@@ -1,0 +1,245 @@
+{
+  "generatedAt": "2026-07-20T22:20:00.233Z",
+  "registryVersion": 1,
+  "sourceCount": 8,
+  "reachableCount": 5,
+  "editorialReviewCount": 2,
+  "checks": [
+    {
+      "id": "costco-easy-indoor-plants",
+      "publisher": "Costco",
+      "status": 200,
+      "result": "reachable",
+      "fetchedUrl": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+      "etag": "W/\"208954594c93b078806993635bcb8400\"",
+      "lastModified": "Mon, 20 Jul 2026 03:11:36 GMT",
+      "bytes": 893518,
+      "contentHash": "623f20f6e19f4622",
+      "productCount": 24,
+      "products": [
+        {
+          "name": "10\" Phalaenopsis Orchid Duo",
+          "url": "https://www.costco.com/.product.100454594.html",
+          "sku": "1277481"
+        },
+        {
+          "name": "5\" Kaleidoscope Orchid in White Quinn Pot",
+          "url": "https://www.costco.com/.product.4000416380.html",
+          "sku": "1000142"
+        },
+        {
+          "name": "Alder & Oak Fruiting Olive Tree",
+          "url": "https://www.costco.com/.product.4000326386.html",
+          "sku": "1778886"
+        },
+        {
+          "name": "Bamboo Plant Collection",
+          "url": "https://www.costco.com/.product.4000136468.html",
+          "sku": "1042637"
+        },
+        {
+          "name": "Bloomaker American Flag Waxed Amaryllis",
+          "url": "https://www.costco.com/.product.4201029375.html",
+          "sku": "1917474"
+        },
+        {
+          "name": "Bonsai Live Indoor Plant in 7 in. Pot",
+          "url": "https://www.costco.com/.product.4000136537.html",
+          "sku": "1042629"
+        },
+        {
+          "name": "Costa Farms Aloe Vera Houseplant in Nursery Pot 3-pack",
+          "url": "https://www.costco.com/.product.4000300204.html",
+          "sku": "1813322"
+        },
+        {
+          "name": "Costa Farms Assorted Houseplants in Nursery Pots 6-pack",
+          "url": "https://www.costco.com/.product.4000300206.html",
+          "sku": "1551522"
+        },
+        {
+          "name": "Costa Farms Cat Palm Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000375045.html",
+          "sku": "1923001"
+        },
+        {
+          "name": "Costa Farms Dieffenbachia Houseplant in Nursery Pot 2-pack",
+          "url": "https://www.costco.com/.product.4000300221.html",
+          "sku": "1813001"
+        },
+        {
+          "name": "Costa Farms Exotic Angels Assorted Clean Air Houseplant Collection in Nursery Pot 10-pack",
+          "url": "https://www.costco.com/.product.4000300461.html",
+          "sku": "1494994"
+        },
+        {
+          "name": "Costa Farms Fiddle Leaf Fig Tree Ficus Lyrata Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000300225.html",
+          "sku": "1628222"
+        },
+        {
+          "name": "Costa Farms Golden Pothos Devil's Ivy Houseplant in Nursery Pot 2-pack",
+          "url": "https://www.costco.com/.product.4000300277.html",
+          "sku": "1813003"
+        },
+        {
+          "name": "Costa Farms Money Tree Houseplant in Decor Basket",
+          "url": "https://www.costco.com/.product.4000331746.html",
+          "sku": "1852929"
+        },
+        {
+          "name": "Costa Farms Monstera Esqueleto Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000404739.html",
+          "sku": "1898228"
+        },
+        {
+          "name": "Costa Farms Peace Lily Spathiphyllum Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000300222.html",
+          "sku": "1615454"
+        },
+        {
+          "name": "Costa Farms Pothos in Self-watering Pot",
+          "url": "https://www.costco.com/.product.4000404729.html",
+          "sku": "1788455"
+        },
+        {
+          "name": "Costa Farms Sansevieria Snake Plant Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000364122.html",
+          "sku": "1679977"
+        },
+        {
+          "name": "Costa Farms Sansevieria Snake Plant Houseplant in Nursery Pot 2-pack",
+          "url": "https://www.costco.com/.product.4000300205.html",
+          "sku": "1813004"
+        },
+        {
+          "name": "Cryptanthus Pink & Red Earth Star Live Indoor Plant in 4\" Plastic Pot 2pk",
+          "url": "https://www.costco.com/.product.4201011478.html",
+          "sku": "1974747"
+        },
+        {
+          "name": "Echeveria Succulent Garden",
+          "url": "https://www.costco.com/.product.4000120803.html",
+          "sku": "1036043"
+        },
+        {
+          "name": "Kumquat Nagami Tree",
+          "url": "https://www.costco.com/.product.100540928.html",
+          "sku": "435014"
+        },
+        {
+          "name": "Lettuce Grow Farmstand Nook",
+          "url": "https://www.costco.com/.product.4000377769.html",
+          "sku": "1995444"
+        },
+        {
+          "name": "Western Sword Fern 3-pack",
+          "url": "https://www.costco.com/.product.100678741.html",
+          "sku": "1471375"
+        }
+      ],
+      "elapsedMs": 684,
+      "collectionMode": "change_detection_then_editorial_review",
+      "productChanges": {
+        "added": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "costco-live-indoor-plants",
+      "publisher": "Costco",
+      "status": 403,
+      "result": "editorial_review_needed",
+      "fetchedUrl": "https://www.costco.com/live-plants.html?deliveryFacetFlag=false&refine=%7C%7CIndoor_Outdoor_descriptive-Indoor",
+      "etag": null,
+      "lastModified": null,
+      "bytes": 397,
+      "contentHash": "9c1f6f2f18e031a8",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 158,
+      "collectionMode": "change_detection_then_editorial_review"
+    },
+    {
+      "id": "home-depot-indoor-plants",
+      "publisher": "The Home Depot",
+      "status": 403,
+      "result": "editorial_review_needed",
+      "fetchedUrl": "https://www.homedepot.com/b/Outdoors-Garden-Center-Indoor-Plants/N-5yc1vZc8rn",
+      "etag": null,
+      "lastModified": null,
+      "bytes": 2343,
+      "contentHash": "ba40374b8738629e",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 191,
+      "collectionMode": "change_detection_then_editorial_review"
+    },
+    {
+      "id": "texas-am-july-austin",
+      "publisher": "Texas A&M AgriLife Extension, Travis County",
+      "status": 200,
+      "result": "reachable",
+      "fetchedUrl": "https://travis-tx.tamu.edu/about-2/horticulture/monthly-gardening-calendar-for-austin-area/july-gardening-checklist-for-austin-and-central-texas/",
+      "etag": null,
+      "lastModified": "Tue, 10 May 2022 13:48:26 GMT",
+      "bytes": 77026,
+      "contentHash": "b41ebe9f0a32bc01",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 311,
+      "collectionMode": "change_detection_then_editorial_review"
+    },
+    {
+      "id": "ucanr-garden",
+      "publisher": "UC Agriculture and Natural Resources",
+      "status": 200,
+      "result": "reachable",
+      "fetchedUrl": "https://ucanr.edu/",
+      "etag": "W/\"1784585340\"",
+      "lastModified": "Mon, 20 Jul 2026 22:09:00 GMT",
+      "bytes": 65183,
+      "contentHash": "e58f05b05cb931ca",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 119,
+      "collectionMode": "editorial_research"
+    },
+    {
+      "id": "search-console",
+      "publisher": "Google Search Console",
+      "status": 200,
+      "result": "reachable",
+      "fetchedUrl": "https://search.google.com/search-console/about",
+      "etag": null,
+      "lastModified": null,
+      "bytes": 116959,
+      "contentHash": "22f2b0e8de78715b",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 250,
+      "collectionMode": "api_after_domain_launch"
+    },
+    {
+      "id": "google-trends",
+      "publisher": "Google Trends",
+      "status": 200,
+      "result": "reachable",
+      "fetchedUrl": "https://trends.google.com/trends/",
+      "etag": null,
+      "lastModified": null,
+      "bytes": 907067,
+      "contentHash": "4b6b9faaea1bdc32",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 345,
+      "collectionMode": "weekly_export_or_approved_api"
+    },
+    {
+      "id": "reader-signals",
+      "publisher": "Garden Companion readers",
+      "result": "owned_source",
+      "collectionMode": "google_sheet_webhook"
+    }
+  ]
+}

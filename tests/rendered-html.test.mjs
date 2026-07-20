@@ -1,0 +1,103 @@
+import assert from "node:assert/strict";
+import { access, readFile } from "node:fs/promises";
+import test from "node:test";
+
+async function render(pathname = "/") {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+
+  return worker.fetch(
+    new Request(`http://localhost${pathname}`, {
+      headers: { accept: "text/html" },
+    }),
+    {
+      ASSETS: {
+        fetch: async () => new Response("Not found", { status: 404 }),
+      },
+    },
+    {
+      waitUntil() {},
+      passThroughOnException() {},
+    },
+  );
+}
+
+test("server-renders the Garden Companion MVP homepage", async () => {
+  const response = await render();
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+
+  const html = await response.text();
+  assert.match(html, /Garden Companion \| Weekly Plant Care Notes/);
+  assert.match(html, /Fresh plant notes for what is growing around you\./);
+  assert.match(html, /Subscribe to plant notes/);
+  assert.match(html, /Start with your plant/);
+  assert.match(html, /PlantPulse/);
+  assert.match(html, /Monstera/);
+  assert.match(html, /Costco plant notes/);
+  assert.match(html, /Seasonal farm-to-table/);
+  assert.match(html, /Seasonal inspiration/);
+  assert.match(html, /A calmer plant letter/);
+  assert.match(html, /Beautiful, useful, and honest\./);
+  assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
+});
+
+test("server-renders the PlantPulse signal engine page", async () => {
+  const response = await render("/plantpulse");
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+
+  const html = await response.text();
+  assert.match(html, /What plant lovers are noticing this week\./);
+  assert.match(html, /Indoor plant homes/);
+  assert.match(html, /Monstera/);
+  assert.match(html, /Bay Area \/ San Jose/);
+  assert.match(html, /Share a plant signal/);
+  assert.match(html, /Timely enough to notice\. Careful enough to trust\./);
+  assert.match(html, /Costco plant watch/);
+  assert.match(html, /Phalaenopsis Orchid Duo/);
+  assert.doesNotMatch(html, /live inventory|exact store availability/i);
+});
+
+test("server-renders the notes hub and complete starter guide", async () => {
+  const hubResponse = await render("/notes");
+  assert.equal(hubResponse.status, 200);
+  const hubHtml = await hubResponse.text();
+  assert.match(hubHtml, /Useful answers for the plants already in your life\./);
+  assert.match(hubHtml, /New olive tree: first-week care/);
+  assert.match(hubHtml, /What eggshells really do in a garden/);
+
+  const guideResponse = await render("/notes/monstera-leaves-curling");
+  assert.equal(guideResponse.status, 200);
+  const guideHtml = await guideResponse.text();
+  assert.match(guideHtml, /Monstera leaves are curling\. Start with these five checks\./);
+  assert.match(guideHtml, /Three things to check first/);
+  assert.match(guideHtml, /Where this guidance comes from/);
+  assert.match(guideHtml, /FAQPage/);
+  assert.match(guideHtml, /University of Wisconsin-Madison Horticulture/);
+});
+
+test("server-renders editorial approach and privacy pages", async () => {
+  const aboutResponse = await render("/about");
+  assert.equal(aboutResponse.status, 200);
+  assert.match(await aboutResponse.text(), /Plant care should leave you calmer and more capable\./);
+
+  const privacyResponse = await render("/privacy");
+  assert.equal(privacyResponse.status, 200);
+  assert.match(await privacyResponse.text(), /We do not sell personal information\./);
+});
+
+test("starter preview files and dependency are removed", async () => {
+  const [page, layout, packageJson] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../package.json", import.meta.url), "utf8"),
+  ]);
+
+  assert.doesNotMatch(page, /SkeletonPreview|_sites-preview|codex-preview/);
+  assert.doesNotMatch(layout, /Starter Project|codex-preview|_sites-preview/);
+  assert.doesNotMatch(packageJson, /react-loading-skeleton/);
+
+  await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
+});

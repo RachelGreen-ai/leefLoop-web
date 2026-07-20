@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "reviewCadence": "weekly",
+  "markets": ["Bay Area / San Jose", "Southern California", "Central Texas / Austin", "Indoor plant homes"],
+  "sources": [
+    {
+      "id": "costco-easy-indoor-plants",
+      "publisher": "Costco",
+      "kind": "retailer_catalog",
+      "url": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+      "markets": ["United States", "Indoor plant homes"],
+      "topics": ["orchid", "peace lily", "snake plant", "pothos", "money tree", "olive tree", "kumquat"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "daily"
+    },
+    {
+      "id": "costco-live-indoor-plants",
+      "publisher": "Costco",
+      "kind": "retailer_catalog",
+      "url": "https://www.costco.com/live-plants.html?deliveryFacetFlag=false&refine=%7C%7CIndoor_Outdoor_descriptive-Indoor",
+      "markets": ["United States", "Indoor plant homes"],
+      "topics": ["indoor plants", "bulbs", "seeds", "citrus", "berries"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "daily"
+    },
+    {
+      "id": "home-depot-indoor-plants",
+      "publisher": "The Home Depot",
+      "kind": "retailer_catalog",
+      "url": "https://www.homedepot.com/b/Outdoors-Garden-Center-Indoor-Plants/N-5yc1vZc8rn",
+      "markets": ["United States", "Indoor plant homes"],
+      "topics": ["monstera", "philodendron", "pothos", "ficus", "palms"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "daily"
+    },
+    {
+      "id": "texas-am-july-austin",
+      "publisher": "Texas A&M AgriLife Extension, Travis County",
+      "kind": "seasonal_authority",
+      "url": "https://travis-tx.tamu.edu/about-2/horticulture/monthly-gardening-calendar-for-austin-area/july-gardening-checklist-for-austin-and-central-texas/",
+      "markets": ["Central Texas / Austin"],
+      "topics": ["fall tomato", "heat", "mulch", "shade", "July planting"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "weekly"
+    },
+    {
+      "id": "ucanr-garden",
+      "publisher": "UC Agriculture and Natural Resources",
+      "kind": "care_authority",
+      "url": "https://ucanr.edu/",
+      "markets": ["Bay Area / San Jose", "Southern California"],
+      "topics": ["California gardening", "olive", "citrus", "container gardening", "integrated pest management"],
+      "collectionMode": "editorial_research",
+      "cadence": "weekly"
+    },
+    {
+      "id": "search-console",
+      "publisher": "Google Search Console",
+      "kind": "owned_search_data",
+      "url": "https://search.google.com/search-console/about",
+      "markets": ["All"],
+      "topics": ["queries", "impressions", "clicks", "pages", "regions"],
+      "collectionMode": "api_after_domain_launch",
+      "cadence": "daily"
+    },
+    {
+      "id": "google-trends",
+      "publisher": "Google Trends",
+      "kind": "search_interest",
+      "url": "https://trends.google.com/trends/",
+      "markets": ["United States", "Japan", "United Kingdom"],
+      "topics": ["houseplants", "monstera", "orchid", "plant care", "vegetable garden", "Costco plants"],
+      "collectionMode": "weekly_export_or_approved_api",
+      "cadence": "weekly"
+    },
+    {
+      "id": "reader-signals",
+      "publisher": "Garden Companion readers",
+      "kind": "owned_community_data",
+      "url": "/plantpulse",
+      "markets": ["All"],
+      "topics": ["local sightings", "care questions", "reader requests"],
+      "collectionMode": "google_sheet_webhook",
+      "cadence": "continuous"
+    }
+  ]
+}
