@@ -6,8 +6,12 @@ import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import { guides } from "./data/guides";
 import { getTopSignals, getRegionName } from "./data/plantpulse";
 import { getSiteUrl } from "./lib/site-url";
+import { buildSocialMetadata } from "./lib/social-metadata";
 
 const siteUrl = getSiteUrl();
+const homeTitle = "Garden Companion | Plant Care & Local Trends";
+const homeDescription =
+  "Weekly plant notes for indoor favorites, local finds, seasonal growing, organic fixes, and small farm-to-table gardens.";
 
 const sitePaths = [
   {
@@ -59,10 +63,10 @@ const subscriberPerks = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Garden Companion | Plant Care & Local Trends" },
-  description:
-    "Weekly plant notes for indoor favorites, local finds, seasonal growing, organic fixes, and small farm-to-table gardens.",
+  title: { absolute: homeTitle },
+  description: homeDescription,
   alternates: { canonical: "/" },
+  ...buildSocialMetadata({ title: homeTitle, description: homeDescription, path: "/" }),
 };
 
 export default function Home() {

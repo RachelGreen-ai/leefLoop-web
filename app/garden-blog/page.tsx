@@ -4,14 +4,18 @@ import { GardenStoryCard } from "../components/GardenStoryCard";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { gardenStories } from "../data/garden-stories";
 import { getSiteUrl } from "../lib/site-url";
+import { buildSocialMetadata } from "../lib/social-metadata";
 
 const siteUrl = getSiteUrl();
+const pageTitle = "Garden Stories: Plants In Film & Books";
+const pageDescription =
+  "Thoughtful garden essays about plants in film and literature, seasonal kitchens, useful beauty, and the small rituals that make growing feel personal.";
 
 export const metadata: Metadata = {
-  title: "Garden Stories: Plants In Film & Books",
-  description:
-    "Thoughtful garden essays about plants in film and literature, seasonal kitchens, useful beauty, and the small rituals that make growing feel personal.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/garden-blog" },
+  ...buildSocialMetadata({ title: pageTitle, description: pageDescription, path: "/garden-blog" }),
 };
 
 const shelves = [

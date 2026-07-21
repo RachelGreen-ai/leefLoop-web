@@ -43,7 +43,6 @@ export const metadata: Metadata = {
       "Practical plant-care notes for local plant finds, indoor favorites, seasonal growing, and small farm-to-table rituals.",
     type: "website",
     siteName: "Garden Companion",
-    url: "/",
     images: [
       {
         url: "/og.png",

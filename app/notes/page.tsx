@@ -4,14 +4,18 @@ import { GuideCard } from "../components/GuideCard";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { guides } from "../data/guides";
 import { getSiteUrl } from "../lib/site-url";
+import { buildSocialMetadata } from "../lib/social-metadata";
 
 const siteUrl = getSiteUrl();
+const pageTitle = "Plant Notes For Everyday Growing";
+const pageDescription =
+  "Calm, evidence-aware plant care for Costco and local finds, Monstera and indoor plants, organic garden questions, and farm-to-table growing.";
 
 export const metadata: Metadata = {
-  title: "Plant Notes For Everyday Growing",
-  description:
-    "Calm, evidence-aware plant care for Costco and local finds, Monstera and indoor plants, organic garden questions, and farm-to-table growing.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/notes" },
+  ...buildSocialMetadata({ title: pageTitle, description: pageDescription, path: "/notes" }),
 };
 
 const filters = ["All notes", "Local finds", "Indoor plants", "Farm to table", "Organic-first"];

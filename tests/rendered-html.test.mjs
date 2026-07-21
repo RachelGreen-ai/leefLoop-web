@@ -155,6 +155,10 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
 
   assert.match(homeHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/"/);
   assert.match(pulseHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/plantpulse"/);
+  assert.match(
+    pulseHtml,
+    /property="og:url" content="https:\/\/gardencompanion\.example\/plantpulse"/,
+  );
   assert.match(homeHtml, /name="googlebot" content="[^\"]*max-image-preview:large/);
   assert.match(guideHtml, /https:\/\/gardencompanion\.example\/notes\/monstera-leaves-curling/);
 

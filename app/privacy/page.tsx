@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { buildSocialMetadata } from "../lib/social-metadata";
+
+const pageTitle = "Privacy";
+const pageDescription =
+  "How Garden Companion handles newsletter and plant-signal information.";
 
 export const metadata: Metadata = {
-  title: "Privacy",
-  description: "How Garden Companion handles newsletter and plant-signal information.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/privacy" },
+  ...buildSocialMetadata({ title: pageTitle, description: pageDescription, path: "/privacy" }),
 };
 
 export default function PrivacyPage() {

@@ -10,14 +10,18 @@ import {
   plantPulseRegions,
 } from "../data/plantpulse";
 import { getSiteUrl } from "../lib/site-url";
+import { buildSocialMetadata } from "../lib/social-metadata";
 
 const siteUrl = getSiteUrl();
+const pageTitle = "Trending Plants & Local Plant Notes";
+const pageDescription =
+  "A warm plant signal digest for local gardens, indoor potted plants, seasonal care notes, Costco plant finds, search trends, and community prompts.";
 
 export const metadata: Metadata = {
-  title: "Trending Plants & Local Plant Notes",
-  description:
-    "A warm plant signal digest for local gardens, indoor potted plants, seasonal care notes, Costco plant finds, search trends, and community prompts.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/plantpulse" },
+  ...buildSocialMetadata({ title: pageTitle, description: pageDescription, path: "/plantpulse" }),
 };
 
 export default function PlantPulsePage() {

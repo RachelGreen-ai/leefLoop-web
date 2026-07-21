@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { buildSocialMetadata } from "../lib/social-metadata";
+
+const pageTitle = "About Garden Companion";
+const pageDescription =
+  "Garden Companion is a calm place for useful plant notes, seasonal finds, and stories about living with plants.";
 
 export const metadata: Metadata = {
-  title: "About Garden Companion",
-  description:
-    "Garden Companion is a calm place for useful plant notes, seasonal finds, and stories about living with plants.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/about" },
+  ...buildSocialMetadata({ title: pageTitle, description: pageDescription, path: "/about" }),
 };
 
 const placesToBegin = [
