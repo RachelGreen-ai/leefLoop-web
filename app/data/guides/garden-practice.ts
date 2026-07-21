@@ -471,9 +471,9 @@ export const gardenPracticeGuides: PlantGuide[] = [
       },
     ],
     relatedSlugs: [
+      "how-succulent-breeders-create-new-echeverias",
       "realistic-succulent-selling-plan",
       "easiest-indoor-succulents-ranked",
-      "best-succulent-soil-mix",
     ],
   },
   {
@@ -604,9 +604,171 @@ export const gardenPracticeGuides: PlantGuide[] = [
       },
     ],
     relatedSlugs: [
+      "how-succulent-breeders-create-new-echeverias",
       "easy-succulents-propagate-gifts-swaps-sales",
-      "easiest-indoor-succulents-ranked",
       "best-succulent-soil-mix",
+    ],
+  },
+  {
+    slug: "how-succulent-breeders-create-new-echeverias",
+    category: "Indoor favorite",
+    title: "What does a succulent breeder do? The patient work behind a new Echeveria.",
+    shortTitle: "How succulent breeders create new Echeverias",
+    dek: "A new rosette begins with two flowers, a careful label, many sibling seedlings, and someone willing to notice the one plant that grows differently.",
+    answer:
+      "A succulent breeder does more than propagate a favorite plant. They choose flowering parents, move pollen in a controlled cross, label it, raise genetically different seedlings, and compare those siblings over time. Only a seedling that remains distinctive, healthy, and repeatable through leaf or stem propagation is a serious new-cultivar candidate. For a beginner, one well-recorded Echeveria cross is more useful than a tray of mystery seedlings.",
+    publishedAt,
+    updatedAt: publishedAt,
+    readingTime: "10 min read",
+    place: "Sunny windowsills and small grow shelves",
+    season: "When two healthy plants flower together",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Echeveria_imbricata_%28Blue_rose%29_cactus_flowers_%2849495258666%29.jpg/1920px-Echeveria_imbricata_%28Blue_rose%29_cactus_flowers_%2849495258666%29.jpg",
+    imagePosition: "center 42%",
+    imageAlt: "Blue-green Echeveria rosettes with coral flower stalks ready for pollinators",
+    firstChecks: [
+      "Confirm that both flowering plants are healthy and keep their original names or tags.",
+      "Write one trait you hope to explore, such as rosette form, color, vigor, or flowering.",
+      "Make room for labeled seed trays and months of observation before moving any pollen.",
+    ],
+    sections: [
+      {
+        id: "breeding-not-propagation",
+        heading: "Propagation makes another plant. Breeding asks what else is possible.",
+        paragraphs: [
+          "A leaf cutting, offset, or stem cutting is a form of asexual propagation. When it succeeds, the new plant is intended to be a genetic copy of its parent. That is how a special seedling can eventually be preserved, but it does not create a new genetic combination by itself.",
+          "Breeding begins with sexual reproduction. Pollen fertilizes an ovule, seed forms, and every seedling can carry a different combination of its parents' traits. Siblings from one seed pod may resemble one another, surprise you, or fail to grow well. Variation is the raw material; selection is the breeder's work.",
+        ],
+      },
+      {
+        id: "question-first",
+        heading: "A breeder begins with a question, not a catchy name",
+        paragraphs: [
+          "Choose parents for a reason you can observe. One Echeveria may have a compact geometric rosette; another may grow vigorously, offset freely, flower generously, or hold attractive color in your conditions. The aim is not to predict a perfect baby. It is to make a thoughtful cross and learn what the seedlings reveal.",
+          "Renée O'Connell's Echeveria 'Cubic Frost' offers a useful real-world timeline. Its patent record describes a planned cross made in April 2011, selection of the distinctive seedling in September 2011, and first vegetative reproduction in March 2012. Multiple later generations were observed before its unusual traits were described as stable and true to type.",
+        ],
+        callout:
+          "The lovely part is not forcing a perfect plant. It is noticing one seedling, among many siblings, becoming unmistakably itself.",
+      },
+      {
+        id: "first-cross",
+        heading: "A small first cross you can actually keep track of",
+        items: [
+          "Choose two correctly identified, healthy plants flowering at the same time. Closely related Echeverias are a more realistic beginning than an arbitrary pair of succulents.",
+          "Assign a cross code before you begin, such as EC-01, and record seed parent x pollen parent, plant tags, date, and photographs.",
+          "When fresh pollen is visible and the other flower's stigma appears receptive, use a clean fine brush to transfer pollen. Flower timing and structure vary, so consult genus-specific guidance rather than relying on one universal day.",
+          "Mark the treated flower immediately. Where insects can reach it, isolate the flower as practical so the pollen parent does not become a guess.",
+          "Repeat on another suitable flower and record each attempt. A swelling pod is encouraging, but only mature seed and germination show that the cross progressed.",
+        ],
+        callout:
+          "Some pairings fail because bloom timing, fertility, chromosome number, or genetic compatibility do not line up. A failed cross is a record, not a verdict on your skill.",
+      },
+      {
+        id: "seedlings",
+        heading: "Succulent seedlings need nursery care, not adult desert care",
+        paragraphs: [
+          "The Royal Horticultural Society recommends sowing many cactus and succulent seeds in spring in small pots or trays of fine, free-draining seed compost with added grit or sharp sand. Echeveria and other Crassulaceae seeds can be extremely small, so handle them out of wind and follow species-specific directions about whether they should be covered.",
+          "Begin with clean containers and fresh medium. Give germinating seed stable moisture, gentle bright light, warmth suited to the parent plants, and ventilation as seedlings establish. Do not apply an adult succulent's long dry cycle to a newly germinated seedling, and do not keep a sealed tray wet after disease or algae begins to appear.",
+        ],
+      },
+      {
+        id: "selection",
+        heading: "Selection is mostly the patience to say not yet",
+        paragraphs: [
+          "Grow siblings under comparable conditions and photograph them from the same angle. Record germination, growth rate, symmetry, leaf shape, seasonal color, flowering, offsets, damage, and losses. A dramatic color caused only by cold, drought, sun stress, disease, or nutrition is not automatically a heritable new trait.",
+          "Keep a promising seedling long enough to see mature growth and at least one meaningful seasonal cycle. Then reproduce it from leaves, offsets, or stems and compare the clones. The USPTO explains that asexual reproduction and observation of later clones are what test whether a claimed plant's distinguishing characteristics are stable rather than temporary.",
+        ],
+      },
+      {
+        id: "name-later",
+        heading: "Give it a code first. Give it a name much later.",
+        paragraphs: [
+          "A pretty seedling can carry its cross code for years. Before treating it as a cultivar, compare it with existing plants, preserve the parentage and photo record, confirm that its useful traits remain through repeated propagation, and learn the International Code of Nomenclature for Cultivated Plants.",
+          "Naming, cultivar registration, trademarks, and legal protection are different systems. In the United States, a plant patent may be available for a distinct new plant that has been asexually reproduced, but a patent is a formal legal process rather than a decorative label. Do not sell a seedling as rare or new merely because an image search did not find a match.",
+        ],
+      },
+      {
+        id: "notebook",
+        heading: "The breeder's notebook is part of the plant",
+        items: [
+          "Cross code, seed parent, pollen parent, and every original nursery tag.",
+          "Trait goal, pollination dates, flower photographs, and number of flowers treated.",
+          "Seed harvest and sowing dates, medium, temperature range, and germination count.",
+          "Monthly sibling photographs with losses and unusual growth recorded honestly.",
+          "First flowering date, mature size, seasonal response, and clone comparisons.",
+          "Any plant shared, its code, recipient, date, and whether the name is provisional.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is propagating succulent leaves the same as breeding?",
+        answer:
+          "No. Leaf, stem, and offset propagation normally make genetic copies of one plant. Breeding uses sexual reproduction and seed to create new combinations, then uses asexual propagation later to preserve a selected seedling.",
+      },
+      {
+        question: "Can I cross any two succulents?",
+        answer:
+          "No. Succulent describes a water-storing growth strategy, not one closely related plant group. Compatibility depends on ancestry, fertility, chromosome number, flower timing, and the direction of the cross. Begin with well-identified plants in a group known to hybridize, such as closely related Echeverias.",
+      },
+      {
+        question: "How long does it take to breed a new Echeveria?",
+        answer:
+          "There is no dependable short timeline. Pollination and germination are only the beginning; a breeder may need many months or years to see mature form, flowering, seasonal behavior, and whether clones remain true to type.",
+      },
+      {
+        question: "Does one beautiful seedling count as a new cultivar?",
+        answer:
+          "Not by appearance alone. Keep it under a code, compare it with known cultivars, observe it over time, and reproduce it asexually to see whether its distinguishing traits remain stable.",
+      },
+      {
+        question: "Can I sell a succulent hybrid that I created?",
+        answer:
+          "Possibly, but first verify parent-plant patent restrictions, local nursery and tax rules, naming accuracy, pest health, and whether your claims are supported. Creating a seedling does not remove regulations or make it commercially ready.",
+      },
+    ],
+    sources: [
+      {
+        title: "Breeding Echeverias",
+        publisher: "Cactus and Succulent Society of America",
+        url: "https://doi.org/10.2985/015.086.0502",
+        note: "Renée O'Connell's Echeveria parent selection, controlled-cross, and recordkeeping overview.",
+      },
+      {
+        title: "Echeveria plant named 'Cubic Frost' (USPP27527)",
+        publisher: "United States Plant Patent record",
+        url: "https://patents.google.com/patent/USPP27527P3/en",
+        note: "Parentage, breeding timeline, distinguishing traits, and repeated vegetative stability.",
+      },
+      {
+        title: "How to Grow Houseplant Cacti and Succulents",
+        publisher: "Royal Horticultural Society",
+        url: "https://www.rhs.org.uk/plants/types/cacti-succulents/houseplants/growing-guide",
+        note: "Seed sowing, free-draining media, light, propagation, and general growing conditions.",
+      },
+      {
+        title: "General Information About Plant Patents",
+        publisher: "U.S. Patent and Trademark Office",
+        url: "https://www.uspto.gov/patents/basics/apply/plant-patent",
+        note: "Difference between seedling discovery, asexual reproduction, stability testing, and patent rights.",
+      },
+      {
+        title: "International Code of Nomenclature for Cultivated Plants",
+        publisher: "International Society for Horticultural Science",
+        url: "https://ishs.org/scripta-horticulturae/international-code-nomenclature-cultivated-plants-ninth-edition/",
+        note: "The international framework for naming cultivated plants.",
+      },
+      {
+        title: "Echeveria imbricata (Blue rose) cactus flowers",
+        publisher: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/File:Echeveria_imbricata_(Blue_rose)_cactus_flowers_(49495258666).jpg",
+        note: "Guide image by Geoff McKay, licensed CC BY 2.0.",
+      },
+    ],
+    relatedSlugs: [
+      "easy-succulents-propagate-gifts-swaps-sales",
+      "realistic-succulent-selling-plan",
+      "easiest-indoor-succulents-ranked",
     ],
   },
 ];

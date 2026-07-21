@@ -15,7 +15,7 @@ Current build checkpoint:
 - Audience-facing content website is complete for the first public MVP.
 - Production deployment is live at `https://garden-companion-notes.vercel.app`.
 - `/notes` hub, search, topic filters, and reusable guide template are live.
-- Twenty-four source-backed Plant Notes are in the release build: four foundation notes plus the new twenty-note search-intent sprint.
+- Twenty-five source-backed Plant Notes are in the release build: four foundation notes, the twenty-note search-intent sprint, and a new research-backed feature on succulent breeding.
 - Retail-first naming now follows the words readers see and search, such as `Trader Joe's Premium Monstera`; cultivar and botanical distinctions are explained inside the note.
 - The new library covers retail finds, beginner succulent care, desert rose, string of pearls, tomato and zucchini problems, balcony food growing, propagation, and realistic local plant selling.
 - `/garden-blog` and three complete Garden Stories connect plant care with film, literature, and everyday rituals.
@@ -24,7 +24,7 @@ Current build checkpoint:
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
 - Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
 - Google search launch foundation now includes truthful dynamic sitemap dates, image sitemap entries, complete canonicals, absolute structured-data URLs, and optional Search Console verification metadata.
-- Release tests now render all 24 notes, verify every internal note link, and require FAQ and reference sections before publication.
+- Release tests now render all 25 notes, verify every internal note link, and require FAQ and reference sections before publication.
 
 ## 0. Strategic Decision
 
@@ -355,7 +355,7 @@ Tasks:
 
 ### Phase 2: Content Page System
 
-Status: Done for the 24-note public content MVP.
+Status: Done for the 25-note public content MVP.
 
 Tasks:
 - Add `/notes` hub. Done.
@@ -366,8 +366,9 @@ Tasks:
 - Add article cards on homepage. Done.
 - Publish olive tree, Monstera, basil, and eggshell guides. Done.
 - Publish the twenty-note search-intent sprint across retail, succulent, edible, and community topics. Done.
+- Publish a source-backed introduction to succulent breeders using Echeveria 'Cubic Frost' as a documented case study. Done.
 - Split the guide library into typed topic modules so larger batches remain maintainable. Done.
-- Add rendered release coverage for all 24 notes and their internal links. Done.
+- Add rendered release coverage for all 25 notes and their internal links. Done.
 - Add editorial approach and privacy pages. Done.
 - Add a taxonomy-driven Plant Notes library with working topic filters, live search, result counts, empty states, and shareable `topic`/`q` URLs. Done.
 - Link every guide card and article breadcrumb back to its relevant Plant Notes topic. Done.

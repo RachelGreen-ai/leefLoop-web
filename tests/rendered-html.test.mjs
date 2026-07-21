@@ -150,20 +150,33 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(retailGuideHtml, /Premium Monstera/);
   assert.match(retailGuideHtml, /UC Statewide IPM Program/);
   assert.match(retailGuideHtml, /FAQPage/);
+
+  const breederGuideResponse = await render(
+    "/notes/how-succulent-breeders-create-new-echeverias",
+  );
+  assert.equal(breederGuideResponse.status, 200);
+  const breederGuideHtml = await breederGuideResponse.text();
+  assert.match(breederGuideHtml, /What does a succulent breeder do\?/);
+  assert.match(breederGuideHtml, /Renée O&#x27;Connell/);
+  assert.match(breederGuideHtml, /Propagation makes another plant/);
+  assert.match(breederGuideHtml, /Cactus and Succulent Society of America/);
+  assert.match(breederGuideHtml, /U\.S\. Patent and Trademark Office/);
+  assert.match(breederGuideHtml, /FAQPage/);
 });
 
-test("publishes the complete 24-note library with valid internal note links", async () => {
+test("publishes the complete 25-note library with valid internal note links", async () => {
   const hubResponse = await render("/notes");
   const hubHtml = await hubResponse.text();
   const noteLinks = new Set(
     [...hubHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );
 
-  assert.equal(noteLinks.size, 24);
+  assert.equal(noteLinks.size, 25);
   assert.ok(noteLinks.has("/notes/trader-joes-premium-monstera-first-week"));
   assert.ok(noteLinks.has("/notes/easiest-indoor-succulents-ranked"));
   assert.ok(noteLinks.has("/notes/tomato-blossom-end-rot-eggshells"));
   assert.ok(noteLinks.has("/notes/realistic-succulent-selling-plan"));
+  assert.ok(noteLinks.has("/notes/how-succulent-breeders-create-new-echeverias"));
 
   const renderedNotes = await Promise.all(
     [...noteLinks].map(async (pathname) => {
