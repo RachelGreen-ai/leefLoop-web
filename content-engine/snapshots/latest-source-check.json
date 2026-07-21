@@ -237,7 +237,7 @@
     },
     {
       "id": "reader-signals",
-      "publisher": "Garden Companion readers",
+      "publisher": "Rachel’s Garden readers",
       "result": "owned_source",
       "collectionMode": "google_sheet_webhook"
     }

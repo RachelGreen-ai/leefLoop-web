@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_NAME, SITE_OG_IMAGE, SITE_TAGLINE } from "./site-brand";
 
 type SocialMetadataOptions = {
   title: string;
@@ -16,14 +17,14 @@ export function buildSocialMetadata({
       title,
       description,
       type: "website",
-      siteName: "Garden Companion",
+      siteName: SITE_NAME,
       url: path,
       images: [
         {
-          url: "/og.png",
+          url: SITE_OG_IMAGE,
           width: 1200,
           height: 630,
-          alt: "Garden Companion: practical plant notes for real homes",
+          alt: `${SITE_NAME}: ${SITE_TAGLINE.toLowerCase()}`,
         },
       ],
     },
@@ -31,7 +32,7 @@ export function buildSocialMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/og.png"],
+      images: [SITE_OG_IMAGE],
     },
   };
 }

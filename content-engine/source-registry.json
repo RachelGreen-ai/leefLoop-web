@@ -75,7 +75,7 @@
     },
     {
       "id": "reader-signals",
-      "publisher": "Garden Companion readers",
+      "publisher": "Rachel’s Garden readers",
       "kind": "owned_community_data",
       "url": "/plantpulse",
       "markets": ["All"],

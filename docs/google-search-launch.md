@@ -1,6 +1,6 @@
 # Google Search Launch And Optimization
 
-Purpose: get Garden Companion discovered, indexed, measured, and improved without paid indexing tools or noisy SEO tactics.
+Purpose: get Rachel’s Garden discovered, indexed, measured, and improved without paid indexing tools or noisy SEO tactics.
 
 Last reviewed: 2026-07-20
 
@@ -10,7 +10,7 @@ Current production URL: `https://garden-companion-notes.vercel.app`
 
 Implemented in the site:
 
-- Root sitemap at `/sitemap.xml` with 13 canonical public URLs.
+- Root sitemap at `/sitemap.xml` with 33 canonical public URLs.
 - Article and story images included in the sitemap.
 - `lastmod` values derived from real guide, story, PlantPulse, and retailer-source dates.
 - Root robots file at `/robots.txt` that allows Googlebot and points to the sitemap.
@@ -50,7 +50,7 @@ The Vercel URL can stay public for review. If the domain decision will take more
 3. Copy the Google DNS TXT verification record into the domain provider's DNS settings.
 4. Wait for DNS propagation, then select **Verify** in Search Console.
 5. Open **Sitemaps** and submit `sitemap.xml`.
-6. Confirm the sitemap status is successful and that 13 URLs are discovered.
+6. Confirm the sitemap status is successful and that 33 URLs are discovered.
 7. Use **URL inspection** on the first priority pages and select **Request indexing**.
 
 If a URL-prefix property is used instead, add the token value from Google's HTML meta-tag method to the Vercel environment variable `GOOGLE_SITE_VERIFICATION`, redeploy, and verify. Do not include the surrounding `<meta>` tag or `google-site-verification=` label in the value.
@@ -120,7 +120,7 @@ Track these after Search Console verification:
 | --- | --- |
 | Valid indexed pages | Priority pages indexed, then steady growth toward all canonical pages |
 | Search impressions | Week-over-week growth from real plant-care queries |
-| Non-brand queries | Discovery beyond searches for Garden Companion |
+| Non-brand queries | Discovery beyond searches for Rachel’s Garden |
 | CTR | Improve page by page; do not use one site-wide target too early |
 | Position 8-20 queries | Best near-term content refresh opportunities |
 | Search-to-subscribe rate | Which guides build an owned audience |

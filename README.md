@@ -1,4 +1,4 @@
-# Garden Companion Web
+# Rachel’s Garden Web
 
 Public web experience for the plant-care content engine: weekly plant notes, PlantPulse local/indoor trend pages, community prompts, garden journal ideas, and newsletter subscription.
 
@@ -36,8 +36,8 @@ Capture setup:
 - `scripts/plantpulse-google-apps-script.js`
 - `.env.example`
 
-Working public name: **Garden Companion**
+Public name: **Rachel’s Garden**
 
 Production: `https://garden-companion-notes.vercel.app`
 
-Repo note: the GitHub repo is currently named `leefLoop-web`. The final public brand name remains open.
+Repo note: the GitHub repo is still named `leefLoop-web`; repository and production-domain migration can happen separately from the public brand launch.

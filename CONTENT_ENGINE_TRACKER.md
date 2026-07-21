@@ -1,4 +1,4 @@
-# Garden Companion Content Engine Tracker
+# Rachel’s Garden Content Engine Tracker
 
 Purpose: build the website as the first product: a refined, useful plant-care publication that grows subscribers before the mobile app.
 
@@ -6,11 +6,12 @@ Repo: `RachelGreen-ai/leefLoop-web`
 
 Local path: `/Users/junyishen/Documents/GitHub/leefLoop-web`
 
-Working public name: **Garden Companion**
+Public name: **Rachel’s Garden**
 
 Last updated: 2026-07-21
 
 Current build checkpoint:
+- Public branding, metadata, structured data, favicon, and social-share artwork now use Rachel’s Garden consistently.
 - Audience-facing content website is complete for the first public MVP.
 - Production deployment is live at `https://garden-companion-notes.vercel.app`.
 - `/notes` hub, search, topic filters, and reusable guide template are live.

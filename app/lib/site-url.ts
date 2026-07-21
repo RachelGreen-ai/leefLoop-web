@@ -15,5 +15,5 @@ export function getSiteUrl() {
     return normalizeSiteUrl(vercelUrl);
   }
 
-  return "https://gardencompanion.example";
+  return "https://rachelsgarden.example";
 }

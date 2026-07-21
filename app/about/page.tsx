@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { SITE_NAME } from "../lib/site-brand";
 import { buildSocialMetadata } from "../lib/social-metadata";
 
-const pageTitle = "About Garden Companion";
+const pageTitle = `About ${SITE_NAME}`;
 const pageDescription =
-  "Garden Companion is a calm place for useful plant notes, seasonal finds, and stories about living with plants.";
+  `${SITE_NAME} is a calm place for useful plant notes, seasonal finds, and stories about living with plants.`;
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -40,7 +41,7 @@ export default function AboutPage() {
     <main>
       <SiteHeader />
       <section className="about-hero">
-        <p className="eyebrow">About garden companion</p>
+        <p className="eyebrow">About {SITE_NAME}</p>
         <h1>A useful place for people who like living with plants.</h1>
         <p>
           Come for help with a plant you already have, stay for what is growing nearby, what is in
@@ -56,7 +57,7 @@ export default function AboutPage() {
         <div className="guide-grid">
           {placesToBegin.map((place) => (
             <article className="guide-card" key={place.title}>
-              <span>Garden Companion</span>
+              <span>{SITE_NAME}</span>
               <h3>{place.title}</h3>
               <p>{place.copy}</p>
               <Link href={place.href}>{place.cta}</Link>

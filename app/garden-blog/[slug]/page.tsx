@@ -9,6 +9,7 @@ import {
   getGardenStory,
   getRelatedGardenStories,
 } from "../../data/garden-stories";
+import { SITE_NAME } from "../../lib/site-brand";
 import { getSiteUrl } from "../../lib/site-url";
 
 const siteUrl = getSiteUrl();
@@ -68,11 +69,11 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
         articleSection: story.category,
         inLanguage: "en-US",
         mainEntityOfPage: pageUrl,
-        author: { "@type": "Organization", name: "Garden Companion" },
+        author: { "@type": "Organization", name: SITE_NAME },
         publisher: {
           "@type": "Organization",
           "@id": `${siteUrl}/#organization`,
-          name: "Garden Companion",
+          name: SITE_NAME,
         },
         citation: story.sources.map((source) => source.url),
       },

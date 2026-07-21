@@ -1,6 +1,6 @@
 # Content Engine Operations
 
-This is the operating system behind Garden Companion. It separates timely signals from care claims so the site can publish quickly without becoming careless.
+This is the operating system behind Rachel’s Garden. It separates timely signals from care claims so the site can publish quickly without becoming careless.
 
 ## The Signal Loop
 

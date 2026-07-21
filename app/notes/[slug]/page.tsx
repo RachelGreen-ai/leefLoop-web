@@ -10,6 +10,7 @@ import {
   guides,
 } from "../../data/guides";
 import { getNoteTopicForCategory } from "../../data/note-topics";
+import { SITE_NAME } from "../../lib/site-brand";
 import { getSiteUrl } from "../../lib/site-url";
 
 const siteUrl = getSiteUrl();
@@ -72,12 +73,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
         mainEntityOfPage: pageUrl,
         author: {
           "@type": "Organization",
-          name: "Garden Companion",
+          name: SITE_NAME,
         },
         publisher: {
           "@type": "Organization",
           "@id": `${siteUrl}/#organization`,
-          name: "Garden Companion",
+          name: SITE_NAME,
         },
         citation: guide.sources.map((source) => source.url),
       },

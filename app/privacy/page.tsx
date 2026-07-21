@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { SITE_NAME } from "../lib/site-brand";
 import { buildSocialMetadata } from "../lib/social-metadata";
 
 const pageTitle = "Privacy";
 const pageDescription =
-  "How Garden Companion handles newsletter and plant-signal information.";
+  `How ${SITE_NAME} handles newsletter and plant-signal information.`;
 
 export const metadata: Metadata = {
   title: pageTitle,

@@ -23,7 +23,7 @@ Sheet: `Plant Signals`
 
 ## Setup
 
-1. Create a Google Sheet, for example `Garden Companion PlantPulse Leads`.
+1. Create a Google Sheet, for example `Rachel’s Garden PlantPulse Leads`.
 2. Open `Extensions -> Apps Script`.
 3. Paste the contents of `scripts/plantpulse-google-apps-script.js`.
 4. In Apps Script, open `Project Settings -> Script Properties`.

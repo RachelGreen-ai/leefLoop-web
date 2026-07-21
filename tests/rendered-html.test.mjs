@@ -23,14 +23,17 @@ async function render(pathname = "/") {
   );
 }
 
-test("server-renders the Garden Companion MVP homepage", async () => {
+test("server-renders the Rachel’s Garden MVP homepage", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Garden Companion \| Plant Care &amp; Local Trends/);
-  assert.match(html, /<strong>Garden Companion<\/strong>/);
+  assert.match(html, /Rachel’s Garden \| Plant Care &amp; Local Trends/);
+  assert.match(html, /<strong>Rachel’s Garden<\/strong>/);
+  assert.match(html, /og-rachels-garden\.png/);
+  assert.match(html, /"name":"Rachel’s Garden"/);
+  assert.doesNotMatch(html, /Garden Companion/);
   assert.match(html, /Fresh plant notes for what is growing around you\./);
   assert.match(html, /Subscribe to plant notes/);
   assert.match(html, /A good place to begin\./);
@@ -89,7 +92,7 @@ test("server-renders the Garden Stories collection and complete Little Forest es
   assert.match(storyHtml, /References/);
   assert.match(storyHtml, /Japanese Film Database/);
   assert.match(storyHtml, /BreadcrumbList/);
-  assert.doesNotMatch(storyHtml, /Sources &amp; notes|Garden Companion editorial team/);
+  assert.doesNotMatch(storyHtml, /Sources &amp; notes|Rachel’s Garden editorial team/);
 });
 
 test("server-renders the PlantPulse signal engine page", async () => {
@@ -228,20 +231,20 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
       robotsResponse.text(),
     ]);
 
-  assert.match(homeHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/"/);
-  assert.match(pulseHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/plantpulse"/);
+  assert.match(homeHtml, /rel="canonical" href="https:\/\/rachelsgarden\.example\/"/);
+  assert.match(pulseHtml, /rel="canonical" href="https:\/\/rachelsgarden\.example\/plantpulse"/);
   assert.match(
     pulseHtml,
-    /property="og:url" content="https:\/\/gardencompanion\.example\/plantpulse"/,
+    /property="og:url" content="https:\/\/rachelsgarden\.example\/plantpulse"/,
   );
   assert.match(homeHtml, /name="googlebot" content="[^\"]*max-image-preview:large/);
-  assert.match(guideHtml, /https:\/\/gardencompanion\.example\/notes\/monstera-leaves-curling/);
+  assert.match(guideHtml, /https:\/\/rachelsgarden\.example\/notes\/monstera-leaves-curling/);
 
   assert.equal(sitemapResponse.status, 200);
   assert.match(sitemapResponse.headers.get("content-type") ?? "", /xml/i);
   assert.match(sitemapXml, /<image:image>/);
-  assert.match(sitemapXml, /gardencompanion\.example\/notes\/monstera-leaves-curling/);
-  assert.match(sitemapXml, /gardencompanion\.example\/garden-blog\/little-forest-growing-a-life/);
+  assert.match(sitemapXml, /rachelsgarden\.example\/notes\/monstera-leaves-curling/);
+  assert.match(sitemapXml, /rachelsgarden\.example\/garden-blog\/little-forest-growing-a-life/);
   const noteLinks = new Set(
     [...notesHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );
@@ -253,7 +256,7 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
 
   assert.equal(robotsResponse.status, 200);
   assert.match(robotsTxt, /User-Agent: \*/i);
-  assert.match(robotsTxt, /Sitemap: https:\/\/gardencompanion\.example\/sitemap\.xml/i);
+  assert.match(robotsTxt, /Sitemap: https:\/\/rachelsgarden\.example\/sitemap\.xml/i);
 });
 
 test("starter preview files and dependency are removed", async () => {

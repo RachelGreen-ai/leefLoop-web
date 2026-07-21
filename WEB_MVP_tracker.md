@@ -1,4 +1,4 @@
-# Garden Companion Web MVP Tracker
+# Rachel’s Garden Web MVP Tracker
 
 Purpose: build the public web experience as a content engine, newsletter funnel, community front door, SEO/GEO growth asset, and later trust layer for the iOS app.
 
@@ -6,9 +6,11 @@ Repo: `RachelGreen-ai/leefLoop-web`
 
 Local path: `/Users/junyishen/Documents/GitHub/leefLoop-web`
 
-Working public name: **Garden Companion**
+Public name: **Rachel’s Garden**
 
 Last updated: 2026-07-20
+
+Brand update: the public website changed from Garden Companion to **Rachel’s Garden** on July 21, 2026. The more distinctive name is intended to improve recall, direct search, creator-led marketing, and community attribution while practical plant-care keywords remain in page titles and content.
 
 ## Build Checkpoint
 

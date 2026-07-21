@@ -5,6 +5,7 @@ import { getGuideSummaries, guides } from "../data/guides";
 import { getSiteUrl } from "../lib/site-url";
 import { buildSocialMetadata } from "../lib/social-metadata";
 import { NotesExplorer } from "./NotesExplorer";
+import { SITE_NAME } from "../lib/site-brand";
 
 const siteUrl = getSiteUrl();
 const pageTitle = "Plant Notes For Everyday Growing";
@@ -23,7 +24,7 @@ export default function NotesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Garden Companion plant notes",
+    name: `${SITE_NAME} plant notes`,
     description:
       "Practical plant notes for local finds, indoor plants, organic garden questions, and seasonal growing.",
     mainEntity: {

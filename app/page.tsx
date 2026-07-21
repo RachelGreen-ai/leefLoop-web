@@ -5,11 +5,12 @@ import { GuideCard } from "./components/GuideCard";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import { guides } from "./data/guides";
 import { getTopSignals, getRegionName } from "./data/plantpulse";
+import { SITE_NAME } from "./lib/site-brand";
 import { getSiteUrl } from "./lib/site-url";
 import { buildSocialMetadata } from "./lib/social-metadata";
 
 const siteUrl = getSiteUrl();
-const homeTitle = "Garden Companion | Plant Care & Local Trends";
+const homeTitle = `${SITE_NAME} | Plant Care & Local Trends`;
 const homeDescription =
   "Weekly plant notes for indoor favorites, local finds, seasonal growing, organic fixes, and small farm-to-table gardens.";
 
@@ -93,7 +94,7 @@ export default function Home() {
       {
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
-        name: "Garden Companion",
+        name: SITE_NAME,
         url: siteUrl,
         description:
           "A weekly plant-care publication for local plant finds, indoor potted plants, seasonal care, and farm-to-table ideas.",
@@ -107,7 +108,7 @@ export default function Home() {
       {
         "@type": "Organization",
         "@id": `${siteUrl}/#organization`,
-        name: "Garden Companion",
+        name: SITE_NAME,
         description:
           "An independent plant-care publication translating timely plant signals and horticultural sources into practical notes.",
         url: siteUrl,
@@ -151,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="editorial-note" aria-label="Garden companion introduction">
+      <section className="editorial-note" aria-label={`${SITE_NAME} introduction`}>
         <div>
           <p className="eyebrow">For the plants you live with</p>
           <h2>Care feels easier when advice meets your actual home.</h2>

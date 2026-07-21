@@ -1,12 +1,13 @@
 import Link from "next/link";
+import { SITE_NAME } from "../lib/site-brand";
 
 export function SiteHeader() {
   return (
     <header className="site-header" aria-label="Main navigation">
-      <Link className="brand-mark" href="/" aria-label="Garden Companion home">
-        <span className="brand-symbol">G</span>
+      <Link className="brand-mark" href="/" aria-label={`${SITE_NAME} home`}>
+        <span className="brand-symbol">R</span>
         <span>
-          <strong>Garden Companion</strong>
+          <strong>{SITE_NAME}</strong>
           <small>plant notes for real homes</small>
         </span>
       </Link>
@@ -26,7 +27,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
-        <strong>Garden Companion</strong>
+        <strong>{SITE_NAME}</strong>
         <p>
           Fresh, practical plant notes for indoor corners, local finds, small gardens, and
           seasonal tables.
