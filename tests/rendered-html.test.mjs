@@ -75,12 +75,13 @@ test("homepage navigation points to real content destinations", async () => {
   }
 });
 
-test("server-renders the Garden Stories collection and complete Little Forest essay", async () => {
+test("server-renders the Garden Stories collection and complete screen essays", async () => {
   const hubResponse = await render("/garden-blog");
   assert.equal(hubResponse.status, 200);
   const hubHtml = await hubResponse.text();
   assert.match(hubHtml, /Where plants meet stories, seasons, and everyday life\./);
   assert.match(hubHtml, /What Little Forest understands about growing a life/);
+  assert.match(hubHtml, /What The Secret History of the British Garden teaches us about time/);
   assert.match(hubHtml, /The Secret Garden is really a story about paying attention/);
   assert.match(hubHtml, /The small magic of keeping one herb beside the kitchen/);
 
@@ -93,6 +94,18 @@ test("server-renders the Garden Stories collection and complete Little Forest es
   assert.match(storyHtml, /Japanese Film Database/);
   assert.match(storyHtml, /BreadcrumbList/);
   assert.doesNotMatch(storyHtml, /Sources &amp; notes|Rachel’s Garden editorial team/);
+
+  const documentaryResponse = await render(
+    "/garden-blog/secret-history-british-garden-time",
+  );
+  assert.equal(documentaryResponse.status, 200);
+  const documentaryHtml = await documentaryResponse.text();
+  assert.match(documentaryHtml, /A garden is a document written in living material/);
+  assert.match(documentaryHtml, /Every exotic leaf arrives with a history/);
+  assert.match(documentaryHtml, /A small way to live with the story/);
+  assert.match(documentaryHtml, /Gardening With Monty Don/);
+  assert.match(documentaryHtml, /Rousham House &amp; Gardens/);
+  assert.match(documentaryHtml, /BreadcrumbList/);
 });
 
 test("server-renders the PlantPulse signal engine page", async () => {
@@ -258,6 +271,10 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
   assert.match(sitemapXml, /<image:image>/);
   assert.match(sitemapXml, /rachelsgarden\.example\/notes\/monstera-leaves-curling/);
   assert.match(sitemapXml, /rachelsgarden\.example\/garden-blog\/little-forest-growing-a-life/);
+  assert.match(
+    sitemapXml,
+    /rachelsgarden\.example\/garden-blog\/secret-history-british-garden-time/,
+  );
   const noteLinks = new Set(
     [...notesHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );

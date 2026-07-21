@@ -22,7 +22,7 @@ const shelves = [
   {
     label: "On screen",
     title: "Gardens we can almost step into",
-    copy: "Films where planting, gathering, weather, and cooking carry as much meaning as dialogue.",
+    copy: "Films and documentaries where gardens, weather, work, and the lives around them carry the story.",
   },
   {
     label: "On the page",
@@ -89,7 +89,7 @@ export default function GardenBlogPage() {
       <section className="stories-index">
         <div className="section-heading story-index-heading">
           <p className="eyebrow">The first collection</p>
-          <h2>Three ways to spend a little more time with plants.</h2>
+          <h2>A few ways to spend a little more time with plants.</h2>
           <p>
             Each story ends with something small to notice, grow, cook, or carry into your own
             week.

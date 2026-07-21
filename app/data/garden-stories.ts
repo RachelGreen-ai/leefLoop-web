@@ -125,7 +125,155 @@ export const gardenStories: GardenStory[] = [
         note: "Cultural context for the film's Tohoku location, rice growing, fieldwork, and seasonal cooking.",
       },
     ],
-    relatedSlugs: ["secret-garden-paying-attention", "one-herb-by-the-kitchen"],
+    relatedSlugs: [
+      "secret-history-british-garden-time",
+      "secret-garden-paying-attention",
+      "one-herb-by-the-kitchen",
+    ],
+  },
+  {
+    slug: "secret-history-british-garden-time",
+    category: "On screen",
+    title: "What The Secret History of the British Garden teaches us about time",
+    shortTitle: "Four centuries inside the British garden",
+    dek: "Topiary, borrowed views, glasshouses, and garden rooms reveal a landscape that has never stood still.",
+    opening:
+      "A beautiful old garden can give the impression that it has always been there, waiting calmly outside history. The Secret History of the British Garden offers a lovelier and more complicated thought: a garden lasts because people keep changing it, and every change leaves a little of its century behind.",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-21",
+    readingTime: "9 min read",
+    setting: "Documentary & garden history",
+    theme: "Time, taste, inheritance",
+    image: "/garden-stories-british-garden.webp",
+    imageAlt: "A flower-lined path through the historic walled gardens at Rousham House",
+    imagePosition: "center 54%",
+    sections: [
+      {
+        id: "living-document",
+        heading: "A garden is a document written in living material",
+        paragraphs: [
+          "Monty Don's four-part journey moves from the formal gardens of the 1600s to the landscapes, glasshouses, garden rooms, allotments, and ordinary back gardens that followed. At each stop, plants tell only part of the story. Paths reveal how people wanted to move. Walls show what they wished to keep in or out. A view records what an owner hoped the world would look like.",
+          "Unlike a chair or a painting, a garden cannot be preserved simply by leaving it alone. Hedges grow out, trees fall, tastes change, and the people who know how to care for a place eventually hand that knowledge to someone else. Survival is an active verb here.",
+        ],
+        callout: "A garden looks timeless only when many hands have agreed to keep meeting time inside it.",
+      },
+      {
+        id: "seventeenth-century",
+        heading: "The seventeenth century shaped nature into a statement",
+        paragraphs: [
+          "At Levens Hall, topiary, hedged walks, and a formal plan preserve the language of the late seventeenth century. The shapes are playful now, but the original order carried status, belief, fashion, and a visible claim of control. Even an orchard could announce wealth through its scale and variety.",
+          "The documentary makes the labor behind that confidence difficult to ignore. A clipped tree is never only an idea by a designer; it is also years of growth, ladders, tools, skilled hands, and the decision to return next season. What appears fixed is being remade all the time.",
+        ],
+      },
+      {
+        id: "eighteenth-century",
+        heading: "The most natural view may be the most carefully made",
+        paragraphs: [
+          "In the eighteenth century, straight lines and tight formality gave way to a landscape that seemed to open into the countryside. At Rousham, William Kent arranged paths, water, statues, trees, and distant architecture as a sequence of scenes. The boundary could be hidden in a ha-ha, allowing grazing land to appear joined to the lawn.",
+          "The effect feels effortless because the effort has been concealed. That is one of the documentary's most useful lessons for a smaller garden: natural and designed are not opposites. Moving a chair, opening one sightline, or letting a path turn before it reveals its destination can change how a place is felt without filling it with more things.",
+        ],
+      },
+      {
+        id: "nineteenth-century",
+        heading: "Every exotic leaf arrives with a history",
+        paragraphs: [
+          "The nineteenth-century garden grew through plant hunting, new transport, the Wardian case, iron, glass, coal, and the enormous reach of the British Empire. Kew's Palm House made tropical plants into a public spectacle of engineering as much as botany. The same century also widened access through public parks, nurseries, magazines, and a growing middle-class enthusiasm for gardening.",
+          "Beauty and extraction sit together in this history. Plants were gathered, moved, displayed, and sometimes stripped from wild populations in the pursuit of novelty and prestige. Looking closely at a familiar houseplant can therefore lead outward: where did it first grow, who carried it, and what systems made it ordinary in our homes? Knowing that story need not lessen delight. It can make our delight more responsible.",
+        ],
+      },
+      {
+        id: "twentieth-century",
+        heading: "The garden moved closer to ordinary life",
+        paragraphs: [
+          "By the twentieth century, strong structure and loose planting began to live together in a particularly intimate way. Gertrude Jekyll treated planting as color and texture within Edwin Lutyens' architectural frames. At Sissinghurst, Harold Nicolson's layout and Vita Sackville-West's abundant planting turned the garden into a sequence of rooms, each with its own atmosphere.",
+          "Two world wars changed the meaning of useful ground, while allotments, garden centers, radio, and television brought practical gardening to a much wider public. The story no longer belongs only to estates and designers. It reaches the person choosing a perennial for a back garden, growing food on a borrowed plot, or learning from a familiar voice on a screen.",
+        ],
+      },
+      {
+        id: "inheritance",
+        heading: "To inherit a garden is to enter an unfinished conversation",
+        paragraphs: [
+          "The four centuries do not replace one another neatly. Later gardens borrow the axis of a formal plan, the borrowed view of a landscape garden, the plant range made possible by Victorian collecting, and the color confidence of the twentieth century. A living garden keeps several times at once.",
+          "This is perhaps the most consoling idea in the series. We do not need to complete a garden, because completion would be strangely lifeless. We only need to notice what came before, care honestly for what is here, and leave the next person something worth continuing.",
+        ],
+      },
+      {
+        id: "watching",
+        heading: "Watch it once with a gardener's eye",
+        paragraphs: [
+          "As the documentary crosses each century, look past the grand house and notice what makes the garden legible. The most reusable ideas are often small enough to bring home.",
+        ],
+        items: [
+          "Where has a boundary been hidden, softened, or made important?",
+          "Which view looks natural but has actually been composed?",
+          "What kind of labor is required to keep the style alive?",
+          "Who was able to enter, work in, or enjoy the garden in each century?",
+          "Which older idea quietly survives inside a later garden?",
+        ],
+      },
+    ],
+    bringHome: [
+      "Find the oldest living or built feature in your garden, balcony, or shared outdoor space, and write down what you know about it.",
+      "Choose one view from a window or chair, then improve only its foreground by moving a pot, trimming a branch, or clearing a distraction.",
+      "Give one small corner the feeling of a room with a clear edge, a path, and one reason to pause there.",
+      "Learn the native home and travel history of one plant you already grow, especially if it is sold as exotic or rare.",
+      "Leave one useful record for the future: a plant label, a sketch, a seasonal photograph, or a note about what thrives.",
+    ],
+    sources: [
+      {
+        title: "Secret History Of The British Garden | Full Journey",
+        publisher: "Gardening With Monty Don",
+        url: "https://www.youtube.com/watch?v=kx23BSgo-GE",
+        note: "The complete documentary journey shared by our reader and used as the primary viewing source.",
+      },
+      {
+        title: "The Secret History of the British Garden",
+        publisher: "Apple TV",
+        url: "https://tv.apple.com/us/show/the-secret-history-of-the-british-garden/umc.cmc.6ps3se4zhavkfr7vvyrhf87vp",
+        note: "Series overview and episode guide for the four-century structure and featured gardens.",
+      },
+      {
+        title: "About Rousham House & Gardens",
+        publisher: "Rousham House & Gardens",
+        url: "https://rousham.org/about/",
+        note: "The garden's account of William Kent's design, staged views, and surviving landscape.",
+      },
+      {
+        title: "The Topiary Garden at Levens Hall",
+        publisher: "Levens Hall",
+        url: "https://www.levenshall.co.uk/DB/latest-news/the-topiary-garden-at-levens-hall",
+        note: "The garden's history of its 1694 topiary design and long continuity of care.",
+      },
+      {
+        title: "Palm House",
+        publisher: "Royal Botanic Gardens, Kew",
+        url: "https://www.kew.org/kew-gardens/whats-in-the-gardens/palm-house",
+        note: "Primary history of the Palm House's 1844 construction and shipbuilding-inspired engineering.",
+      },
+      {
+        title: "A potted history of houseplants",
+        publisher: "National Trust",
+        url: "https://www.nationaltrust.org.uk/discover/history/gardens-landscapes/a-potted-history-of-houseplants",
+        note: "Context for nineteenth-century plant collecting, domestic display, and ecological harm.",
+      },
+      {
+        title: "The garden at Sissinghurst Castle Garden",
+        publisher: "National Trust",
+        url: "https://www.nationaltrust.org.uk/visit/kent/sissinghurst-castle-garden/the-garden-at-sissinghurst-castle-garden",
+        note: "Garden history and the relationship between Harold Nicolson's structure and Vita Sackville-West's planting.",
+      },
+      {
+        title: "Rousham House Gardens",
+        publisher: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/File:Rousham_House_Gardens.jpg",
+        note: "Hero photograph by Jason Ballard, used under CC BY 2.0 and converted to WebP.",
+      },
+    ],
+    relatedSlugs: [
+      "little-forest-growing-a-life",
+      "secret-garden-paying-attention",
+      "one-herb-by-the-kitchen",
+    ],
   },
   {
     slug: "secret-garden-paying-attention",
@@ -193,7 +341,11 @@ export const gardenStories: GardenStory[] = [
         note: "Public-domain edition of Frances Hodgson Burnett's novel used for the literary reading.",
       },
     ],
-    relatedSlugs: ["little-forest-growing-a-life", "one-herb-by-the-kitchen"],
+    relatedSlugs: [
+      "secret-history-british-garden-time",
+      "little-forest-growing-a-life",
+      "one-herb-by-the-kitchen",
+    ],
   },
   {
     slug: "one-herb-by-the-kitchen",
@@ -272,7 +424,11 @@ export const gardenStories: GardenStory[] = [
         note: "Practical ways to harvest and preserve surplus herbs.",
       },
     ],
-    relatedSlugs: ["little-forest-growing-a-life", "secret-garden-paying-attention"],
+    relatedSlugs: [
+      "secret-history-british-garden-time",
+      "little-forest-growing-a-life",
+      "secret-garden-paying-attention",
+    ],
   },
 ];
 
