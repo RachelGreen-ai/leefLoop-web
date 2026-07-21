@@ -204,8 +204,8 @@ export const guides: PlantGuide[] = [
         id: "light",
         heading: "2. Look at the light it actually receives",
         paragraphs: [
-          "Monstera grows best with bright light. A room can feel bright to us while the plant several feet from the window receives very little useful light. Sparse growth and small leaves without splits often accompany insufficient light.",
-          "Move it closer gradually. Plants brought outdoors for summer or shifted into direct sun need time to acclimate or the leaves can burn.",
+          "Monstera usually grows best indoors with bright, indirect or filtered light. It tolerates lower light, which is why it is often described as shade-loving, but tolerance is not the same as best growth. In lower light, growth may be slower and new leaves may stay smaller or develop fewer splits.",
+          "Bright does not mean harsh direct sun. Move the plant closer to usable window light gradually, and soften intense midday or afternoon sun with distance or a sheer curtain. A sudden move outdoors or into strong direct sun can burn the leaves.",
         ],
       },
       {
@@ -249,6 +249,11 @@ export const guides: PlantGuide[] = [
         answer:
           "No. Misting creates only a brief humidity change. Stable room conditions, correct watering, usable light, and healthy roots matter more.",
       },
+      {
+        question: "Is Monstera a shade-loving or low-light plant?",
+        answer:
+          "Monstera can tolerate medium or lower indoor light, but it generally grows more vigorously in bright, indirect or filtered light. Protect it from abrupt, intense direct sun. In everyday plant language, shade-loving often means no harsh sun, not a dark corner with very little usable light.",
+      },
     ],
     sources: [
       {
@@ -256,6 +261,12 @@ export const guides: PlantGuide[] = [
         publisher: "University of Wisconsin-Madison Horticulture",
         url: "https://hort.extension.wisc.edu/articles/monstera-deliciosa/",
         note: "Light, watering, humidity, support, repotting, and pest guidance.",
+      },
+      {
+        title: "Monstera deliciosa",
+        publisher: "Missouri Botanical Garden",
+        url: "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b605",
+        note: "Bright indoor light and protection from strong direct sun.",
       },
       {
         title: "6 in. Monstera Thai Constellation Plant",

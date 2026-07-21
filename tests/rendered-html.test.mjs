@@ -133,6 +133,9 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(guideHtml, /References/);
   assert.match(guideHtml, /FAQPage/);
   assert.match(guideHtml, /University of Wisconsin-Madison Horticulture/);
+  assert.match(guideHtml, /Bright does not mean harsh direct sun\./);
+  assert.match(guideHtml, /Is Monstera a shade-loving or low-light plant\?/);
+  assert.match(guideHtml, /Missouri Botanical Garden/);
   assert.match(guideHtml, /href="\/notes\?topic=indoor-plants"[^>]*>Indoor plants<\/a>/);
   assert.doesNotMatch(guideHtml, /Indoor plant homes|Year-round care|Sources &amp; review/);
 });
