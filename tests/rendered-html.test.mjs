@@ -124,6 +124,7 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(hubHtml, /href="\/notes\?topic=organic-first"/);
   assert.match(hubHtml, /New olive tree: first-week care/);
   assert.match(hubHtml, /What eggshells really do in a garden/);
+  assert.match(hubHtml, /Trader Joe&#x27;s Premium Monstera care/);
 
   const guideResponse = await render("/notes/monstera-leaves-curling");
   assert.equal(guideResponse.status, 200);
@@ -138,6 +139,50 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(guideHtml, /Missouri Botanical Garden/);
   assert.match(guideHtml, /href="\/notes\?topic=indoor-plants"[^>]*>Indoor plants<\/a>/);
   assert.doesNotMatch(guideHtml, /Indoor plant homes|Year-round care|Sources &amp; review/);
+
+  const retailGuideResponse = await render("/notes/trader-joes-premium-monstera-first-week");
+  assert.equal(retailGuideResponse.status, 200);
+  const retailGuideHtml = await retailGuideResponse.text();
+  assert.match(retailGuideHtml, /Trader Joe&#x27;s Premium Monstera: what to do in the first week\./);
+  assert.match(retailGuideHtml, /Premium Monstera/);
+  assert.match(retailGuideHtml, /UC Statewide IPM Program/);
+  assert.match(retailGuideHtml, /FAQPage/);
+});
+
+test("publishes the complete 24-note library with valid internal note links", async () => {
+  const hubResponse = await render("/notes");
+  const hubHtml = await hubResponse.text();
+  const noteLinks = new Set(
+    [...hubHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
+  );
+
+  assert.equal(noteLinks.size, 24);
+  assert.ok(noteLinks.has("/notes/trader-joes-premium-monstera-first-week"));
+  assert.ok(noteLinks.has("/notes/easiest-indoor-succulents-ranked"));
+  assert.ok(noteLinks.has("/notes/tomato-blossom-end-rot-eggshells"));
+  assert.ok(noteLinks.has("/notes/realistic-succulent-selling-plan"));
+
+  const renderedNotes = await Promise.all(
+    [...noteLinks].map(async (pathname) => {
+      const response = await render(pathname);
+      return { pathname, response, html: await response.text() };
+    }),
+  );
+
+  for (const { pathname, response, html } of renderedNotes) {
+    assert.equal(response.status, 200, `${pathname} should resolve`);
+    assert.match(html, /FAQPage/, `${pathname} should publish FAQ schema`);
+    assert.match(html, /References/, `${pathname} should publish references`);
+    assert.match(html, /Three things to check first/, `${pathname} should be answer-first`);
+
+    const relatedLinks = [
+      ...html.matchAll(/href="(\/notes\/[^"?#]+)"/g),
+    ].map((match) => match[1]);
+
+    for (const relatedLink of relatedLinks) {
+      assert.ok(noteLinks.has(relatedLink), `${pathname} links to missing note ${relatedLink}`);
+    }
+  }
 });
 
 test("server-renders about and privacy pages", async () => {
@@ -153,22 +198,35 @@ test("server-renders about and privacy pages", async () => {
 });
 
 test("publishes canonical URLs, search directives, and a complete image sitemap", async () => {
-  const [homeResponse, pulseResponse, guideResponse, sitemapResponse, robotsResponse] =
+  const [
+    homeResponse,
+    pulseResponse,
+    guideResponse,
+    notesResponse,
+    storiesResponse,
+    sitemapResponse,
+    robotsResponse,
+  ] =
     await Promise.all([
       render("/"),
       render("/plantpulse"),
       render("/notes/monstera-leaves-curling"),
+      render("/notes"),
+      render("/garden-blog"),
       render("/sitemap.xml"),
       render("/robots.txt"),
     ]);
 
-  const [homeHtml, pulseHtml, guideHtml, sitemapXml, robotsTxt] = await Promise.all([
-    homeResponse.text(),
-    pulseResponse.text(),
-    guideResponse.text(),
-    sitemapResponse.text(),
-    robotsResponse.text(),
-  ]);
+  const [homeHtml, pulseHtml, guideHtml, notesHtml, storiesHtml, sitemapXml, robotsTxt] =
+    await Promise.all([
+      homeResponse.text(),
+      pulseResponse.text(),
+      guideResponse.text(),
+      notesResponse.text(),
+      storiesResponse.text(),
+      sitemapResponse.text(),
+      robotsResponse.text(),
+    ]);
 
   assert.match(homeHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/"/);
   assert.match(pulseHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/plantpulse"/);
@@ -184,7 +242,14 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
   assert.match(sitemapXml, /<image:image>/);
   assert.match(sitemapXml, /gardencompanion\.example\/notes\/monstera-leaves-curling/);
   assert.match(sitemapXml, /gardencompanion\.example\/garden-blog\/little-forest-growing-a-life/);
-  assert.equal((sitemapXml.match(/<url>/g) ?? []).length, 13);
+  const noteLinks = new Set(
+    [...notesHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
+  );
+  const storyLinks = new Set(
+    [...storiesHtml.matchAll(/href="(\/garden-blog\/[^"?#]+)"/g)].map((match) => match[1]),
+  );
+  const sitemapUrlCount = (sitemapXml.match(/<url>/g) ?? []).length;
+  assert.equal(sitemapUrlCount, 6 + noteLinks.size + storyLinks.size);
 
   assert.equal(robotsResponse.status, 200);
   assert.match(robotsTxt, /User-Agent: \*/i);

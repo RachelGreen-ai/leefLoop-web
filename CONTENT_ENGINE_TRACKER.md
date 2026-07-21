@@ -8,19 +8,22 @@ Local path: `/Users/junyishen/Documents/GitHub/leefLoop-web`
 
 Working public name: **Garden Companion**
 
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 Current build checkpoint:
 - Audience-facing content website is complete for the first public MVP.
 - Production deployment is live at `https://garden-companion-notes.vercel.app`.
-- `/notes` hub and reusable guide template are live locally.
-- Four source-backed starter guides are published in the codebase.
+- `/notes` hub, search, topic filters, and reusable guide template are live.
+- Twenty-four source-backed Plant Notes are in the release build: four foundation notes plus the new twenty-note search-intent sprint.
+- Retail-first naming now follows the words readers see and search, such as `Trader Joe's Premium Monstera`; cultivar and botanical distinctions are explained inside the note.
+- The new library covers retail finds, beginner succulent care, desert rose, string of pearls, tomato and zucchini problems, balcony food growing, propagation, and realistic local plant selling.
 - `/garden-blog` and three complete Garden Stories connect plant care with film, literature, and everyday rituals.
 - The first culture-led feature explores seasonal growing and cooking through the Japanese films *Little Forest*.
 - PlantPulse now links to dated evidence instead of displaying invented precision.
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
 - Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
 - Google search launch foundation now includes truthful dynamic sitemap dates, image sitemap entries, complete canonicals, absolute structured-data URLs, and optional Search Console verification metadata.
+- Release tests now render all 24 notes, verify every internal note link, and require FAQ and reference sections before publication.
 
 ## 0. Strategic Decision
 
@@ -253,31 +256,56 @@ Weekly newsletter structure:
 4. One organic-first troubleshooting tip.
 5. One community prompt or reply request.
 
-## 6. 30-Day Editorial Sprint
+## 6. Twenty-Note Search Sprint
 
-Week 1:
-- Costco olive tree first-week care
-- Monstera leaves curling
-- Basil to pesto first harvest
-- Eggshells in the garden
+Status: Complete in the July 21 release build.
 
-Week 2:
-- Grocery store orchid care
-- Pothos low-light truth
-- Tomato starts before hot weather
-- Coffee grounds for plants
+### Retail And Grocery Plant Intent
 
-Week 3:
-- Blueberry bush in containers
-- Indoor plant watering by pot size
-- Rosemary and thyme herb corner
-- Beginner pest checks before spraying
+1. Trader Joe's Premium Monstera: first-week care.
+2. Is a Trader Joe's Premium Monstera a Thai Constellation?
+3. Brown spots on a Premium Monstera.
+4. Grocery-store orchid care after blooming.
+5. Whether to separate a Costco succulent garden.
 
-Week 4:
-- Patio citrus care
-- Pet-aware houseplant notes
-- Hydrangea heat stress
-- Little Forest-inspired seasonal plant notebook
+### Beginner Indoor And Succulent Intent
+
+6. Money tree leaves turning yellow.
+7. Easiest indoor succulents, honestly ranked.
+8. How often to water succulents without a calendar.
+9. How to reset a tall, leggy succulent.
+10. Mushy succulent leaves and root-rot rescue.
+
+### Specialty Care And Myth Checks
+
+11. How to build a succulent soil mix.
+12. Desert rose yellow leaves and caudex checks.
+13. Desert rose not blooming.
+14. String of pearls shriveled, mushy, or bald.
+15. Tomato blossom-end rot and why eggshells do not provide a quick fix.
+
+### Farm-To-Table And Community Value
+
+16. Tomato leaves curling in summer.
+17. Zucchini flowers but no fruit.
+18. A realistic balcony snack garden.
+19. Five succulents to propagate for gifts, swaps, or local sale.
+20. A realistic small-batch local succulent-selling plan.
+
+### Editorial Quality Gate
+
+Every new Plant Note must pass these checks before release:
+
+1. **Search language first.** Put the complete, plain retail or common name in the title. Explain scientific, botanical, or cultivar names inside the article.
+2. **Answer first.** Give the useful short answer before background, followed by three immediate checks.
+3. **Evidence hierarchy.** Use retailer pages and forums to identify demand. Use Extension services, public horticulture institutions, regulators, and original official sources for care, safety, and legal claims.
+4. **No false precision.** Do not invent search volume, local inventory, success rates, profit, or fixed watering schedules.
+5. **Uncertainty is visible.** Separate a likely pattern from a confirmed diagnosis and tell readers what observation would change the answer.
+6. **Useful low-cost action.** Prefer observation, drainage, light, sanitation, soil testing, and simple household routines over unnecessary products.
+7. **Complete page.** Include four or more useful sections, a practical checklist, FAQs, reliable sources, an accurate image, and related notes.
+8. **Automated release check.** Every note must return 200, publish FAQ schema and References, and contain no broken Plant Notes links.
+
+Forum and social discussions can shape the question queue, but they never become the sole evidence for a technical care recommendation.
 
 ## 7. Community And Sharing Loop
 
@@ -326,7 +354,7 @@ Tasks:
 
 ### Phase 2: Content Page System
 
-Status: Done for structured content MVP.
+Status: Done for the 24-note public content MVP.
 
 Tasks:
 - Add `/notes` hub. Done.
@@ -336,6 +364,9 @@ Tasks:
 - Add related guide links. Done.
 - Add article cards on homepage. Done.
 - Publish olive tree, Monstera, basil, and eggshell guides. Done.
+- Publish the twenty-note search-intent sprint across retail, succulent, edible, and community topics. Done.
+- Split the guide library into typed topic modules so larger batches remain maintainable. Done.
+- Add rendered release coverage for all 24 notes and their internal links. Done.
 - Add editorial approach and privacy pages. Done.
 - Add a taxonomy-driven Plant Notes library with working topic filters, live search, result counts, empty states, and shareable `topic`/`q` URLs. Done.
 - Link every guide card and article breadcrumb back to its relevant Plant Notes topic. Done.
@@ -395,14 +426,15 @@ Tasks:
 - Verify the final domain in Google Search Console and Bing Webmaster Tools. Not started.
 - Submit the production-domain sitemap. Not started.
 - Add privacy-aware analytics and newsletter conversion events.
-- Send the first weekly issue using the four published guides.
+- Send the first weekly issue using the strongest new retail, succulent, and balcony guides.
 - Review subscriber source, interest, region, and reply patterns after two issues.
 
 ## 9. Next Build Priorities
 
 1. Choose and connect the final custom domain, then set `NEXT_PUBLIC_SITE_URL` in Vercel.
 2. Verify the domain in Search Console and submit `sitemap.xml` using `docs/google-search-launch.md`.
-3. Turn the current Costco list into the next three guides: orchid, Monstera Esqueleto, and kumquat.
-4. Add the Search Console query import after enough impressions exist.
-5. Publish the first weekly letter and record topic-level conversion.
-6. Add one new guide per week only when it has a dated signal and a credible care source.
+3. Publish a first newsletter issue that links to Trader Joe's Premium Monstera, the honest succulent ranking, and the balcony snack garden; record clicks by topic.
+4. Add privacy-aware analytics for note view, search, topic filter, related-note click, source click, and newsletter conversion.
+5. Use Search Console queries, onsite search with no results, subscriber replies, retailer signals, and seasonal timing to rank the next briefs.
+6. Build the next cluster only after demand review: pothos low-light truth, coffee grounds, blueberry containers, patio citrus, pet-aware plant choices, and hydrangea heat stress.
+7. Automate brief generation and source-change alerts while keeping claim review and final editorial approval human-led.
