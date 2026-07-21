@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
+import { gardenStories } from "./data/garden-stories";
 import { guides } from "./data/guides";
+import { getSiteUrl } from "./lib/site-url";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gardencompanion.example";
+const siteUrl = getSiteUrl();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const latestUpdate = new Date("2026-07-20T00:00:00Z");
@@ -26,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${siteUrl}/garden-blog`,
+      lastModified: latestUpdate,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
       url: `${siteUrl}/about`,
       lastModified: latestUpdate,
       changeFrequency: "monthly",
@@ -42,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(`${guide.updatedAt}T00:00:00Z`),
       changeFrequency: "monthly" as const,
       priority: 0.85,
+    })),
+    ...gardenStories.map((story) => ({
+      url: `${siteUrl}/garden-blog/${story.slug}`,
+      lastModified: new Date(`${story.updatedAt}T00:00:00Z`),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     })),
   ];
 }

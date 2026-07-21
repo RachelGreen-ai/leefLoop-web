@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Our Approach To Plant Care",
+  title: "About Garden Companion",
   description:
     "How Garden Companion turns seasonal plant signals and evidence-based horticulture into warm, practical care notes for real homes.",
   alternates: { canonical: "/about" },
@@ -33,7 +33,7 @@ export default function AboutPage() {
     <main>
       <SiteHeader />
       <section className="about-hero">
-        <p className="eyebrow">Our approach</p>
+        <p className="eyebrow">About garden companion</p>
         <h1>Plant care should leave you calmer and more capable.</h1>
         <p>
           We notice what people are bringing home, then pair that timely curiosity with careful

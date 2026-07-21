@@ -17,7 +17,7 @@ import {
 } from "../data/plantpulse";
 
 export const metadata: Metadata = {
-  title: "PlantPulse | Weekly Local And Indoor Plant Trend Notes",
+  title: "Trending Plants | Local And Indoor Plant Notes",
   description:
     "A warm plant signal digest for local gardens, indoor potted plants, seasonal care notes, Costco plant finds, search trends, and community prompts.",
 };
@@ -35,7 +35,7 @@ export default function PlantPulsePage() {
       <SiteHeader />
 
       <section className="pulse-hero">
-        <p className="eyebrow">PlantPulse</p>
+        <p className="eyebrow">Trending plants</p>
         <h1>What plant lovers are noticing this week.</h1>
         <p>
           A gentle signal digest for local gardens and indoor plant homes: what is appearing,

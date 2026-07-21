@@ -1,0 +1,11 @@
+.vinext
+dist
+.wrangler
+build
+db
+drizzle
+examples
+worker
+drizzle.config.ts
+vite.config.ts
+**/* 2.ts

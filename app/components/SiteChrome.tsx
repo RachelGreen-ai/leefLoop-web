@@ -11,9 +11,9 @@ export function SiteHeader() {
         </span>
       </Link>
       <nav aria-label="Primary navigation">
-        <Link href="/notes">Plant notes</Link>
-        <Link href="/plantpulse">PlantPulse</Link>
-        <Link href="/about">Our approach</Link>
+        <Link href="/notes">Plant Notes</Link>
+        <Link href="/plantpulse">Trending Plants</Link>
+        <Link href="/garden-blog">Garden Stories</Link>
       </nav>
       <Link className="header-cta" href="/#newsletter">
         Subscribe
@@ -33,9 +33,10 @@ export function SiteFooter() {
         </p>
       </div>
       <div>
-        <Link href="/notes">Plant notes</Link>
-        <Link href="/plantpulse">PlantPulse</Link>
-        <Link href="/about">Our approach</Link>
+        <Link href="/notes">Plant Notes</Link>
+        <Link href="/plantpulse">Trending Plants</Link>
+        <Link href="/garden-blog">Garden Stories</Link>
+        <Link href="/about">About</Link>
         <Link href="/privacy">Privacy</Link>
         <Link href="/#newsletter">Subscribe</Link>
       </div>

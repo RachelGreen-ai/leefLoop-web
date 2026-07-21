@@ -12,11 +12,14 @@ Last updated: 2026-07-20
 
 Current build checkpoint:
 - Audience-facing content website is complete for the first public MVP.
+- Production deployment is live at `https://garden-companion-notes.vercel.app`.
 - `/notes` hub and reusable guide template are live locally.
 - Four source-backed starter guides are published in the codebase.
+- `/garden-blog` and three complete Garden Stories connect plant care with film, literature, and everyday rituals.
+- The first culture-led feature explores seasonal growing and cooking through the Japanese films *Little Forest*.
 - PlantPulse now links to dated evidence instead of displaying invented precision.
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
-- Newsletter, privacy, editorial approach, sitemap, robots, and social preview are implemented.
+- Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
 
 ## 0. Strategic Decision
 

@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           <h2>What we collect</h2>
           <p>
             When you subscribe, we collect your email address and any region or plant interest you
-            choose to share. When you send a PlantPulse observation, we collect the plant, broad
+            choose to share. When you send a trending-plant observation, we collect the plant, broad
             place or context, observation type, and optional email address.
           </p>
         </section>

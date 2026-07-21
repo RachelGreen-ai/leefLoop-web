@@ -40,7 +40,26 @@ test("server-renders the Garden Companion MVP homepage", async () => {
   assert.match(html, /Seasonal inspiration/);
   assert.match(html, /A calmer plant letter/);
   assert.match(html, /Beautiful, useful, and honest\./);
+  assert.match(html, /Garden Stories/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
+});
+
+test("server-renders the Garden Stories collection and complete Little Forest essay", async () => {
+  const hubResponse = await render("/garden-blog");
+  assert.equal(hubResponse.status, 200);
+  const hubHtml = await hubResponse.text();
+  assert.match(hubHtml, /Where plants meet stories, seasons, and everyday life\./);
+  assert.match(hubHtml, /What Little Forest understands about growing a life/);
+  assert.match(hubHtml, /The Secret Garden is really a story about paying attention/);
+  assert.match(hubHtml, /The small magic of keeping one herb beside the kitchen/);
+
+  const storyResponse = await render("/garden-blog/little-forest-growing-a-life");
+  assert.equal(storyResponse.status, 200);
+  const storyHtml = await storyResponse.text();
+  assert.match(storyHtml, /The garden is the calendar/);
+  assert.match(storyHtml, /A small way to live with the story/);
+  assert.match(storyHtml, /Japanese Film Database/);
+  assert.match(storyHtml, /BreadcrumbList/);
 });
 
 test("server-renders the PlantPulse signal engine page", async () => {
@@ -78,7 +97,7 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(guideHtml, /University of Wisconsin-Madison Horticulture/);
 });
 
-test("server-renders editorial approach and privacy pages", async () => {
+test("server-renders about and privacy pages", async () => {
   const aboutResponse = await render("/about");
   assert.equal(aboutResponse.status, 200);
   assert.match(await aboutResponse.text(), /Plant care should leave you calmer and more capable\./);

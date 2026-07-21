@@ -12,17 +12,20 @@ Last updated: 2026-07-20
 
 ## Build Checkpoint
 
-The first release candidate is now implemented:
+The first release candidate is now implemented and deployed to Vercel:
 - content-first homepage
 - `/notes` publication hub
 - four complete, sourced starter guides
+- Garden Stories hub with three complete film, literature, and everyday-plant essays
 - source-backed PlantPulse with current Costco online plant watch
 - newsletter and plant-signal capture
 - editorial approach and privacy pages
 - technical SEO/GEO foundation and social preview
 - automated source freshness and Costco product-change monitor
 
-Remaining release work is deployment configuration, production form storage, analytics/search verification, and the first newsletter send.
+Production: `https://garden-companion-notes.vercel.app`
+
+Remaining release work is production form storage, analytics/search verification, a custom domain, GitHub-Vercel integration, and the first newsletter send.
 
 ## 2026-07-20 Strategy Update
 

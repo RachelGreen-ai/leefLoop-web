@@ -41,7 +41,7 @@ const contentPillars = [
     title: "Seasonal stories",
     detail: "Plant notes inspired by farmers markets, home cooking, beautiful films, and quiet seasonal rituals.",
     tag: "Living well",
-    href: "/notes",
+    href: "/garden-blog",
   },
 ];
 
@@ -192,7 +192,7 @@ export default function Home() {
 
       <section id="plantpulse" className="plantpulse-section">
         <div className="plantpulse-copy">
-          <p className="eyebrow">PlantPulse</p>
+          <p className="eyebrow">Trending plants</p>
           <h2>See what plant lovers near you are noticing this week.</h2>
           <p>
             A gentle weekly pulse of plants people are bringing home, talking about, growing,
@@ -202,7 +202,7 @@ export default function Home() {
             Get the weekly digest
           </a>
           <a className="text-link secondary-text-link" href="/plantpulse">
-            Open PlantPulse
+            Explore trending plants
           </a>
         </div>
         <div className="trend-list" aria-label="Example local plant trends">
@@ -237,6 +237,26 @@ export default function Home() {
           <strong>Seasonal inspiration:</strong> a beautiful film, a farmers market table, or a
           home-cooking ritual can become a real guide for what to grow, how to care for it, and how
           to enjoy it.
+        </div>
+      </section>
+
+      <section className="home-story-feature">
+        <Link
+          className="home-story-image"
+          href="/garden-blog/little-forest-growing-a-life"
+          aria-label="Read What Little Forest understands about growing a life"
+        />
+        <div>
+          <p className="eyebrow">Garden stories · On screen</p>
+          <h2>What Little Forest understands about growing a life.</h2>
+          <p>
+            Rice, tomatoes, nuts, and preserves turn the four seasons into something you can
+            touch, taste, and remember. Our first film-and-garden reading ends with four small
+            rituals to try at home.
+          </p>
+          <Link className="text-link" href="/garden-blog/little-forest-growing-a-life">
+            Read the story <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

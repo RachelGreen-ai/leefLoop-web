@@ -5,7 +5,7 @@ import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { guides } from "../data/guides";
 
 export const metadata: Metadata = {
-  title: "Practical Plant Care Guides",
+  title: "Plant Notes For Everyday Growing",
   description:
     "Calm, evidence-aware plant care for Costco and local finds, Monstera and indoor plants, organic garden questions, and farm-to-table growing.",
   alternates: { canonical: "/notes" },
@@ -17,9 +17,9 @@ export default function NotesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Garden Companion plant care guides",
+    name: "Garden Companion plant notes",
     description:
-      "Practical plant care guides for local finds, indoor plants, organic garden questions, and seasonal growing.",
+      "Practical plant notes for local finds, indoor plants, organic garden questions, and seasonal growing.",
     mainEntity: {
       "@type": "ItemList",
       itemListElement: guides.map((guide, index) => ({

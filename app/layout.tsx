@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist } from "next/font/google";
+import { getSiteUrl } from "./lib/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,7 +15,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://gardencompanion.example"),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "Garden Companion | Practical Plant Care Notes",
     template: "%s | Garden Companion",
