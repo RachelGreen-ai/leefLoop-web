@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GuideCard } from "../components/GuideCard";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
-import { guides } from "../data/guides";
+import { getGuideSummaries, guides } from "../data/guides";
 import { getSiteUrl } from "../lib/site-url";
 import { buildSocialMetadata } from "../lib/social-metadata";
+import { NotesExplorer } from "./NotesExplorer";
 
 const siteUrl = getSiteUrl();
 const pageTitle = "Plant Notes For Everyday Growing";
@@ -18,9 +18,8 @@ export const metadata: Metadata = {
   ...buildSocialMetadata({ title: pageTitle, description: pageDescription, path: "/notes" }),
 };
 
-const filters = ["All notes", "Local finds", "Indoor plants", "Farm to table", "Organic-first"];
-
 export default function NotesPage() {
+  const guideSummaries = getGuideSummaries();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -55,21 +54,7 @@ export default function NotesPage() {
         </p>
       </section>
 
-      <section className="notes-index">
-        <div className="topic-filter" aria-label="Topics in this first collection">
-          {filters.map((filter, index) => (
-            <span className={index === 0 ? "active" : ""} key={filter}>
-              {filter}
-            </span>
-          ))}
-        </div>
-
-        <div className="article-grid">
-          {guides.map((guide, index) => (
-            <GuideCard guide={guide} featured={index === 0} key={guide.slug} />
-          ))}
-        </div>
-      </section>
+      <NotesExplorer guides={guideSummaries} />
 
       <section className="notes-letter">
         <div>

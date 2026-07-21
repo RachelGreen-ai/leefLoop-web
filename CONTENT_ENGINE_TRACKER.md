@@ -337,6 +337,15 @@ Tasks:
 - Add article cards on homepage. Done.
 - Publish olive tree, Monstera, basil, and eggshell guides. Done.
 - Add editorial approach and privacy pages. Done.
+- Add a taxonomy-driven Plant Notes library with working topic filters, live search, result counts, empty states, and shareable `topic`/`q` URLs. Done.
+- Link every guide card and article breadcrumb back to its relevant Plant Notes topic. Done.
+- Keep `/notes` statically generated and send only lightweight guide summaries to the browser search index. Done.
+
+Plant Notes scaling rules:
+- New guides automatically join search, topic counts, filters, cards, structured data, and the sitemap when added to `app/data/guides.ts`.
+- Every guide must use one category defined in `app/data/note-topics.ts`; add a new public category only when it will support a meaningful collection of notes.
+- Filter/search query URLs canonicalize to `/notes`, so they remain useful and shareable without creating duplicate index pages.
+- Revisit a generated external search index when the library exceeds roughly 250 notes or its client search payload becomes materially large.
 
 ### Phase 3: Newsletter Operations
 

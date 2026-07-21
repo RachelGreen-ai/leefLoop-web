@@ -1,7 +1,8 @@
 import Link from "next/link";
-import type { PlantGuide } from "../data/guides";
+import type { GuideSummary } from "../data/guides";
+import { getNoteTopicHref } from "../data/note-topics";
 
-export function GuideCard({ guide, featured = false }: { guide: PlantGuide; featured?: boolean }) {
+export function GuideCard({ guide, featured = false }: { guide: GuideSummary; featured?: boolean }) {
   return (
     <article className={`article-card${featured ? " featured" : ""}`}>
       <Link
@@ -12,7 +13,7 @@ export function GuideCard({ guide, featured = false }: { guide: PlantGuide; feat
       />
       <div className="article-card-body">
         <div className="article-card-meta">
-          <span>{guide.category}</span>
+          <Link href={getNoteTopicHref(guide.category)}>{guide.category}</Link>
           <small>{guide.readingTime}</small>
         </div>
         <h3>

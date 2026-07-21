@@ -9,6 +9,7 @@ import {
   getRelatedGuides,
   guides,
 } from "../../data/guides";
+import { getNoteTopicForCategory } from "../../data/note-topics";
 import { getSiteUrl } from "../../lib/site-url";
 
 const siteUrl = getSiteUrl();
@@ -54,6 +55,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   }
 
   const relatedGuides = getRelatedGuides(guide.relatedSlugs);
+  const guideTopic = getNoteTopicForCategory(guide.category);
   const pageUrl = `${siteUrl}/notes/${guide.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -65,6 +67,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         image: new URL(guide.image, `${siteUrl}/`).toString(),
         datePublished: guide.publishedAt,
         dateModified: guide.updatedAt,
+        articleSection: guide.category,
         inLanguage: "en-US",
         mainEntityOfPage: pageUrl,
         author: {
@@ -114,6 +117,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <Link href="/">Home</Link>
             <span>/</span>
             <Link href="/notes">Plant notes</Link>
+            <span>/</span>
+            <Link href={`/notes?topic=${guideTopic.slug}`}>{guideTopic.label}</Link>
           </div>
           <p className="eyebrow">{guide.category}</p>
           <h1>{guide.title}</h1>

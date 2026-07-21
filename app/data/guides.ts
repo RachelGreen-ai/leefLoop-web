@@ -40,6 +40,22 @@ export type PlantGuide = {
   relatedSlugs: string[];
 };
 
+export type GuideSummary = Pick<
+  PlantGuide,
+  | "slug"
+  | "category"
+  | "title"
+  | "shortTitle"
+  | "dek"
+  | "answer"
+  | "updatedAt"
+  | "readingTime"
+  | "place"
+  | "season"
+  | "image"
+  | "imagePosition"
+>;
+
 export const guides: PlantGuide[] = [
   {
     slug: "new-olive-tree-first-week-care",
@@ -437,6 +453,40 @@ export const guides: PlantGuide[] = [
 
 export function getGuide(slug: string) {
   return guides.find((guide) => guide.slug === slug);
+}
+
+export function getGuideSummaries(): GuideSummary[] {
+  return guides
+    .map(
+      ({
+        slug,
+        category,
+        title,
+        shortTitle,
+        dek,
+        answer,
+        updatedAt,
+        readingTime,
+        place,
+        season,
+        image,
+        imagePosition,
+      }) => ({
+        slug,
+        category,
+        title,
+        shortTitle,
+        dek,
+        answer,
+        updatedAt,
+        readingTime,
+        place,
+        season,
+        image,
+        imagePosition,
+      }),
+    )
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
 }
 
 export function getRelatedGuides(slugs: string[]) {

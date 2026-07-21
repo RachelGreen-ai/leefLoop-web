@@ -116,6 +116,12 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.equal(hubResponse.status, 200);
   const hubHtml = await hubResponse.text();
   assert.match(hubHtml, /Useful answers for the plants already in your life\./);
+  assert.match(hubHtml, /Find the note that fits the moment\./);
+  assert.match(hubHtml, /Search Plant Notes/);
+  assert.match(hubHtml, /href="\/notes\?topic=local-finds"/);
+  assert.match(hubHtml, /href="\/notes\?topic=indoor-plants"/);
+  assert.match(hubHtml, /href="\/notes\?topic=farm-to-table"/);
+  assert.match(hubHtml, /href="\/notes\?topic=organic-first"/);
   assert.match(hubHtml, /New olive tree: first-week care/);
   assert.match(hubHtml, /What eggshells really do in a garden/);
 
@@ -127,6 +133,7 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(guideHtml, /References/);
   assert.match(guideHtml, /FAQPage/);
   assert.match(guideHtml, /University of Wisconsin-Madison Horticulture/);
+  assert.match(guideHtml, /href="\/notes\?topic=indoor-plants"[^>]*>Indoor plants<\/a>/);
   assert.doesNotMatch(guideHtml, /Indoor plant homes|Year-round care|Sources &amp; review/);
 });
 
