@@ -1,0 +1,341 @@
+{
+  "generatedAt": "2026-07-21T19:19:34.388Z",
+  "entityRegistryVersion": 1,
+  "sourceSnapshotGeneratedAt": "2026-07-21T19:16:29.933Z",
+  "googleTrendsObservationCount": 0,
+  "scoringNotice": "Scores are editorial prioritization aids, not public popularity claims. Missing evidence always scores zero.",
+  "queue": [
+    {
+      "entityId": "thai-constellation-monstera",
+      "canonicalName": "Thai Constellation Monstera",
+      "botanicalName": "Monstera deliciosa 'Thai Constellation'",
+      "score": 35,
+      "band": "watch",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 25,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 5,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Thai Constellation Monstera",
+        "Premium Monstera",
+        "Live 5-inch Thai Constellation Plant",
+        "6-inch Monstera Thai Constellation Plant",
+        "Thai Con Monstera"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Thai+Constellation+Monstera%2CPremium+Monstera%2CLive+5-inch+Thai+Constellation+Plant%2C6-inch+Monstera+Thai+Constellation+Plant%2CThai+Con+Monstera",
+      "aliases": [
+        "Premium Monstera",
+        "Live 5-inch Thai Constellation Plant",
+        "6-inch Monstera Thai Constellation Plant",
+        "Thai Con Monstera",
+        "Variegated Monstera",
+        "Monstera deliciosa Thai Constellation"
+      ],
+      "tags": [
+        "Premium Monstera",
+        "Thai Constellation",
+        "Variegated Monstera",
+        "Retail plant finds"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Target",
+          "label": "Live 5-inch Thai Constellation Plant",
+          "url": "https://www.target.com/p/-/A-92644900",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        },
+        {
+          "retailer": "The Home Depot",
+          "label": "6-inch Monstera Thai Constellation Plant",
+          "url": "https://www.homedepot.com/p/341396770",
+          "observedAt": "2026-07-20",
+          "collection": "dated_editorial_observation"
+        },
+        {
+          "retailer": "Trader Joe's",
+          "label": "Premium Monstera",
+          "url": "https://www.traderjoes.com/home/products/pdp/premium-monstera-069638",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Is a Premium Monstera a Thai Constellation?",
+        "What should I do the first week after bringing a Thai Constellation home?",
+        "Why does my Thai Constellation have brown spots?",
+        "When should I repot a store-bought Thai Constellation?"
+      ],
+      "coverageSlugs": [
+        "trader-joes-premium-monstera-first-week",
+        "trader-joes-premium-monstera-thai-constellation",
+        "premium-monstera-brown-spots"
+      ],
+      "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
+    },
+    {
+      "entityId": "phalaenopsis-orchid",
+      "canonicalName": "Phalaenopsis orchid",
+      "botanicalName": "Phalaenopsis",
+      "score": 23,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 8,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Phalaenopsis orchid",
+        "Moth orchid",
+        "Orchid Duo",
+        "Premium Orchid",
+        "Grocery-store orchid"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Phalaenopsis+orchid%2CMoth+orchid%2COrchid+Duo%2CPremium+Orchid%2CGrocery-store+orchid",
+      "aliases": [
+        "Moth orchid",
+        "Orchid Duo",
+        "Premium Orchid",
+        "Grocery-store orchid"
+      ],
+      "tags": [
+        "Orchid",
+        "Phalaenopsis",
+        "Grocery-store plants",
+        "After blooming"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "10\" Phalaenopsis Orchid Duo",
+          "url": "https://www.costco.com/.product.100454594.html",
+          "observedAt": "2026-07-21",
+          "collection": "automated_structured_product_check"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "What should I do after orchid flowers fall?",
+        "Should I cut a green orchid spike?",
+        "How can I tell whether orchid roots are healthy?"
+      ],
+      "coverageSlugs": [
+        "grocery-store-orchid-after-blooming"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "mixed-succulent-garden",
+      "canonicalName": "Mixed succulent garden",
+      "botanicalName": null,
+      "score": 21,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 6,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Mixed succulent garden",
+        "Succulent Garden",
+        "Succulent bowl",
+        "Succulent and Cactus Desert Collection",
+        "Mixed succulent planter"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Mixed+succulent+garden%2CSucculent+Garden%2CSucculent+bowl%2CSucculent+and+Cactus+Desert+Collection%2CMixed+succulent+planter",
+      "aliases": [
+        "Succulent Garden",
+        "Succulent bowl",
+        "Succulent and Cactus Desert Collection",
+        "Mixed succulent planter"
+      ],
+      "tags": [
+        "Succulent garden",
+        "Mixed planters",
+        "Repotting",
+        "Retail plant finds"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Echeveria Succulent Garden",
+          "url": "https://www.costco.com/.product.4000120803.html",
+          "observedAt": "2026-07-21",
+          "collection": "automated_structured_product_check"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Should I separate a mixed succulent garden?",
+        "Why are some plants in my succulent bowl dying first?",
+        "When should I repot a store-bought succulent arrangement?"
+      ],
+      "coverageSlugs": [
+        "costco-succulent-garden-separate-repot"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "summer-tomato-problems",
+      "canonicalName": "Summer tomato problems",
+      "botanicalName": null,
+      "score": 20,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 0,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 15,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Summer tomato problems",
+        "Tomato leaf curl",
+        "Black bottom on tomato",
+        "Tomato blossom-end rot",
+        "Eggshells for tomato plants"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Summer+tomato+problems%2CTomato+leaf+curl%2CBlack+bottom+on+tomato%2CTomato+blossom-end+rot%2CEggshells+for+tomato+plants",
+      "aliases": [
+        "Tomato leaf curl",
+        "Black bottom on tomato",
+        "Tomato blossom-end rot",
+        "Eggshells for tomato plants"
+      ],
+      "tags": [
+        "Tomato",
+        "Leaf curl",
+        "Blossom-end rot",
+        "Summer garden"
+      ],
+      "retailEvidence": [],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are tomato leaves curling in summer?",
+        "Do eggshells fix blossom-end rot?",
+        "How do I keep soil moisture even during hot weather?"
+      ],
+      "coverageSlugs": [
+        "tomato-leaf-curl-summer",
+        "tomato-blossom-end-rot-eggshells"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "money-tree",
+      "canonicalName": "Money tree",
+      "botanicalName": "Pachira aquatica",
+      "score": 19,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 5,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 4
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Money tree",
+        "Money Tree",
+        "Braided money tree",
+        "Pachira aquatica"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Money+tree%2CMoney+Tree%2CBraided+money+tree%2CPachira+aquatica",
+      "aliases": [
+        "Money Tree",
+        "Braided money tree",
+        "Pachira aquatica"
+      ],
+      "tags": [
+        "Money tree",
+        "Indoor plants",
+        "Yellow leaves",
+        "Retail plant finds"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Costa Farms Money Tree Houseplant in Decor Basket",
+          "url": "https://www.costco.com/.product.4000331746.html",
+          "observedAt": "2026-07-21",
+          "collection": "automated_structured_product_check"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are money tree leaves turning yellow?",
+        "Should I remove the tie from a braided money tree?",
+        "How often should I water a money tree?"
+      ],
+      "coverageSlugs": [
+        "money-tree-yellow-leaves"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "potted-olive-tree",
+      "canonicalName": "Potted olive tree",
+      "botanicalName": "Olea europaea",
+      "score": 14,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 0,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 10,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 4
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Potted olive tree",
+        "Fruiting Olive Tree",
+        "Alder & Oak Olive Tree",
+        "Patio olive tree",
+        "Indoor olive tree"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Potted+olive+tree%2CFruiting+Olive+Tree%2CAlder+%26+Oak+Olive+Tree%2CPatio+olive+tree%2CIndoor+olive+tree",
+      "aliases": [
+        "Fruiting Olive Tree",
+        "Alder & Oak Olive Tree",
+        "Patio olive tree",
+        "Indoor olive tree"
+      ],
+      "tags": [
+        "Olive tree",
+        "Container trees",
+        "First-week care",
+        "Retail plant finds"
+      ],
+      "retailEvidence": [],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "What should I do the first week after buying an olive tree?",
+        "Can an olive tree live indoors?",
+        "How often should I water a potted olive tree?"
+      ],
+      "coverageSlugs": [
+        "new-olive-tree-first-week-care"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    }
+  ]
+}

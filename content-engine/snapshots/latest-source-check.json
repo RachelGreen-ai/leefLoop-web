@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-20T22:20:00.233Z",
-  "registryVersion": 1,
-  "sourceCount": 8,
-  "reachableCount": 5,
+  "generatedAt": "2026-07-21T19:16:29.933Z",
+  "registryVersion": 2,
+  "sourceCount": 10,
+  "reachableCount": 7,
   "editorialReviewCount": 2,
   "checks": [
     {
@@ -11,10 +11,10 @@
       "status": 200,
       "result": "reachable",
       "fetchedUrl": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
-      "etag": "W/\"208954594c93b078806993635bcb8400\"",
-      "lastModified": "Mon, 20 Jul 2026 03:11:36 GMT",
-      "bytes": 893518,
-      "contentHash": "623f20f6e19f4622",
+      "etag": "W/\"db55333c2fabebab4813092c331ddb87\"",
+      "lastModified": "Tue, 21 Jul 2026 03:02:28 GMT",
+      "bytes": 893730,
+      "contentHash": "350cba09bcdb0251",
       "productCount": 24,
       "products": [
         {
@@ -26,11 +26,6 @@
           "name": "5\" Kaleidoscope Orchid in White Quinn Pot",
           "url": "https://www.costco.com/.product.4000416380.html",
           "sku": "1000142"
-        },
-        {
-          "name": "Alder & Oak Fruiting Olive Tree",
-          "url": "https://www.costco.com/.product.4000326386.html",
-          "sku": "1778886"
         },
         {
           "name": "Bamboo Plant Collection",
@@ -118,6 +113,11 @@
           "sku": "1974747"
         },
         {
+          "name": "Easy to Care Boston Fern Houseplant in 10 in. Nursery Pot 2-pack",
+          "url": "https://www.costco.com/.product.4000300411.html",
+          "sku": "1545881"
+        },
+        {
           "name": "Echeveria Succulent Garden",
           "url": "https://www.costco.com/.product.4000120803.html",
           "sku": "1036043"
@@ -138,7 +138,7 @@
           "sku": "1471375"
         }
       ],
-      "elapsedMs": 684,
+      "elapsedMs": 491,
       "collectionMode": "change_detection_then_editorial_review",
       "productChanges": {
         "added": [],
@@ -154,10 +154,10 @@
       "etag": null,
       "lastModified": null,
       "bytes": 397,
-      "contentHash": "9c1f6f2f18e031a8",
+      "contentHash": "0c8597bd4d49fca6",
       "productCount": 0,
       "products": [],
-      "elapsedMs": 158,
+      "elapsedMs": 137,
       "collectionMode": "change_detection_then_editorial_review"
     },
     {
@@ -172,7 +172,37 @@
       "contentHash": "ba40374b8738629e",
       "productCount": 0,
       "products": [],
-      "elapsedMs": 191,
+      "elapsedMs": 157,
+      "collectionMode": "change_detection_then_editorial_review"
+    },
+    {
+      "id": "target-indoor-live-plants",
+      "publisher": "Target",
+      "status": 200,
+      "result": "reachable",
+      "fetchedUrl": "https://www.target.com/c/indoor-live-plants-fresh-flowers-produce-grocery/-/N-r04uw",
+      "etag": "W/\"5jv01iasza34zh\"",
+      "lastModified": null,
+      "bytes": 146447,
+      "contentHash": "22c624b06240d024",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 1053,
+      "collectionMode": "change_detection_then_editorial_review"
+    },
+    {
+      "id": "trader-joes-premium-monstera",
+      "publisher": "Trader Joe's",
+      "status": 200,
+      "result": "reachable",
+      "fetchedUrl": "https://www.traderjoes.com/home/products/pdp/premium-monstera-069638",
+      "etag": "W/\"fd6-65723d6c35208-gzip\"",
+      "lastModified": "Tue, 21 Jul 2026 19:14:58 GMT",
+      "bytes": 4054,
+      "contentHash": "9f062d167958ea00",
+      "productCount": 0,
+      "products": [],
+      "elapsedMs": 154,
       "collectionMode": "change_detection_then_editorial_review"
     },
     {
@@ -184,10 +214,10 @@
       "etag": null,
       "lastModified": "Tue, 10 May 2022 13:48:26 GMT",
       "bytes": 77026,
-      "contentHash": "b41ebe9f0a32bc01",
+      "contentHash": "0356073e73965b2e",
       "productCount": 0,
       "products": [],
-      "elapsedMs": 311,
+      "elapsedMs": 283,
       "collectionMode": "change_detection_then_editorial_review"
     },
     {
@@ -196,10 +226,10 @@
       "status": 200,
       "result": "reachable",
       "fetchedUrl": "https://ucanr.edu/",
-      "etag": "W/\"1784585340\"",
-      "lastModified": "Mon, 20 Jul 2026 22:09:00 GMT",
+      "etag": "W/\"1784661282\"",
+      "lastModified": "Tue, 21 Jul 2026 19:14:42 GMT",
       "bytes": 65183,
-      "contentHash": "e58f05b05cb931ca",
+      "contentHash": "5045fb0e43228166",
       "productCount": 0,
       "products": [],
       "elapsedMs": 119,
@@ -213,11 +243,11 @@
       "fetchedUrl": "https://search.google.com/search-console/about",
       "etag": null,
       "lastModified": null,
-      "bytes": 116959,
-      "contentHash": "22f2b0e8de78715b",
+      "bytes": 117021,
+      "contentHash": "08788d72c3785fc7",
       "productCount": 0,
       "products": [],
-      "elapsedMs": 250,
+      "elapsedMs": 173,
       "collectionMode": "api_after_domain_launch"
     },
     {
@@ -228,11 +258,11 @@
       "fetchedUrl": "https://trends.google.com/trends/",
       "etag": null,
       "lastModified": null,
-      "bytes": 907067,
-      "contentHash": "4b6b9faaea1bdc32",
+      "bytes": 907091,
+      "contentHash": "1c5e5bc3924d5ae4",
       "productCount": 0,
       "products": [],
-      "elapsedMs": 345,
+      "elapsedMs": 337,
       "collectionMode": "weekly_export_or_approved_api"
     },
     {

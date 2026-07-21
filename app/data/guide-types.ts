@@ -21,6 +21,8 @@ export type GuideFaq = {
 export type PlantGuide = {
   slug: string;
   category: "Local find" | "Indoor favorite" | "Farm to table" | "Organic-first";
+  tags: string[];
+  aliases?: string[];
   title: string;
   shortTitle: string;
   dek: string;
@@ -44,6 +46,8 @@ export type GuideSummary = Pick<
   PlantGuide,
   | "slug"
   | "category"
+  | "tags"
+  | "aliases"
   | "title"
   | "shortTitle"
   | "dek"

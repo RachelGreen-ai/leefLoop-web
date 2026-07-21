@@ -16,6 +16,8 @@ export const guides: PlantGuide[] = [
   {
     slug: "new-olive-tree-first-week-care",
     category: "Local find",
+    tags: ["Olive tree", "Costco plants", "First-week care", "Container trees"],
+    aliases: ["Costco olive tree", "Potted olive tree", "Fruiting olive tree"],
     title: "A new olive tree came home. Here is what to do in the first week.",
     shortTitle: "New olive tree: first-week care",
     dek: "Sun, drainage, and a little patience matter more than a complicated shopping list.",
@@ -128,6 +130,8 @@ export const guides: PlantGuide[] = [
   {
     slug: "monstera-leaves-curling",
     category: "Indoor favorite",
+    tags: ["Monstera", "Leaf problems", "Indoor plants", "Watering"],
+    aliases: ["Monstera deliciosa leaves curling", "Swiss cheese plant curling leaves"],
     title: "Monstera leaves are curling. Start with these five checks.",
     shortTitle: "Monstera leaves curling",
     dek: "A curled leaf is a clue, not a diagnosis. Read the soil, light, room, roots, and leaf surface in that order.",
@@ -236,6 +240,8 @@ export const guides: PlantGuide[] = [
   {
     slug: "basil-first-harvest",
     category: "Farm to table",
+    tags: ["Basil", "First harvest", "Kitchen garden", "Summer herbs"],
+    aliases: ["How to harvest basil", "Basil pruning", "Grocery-store basil"],
     title: "Your basil is ready. Make the first harvest help it grow bushier.",
     shortTitle: "Basil to first harvest",
     dek: "Cut above a pair of leaves, keep flower buds in check, and turn a small pot into a generous summer ritual.",
@@ -334,6 +340,8 @@ export const guides: PlantGuide[] = [
   {
     slug: "eggshells-in-the-garden",
     category: "Organic-first",
+    tags: ["Eggshells", "Garden myths", "Compost", "Soil care"],
+    aliases: ["Eggshell fertilizer", "Eggshell water for plants", "Crushed eggshells for plants"],
     title: "Eggshells in the garden: useful compost ingredient, unreliable quick fix.",
     shortTitle: "What eggshells really do in a garden",
     dek: "Keep the low-cost habit. Let go of the promise that shells will quickly cure blossom-end rot or replace a soil test.",
@@ -432,6 +440,8 @@ export function getGuideSummaries(): GuideSummary[] {
       ({
         slug,
         category,
+        tags,
+        aliases,
         title,
         shortTitle,
         dek,
@@ -445,6 +455,8 @@ export function getGuideSummaries(): GuideSummary[] {
       }) => ({
         slug,
         category,
+        tags,
+        aliases,
         title,
         shortTitle,
         dek,

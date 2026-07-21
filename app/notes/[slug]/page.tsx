@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   return {
     title: guide.shortTitle,
     description: guide.answer,
+    keywords: [...guide.tags, ...(guide.aliases ?? [])],
     alternates: { canonical: `/notes/${guide.slug}` },
     openGraph: {
       type: "article",
@@ -69,6 +70,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
         datePublished: guide.publishedAt,
         dateModified: guide.updatedAt,
         articleSection: guide.category,
+        keywords: guide.tags,
+        about: guide.tags.map((tag) => ({ "@type": "Thing", name: tag })),
         inLanguage: "en-US",
         mainEntityOfPage: pageUrl,
         author: {
@@ -128,6 +131,13 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <span>Updated {formatGuideDate(guide.updatedAt)}</span>
             <span>{guide.readingTime}</span>
           </div>
+          <nav className="article-tags" aria-label="Explore related Plant Notes">
+            {guide.tags.map((tag) => (
+              <Link href={`/notes?q=${encodeURIComponent(tag)}`} key={tag}>
+                {tag}
+              </Link>
+            ))}
+          </nav>
         </header>
 
         <div

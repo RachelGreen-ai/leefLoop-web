@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-21",
+  "entities": [
+    {
+      "id": "thai-constellation-monstera",
+      "canonicalName": "Thai Constellation Monstera",
+      "botanicalName": "Monstera deliciosa 'Thai Constellation'",
+      "tags": ["Premium Monstera", "Thai Constellation", "Variegated Monstera", "Retail plant finds"],
+      "aliases": [
+        {
+          "term": "Premium Monstera",
+          "kind": "retail_name",
+          "retailer": "Trader Joe's",
+          "sourceUrl": "https://www.traderjoes.com/home/products/pdp/premium-monstera-069638",
+          "observedAt": "2026-07-21"
+        },
+        {
+          "term": "Live 5-inch Thai Constellation Plant",
+          "kind": "retail_name",
+          "retailer": "Target",
+          "sourceUrl": "https://www.target.com/p/-/A-92644900",
+          "observedAt": "2026-07-21"
+        },
+        {
+          "term": "6-inch Monstera Thai Constellation Plant",
+          "kind": "retail_name",
+          "retailer": "The Home Depot",
+          "sourceUrl": "https://www.homedepot.com/p/341396770",
+          "observedAt": "2026-07-20"
+        },
+        { "term": "Thai Con Monstera", "kind": "common_search" },
+        { "term": "Variegated Monstera", "kind": "common_search" },
+        { "term": "Monstera deliciosa Thai Constellation", "kind": "cultivar_search" }
+      ],
+      "questionPatterns": [
+        "Is a Premium Monstera a Thai Constellation?",
+        "What should I do the first week after bringing a Thai Constellation home?",
+        "Why does my Thai Constellation have brown spots?",
+        "When should I repot a store-bought Thai Constellation?"
+      ],
+      "seasonalScore": 5,
+      "visualScore": 5,
+      "coverageSlugs": [
+        "trader-joes-premium-monstera-first-week",
+        "trader-joes-premium-monstera-thai-constellation",
+        "premium-monstera-brown-spots"
+      ]
+    },
+    {
+      "id": "phalaenopsis-orchid",
+      "canonicalName": "Phalaenopsis orchid",
+      "botanicalName": "Phalaenopsis",
+      "tags": ["Orchid", "Phalaenopsis", "Grocery-store plants", "After blooming"],
+      "aliases": [
+        { "term": "Moth orchid", "kind": "common_search" },
+        { "term": "Orchid Duo", "kind": "retail_name", "retailer": "Costco" },
+        { "term": "Premium Orchid", "kind": "retail_name", "retailer": "Target" },
+        { "term": "Grocery-store orchid", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "What should I do after orchid flowers fall?",
+        "Should I cut a green orchid spike?",
+        "How can I tell whether orchid roots are healthy?"
+      ],
+      "seasonalScore": 8,
+      "visualScore": 5,
+      "coverageSlugs": ["grocery-store-orchid-after-blooming"]
+    },
+    {
+      "id": "mixed-succulent-garden",
+      "canonicalName": "Mixed succulent garden",
+      "tags": ["Succulent garden", "Mixed planters", "Repotting", "Retail plant finds"],
+      "aliases": [
+        { "term": "Succulent Garden", "kind": "retail_name", "retailer": "Costco" },
+        { "term": "Succulent bowl", "kind": "common_search" },
+        { "term": "Succulent and Cactus Desert Collection", "kind": "retail_name", "retailer": "Target" },
+        { "term": "Mixed succulent planter", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Should I separate a mixed succulent garden?",
+        "Why are some plants in my succulent bowl dying first?",
+        "When should I repot a store-bought succulent arrangement?"
+      ],
+      "seasonalScore": 6,
+      "visualScore": 5,
+      "coverageSlugs": ["costco-succulent-garden-separate-repot"]
+    },
+    {
+      "id": "potted-olive-tree",
+      "canonicalName": "Potted olive tree",
+      "botanicalName": "Olea europaea",
+      "tags": ["Olive tree", "Container trees", "First-week care", "Retail plant finds"],
+      "aliases": [
+        { "term": "Fruiting Olive Tree", "kind": "retail_name", "retailer": "Costco" },
+        { "term": "Alder & Oak Olive Tree", "kind": "retail_name", "retailer": "Costco" },
+        { "term": "Patio olive tree", "kind": "common_search" },
+        { "term": "Indoor olive tree", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "What should I do the first week after buying an olive tree?",
+        "Can an olive tree live indoors?",
+        "How often should I water a potted olive tree?"
+      ],
+      "seasonalScore": 10,
+      "visualScore": 4,
+      "coverageSlugs": ["new-olive-tree-first-week-care"]
+    },
+    {
+      "id": "money-tree",
+      "canonicalName": "Money tree",
+      "botanicalName": "Pachira aquatica",
+      "tags": ["Money tree", "Indoor plants", "Yellow leaves", "Retail plant finds"],
+      "aliases": [
+        { "term": "Money Tree", "kind": "retail_name", "retailer": "Costco" },
+        { "term": "Braided money tree", "kind": "common_search" },
+        { "term": "Pachira aquatica", "kind": "botanical_name" }
+      ],
+      "questionPatterns": [
+        "Why are money tree leaves turning yellow?",
+        "Should I remove the tie from a braided money tree?",
+        "How often should I water a money tree?"
+      ],
+      "seasonalScore": 5,
+      "visualScore": 4,
+      "coverageSlugs": ["money-tree-yellow-leaves"]
+    },
+    {
+      "id": "summer-tomato-problems",
+      "canonicalName": "Summer tomato problems",
+      "tags": ["Tomato", "Leaf curl", "Blossom-end rot", "Summer garden"],
+      "aliases": [
+        { "term": "Tomato leaf curl", "kind": "common_search" },
+        { "term": "Black bottom on tomato", "kind": "common_search" },
+        { "term": "Tomato blossom-end rot", "kind": "common_search" },
+        { "term": "Eggshells for tomato plants", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why are tomato leaves curling in summer?",
+        "Do eggshells fix blossom-end rot?",
+        "How do I keep soil moisture even during hot weather?"
+      ],
+      "seasonalScore": 15,
+      "visualScore": 5,
+      "coverageSlugs": ["tomato-leaf-curl-summer", "tomato-blossom-end-rot-eggshells"]
+    }
+  ]
+}

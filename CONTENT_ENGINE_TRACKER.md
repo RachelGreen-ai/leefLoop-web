@@ -17,6 +17,8 @@ Current build checkpoint:
 - `/notes` hub, search, topic filters, and reusable guide template are live.
 - Twenty-five source-backed Plant Notes are in the release build: four foundation notes, the twenty-note search-intent sprint, and a new research-backed feature on succulent breeding.
 - Retail-first naming now follows the words readers see and search, such as `Trader Joe's Premium Monstera`; cultivar and botanical distinctions are explained inside the note.
+- All 25 Plant Notes now have visible, searchable editorial tags; retailer aliases and common search names are included in onsite search and article metadata.
+- The first shared plant entity joins Trader Joe's `Premium Monstera`, Target's `Live 5-inch Thai Constellation Plant`, Home Depot's Thai Constellation wording, common shorthand, and the accepted cultivar name without duplicating articles.
 - The new library covers retail finds, beginner succulent care, desert rose, string of pearls, tomato and zucchini problems, balcony food growing, propagation, and realistic local plant selling.
 - `/garden-blog` and five complete Garden Stories connect plant care with film, documentaries, literature, and everyday rituals.
 - The culture-led collection now includes seasonal growing through the Japanese films *Little Forest*, four centuries of garden history through Monty Don's *The Secret History of the British Garden*, and a close reading of attention, season, and care in *Monty Don's Japanese Gardens*.
@@ -212,6 +214,12 @@ Source monitor:
 - run with `npm run signals:check`
 - add `-- --write` to refresh `content-engine/snapshots/latest-source-check.json`
 
+Topic and alias engine:
+- `content-engine/topic-entities.json`
+- `scripts/build-content-queue.mjs`
+- run with `npm run content:queue`
+- review `content-engine/reports/latest-topic-queue.md`
+
 What works now:
 - daily reachability, ETag, last-modified, content-hash, and change checks
 - structured product extraction from accessible retailer JSON-LD
@@ -219,16 +227,18 @@ What works now:
 - direct use of the latest verified Costco product list on `/plantpulse`
 - blocked sources become review tasks instead of triggering aggressive scraping
 
-Current source result on July 20, 2026:
+Current source result on July 21, 2026:
 - Costco easy-care indoor collection: reachable; 24 structured product records extracted
 - Costco alternate live-plants collection: automated access blocked; editorial review required
 - Home Depot indoor category: automated access blocked; official product URLs reviewed manually
+- Target indoor live-plants category: reachable; product names require editorial review because the page exposes no Product JSON-LD
+- Trader Joe's Premium Monstera product page: reachable; exact shelf name stored as dated alias evidence
 - Texas A&M, UC ANR, Google Trends landing page, and Search Console landing page: reachable
 - reader plant signals: captured continuously through the Google Sheet webhook path
 
 Next automation layers:
 1. Search Console API after a production domain is deployed and verified.
-2. Google Trends weekly export or approved API access.
+2. Populate the normalized Google Trends input weekly from official Explore exports; replace this manual handoff with the official API only after alpha access is approved.
 3. Source-change alerts through a scheduled Cloudflare job or GitHub workflow.
 4. Topic clustering that joins retailer appearance, search queries, season, and owned audience response.
 5. Draft briefs generated automatically; care claims remain human-reviewed.
@@ -407,8 +417,12 @@ Tasks:
 - Add source registry and freshness monitor. Done.
 - Extract the current Costco online product list from structured data. Done.
 - Show selected and complete Costco watch lists on PlantPulse. Done.
+- Add Target and Trader Joe's to the source registry. Done.
+- Add canonical plant entities with retailer aliases, search names, question patterns, and existing coverage. Done.
+- Add a validated Google Trends CSV input and automatically scored topic queue. Done; weekly observations pending.
+- Add visible tags and alias-aware onsite search to all Plant Notes. Done.
 - Add Search Console after the final custom domain is connected. Not started.
-- Add manual Google Trends worksheet. Not started.
+- Add the first weekly Google Trends observations through the documented Google Sheet workflow. Not started.
 
 ### Phase 5: Brand And Visual Refinement
 
@@ -440,6 +454,6 @@ Tasks:
 2. Verify the domain in Search Console and submit `sitemap.xml` using `docs/google-search-launch.md`.
 3. Publish a first newsletter issue that links to Trader Joe's Premium Monstera, the honest succulent ranking, and the balcony snack garden; record clicks by topic.
 4. Add privacy-aware analytics for note view, search, topic filter, related-note click, source click, and newsletter conversion.
-5. Use Search Console queries, onsite search with no results, subscriber replies, retailer signals, and seasonal timing to rank the next briefs.
+5. Import the first official Google Trends comparison rows, then use the generated queue with Search Console queries, onsite search gaps, subscriber replies, retailer signals, and seasonal timing to rank the next briefs.
 6. Build the next cluster only after demand review: pothos low-light truth, coffee grounds, blueberry containers, patio citrus, pet-aware plant choices, and hydrangea heat stress.
 7. Automate brief generation and source-change alerts while keeping claim review and final editorial approval human-led.

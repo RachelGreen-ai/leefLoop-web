@@ -6,6 +6,7 @@ export const succulentBasicsGuides: PlantGuide[] = [
   {
     slug: "money-tree-yellow-leaves",
     category: "Indoor favorite",
+    tags: ["Money tree", "Yellow leaves", "Indoor plants", "Root health"],
     title: "Money tree leaves turning yellow: check the roots, light, and braided trunk.",
     shortTitle: "Money tree leaves turning yellow",
     dek: "Yellow leaves do not automatically mean thirst. Let the soil, roots, and recent changes narrow the cause before you water again.",
@@ -121,6 +122,7 @@ export const succulentBasicsGuides: PlantGuide[] = [
   {
     slug: "easiest-indoor-succulents-ranked",
     category: "Indoor favorite",
+    tags: ["Easy succulents", "Indoor plants", "Beginner plants", "Plant rankings"],
     title: "The easiest indoor succulents, honestly ranked for the light you have.",
     shortTitle: "Easiest indoor succulents, ranked",
     dek: "The best beginner succulent is the one that fits your window. This list rewards real indoor tolerance, not just a pretty store display.",
@@ -244,6 +246,7 @@ export const succulentBasicsGuides: PlantGuide[] = [
   {
     slug: "how-often-water-succulents",
     category: "Indoor favorite",
+    tags: ["Succulent watering", "Indoor succulents", "Root health", "Beginner care"],
     title: "How often should you water succulents? Stop using a calendar.",
     shortTitle: "How often to water succulents",
     dek: "A weekly reminder cannot see your soil. Learn the three checks that travel with the plant through summer, winter, and every windowsill.",
@@ -367,6 +370,7 @@ export const succulentBasicsGuides: PlantGuide[] = [
   {
     slug: "leggy-succulent-reset",
     category: "Indoor favorite",
+    tags: ["Leggy succulents", "Low light", "Propagation", "Succulent rescue"],
     title: "Why your succulent is growing tall and leggy, and how to reset it.",
     shortTitle: "How to fix a leggy succulent",
     dek: "Long gaps between leaves are usually a light story. Improve the next growth first, then decide whether to keep, cut, or propagate the stretched stem.",
@@ -483,6 +487,7 @@ export const succulentBasicsGuides: PlantGuide[] = [
   {
     slug: "mushy-succulent-leaves-root-rot",
     category: "Indoor favorite",
+    tags: ["Succulent root rot", "Mushy leaves", "Overwatering", "Plant rescue"],
     title: "Mushy or translucent succulent leaves: stop rot before it reaches the stem.",
     shortTitle: "Mushy succulent leaves and root rot",
     dek: "Soft leaves in wet soil need a fast inspection, not another splash. Separate cosmetic damage from a rotting root or stem while healthy tissue remains.",

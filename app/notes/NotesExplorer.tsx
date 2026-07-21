@@ -72,6 +72,8 @@ export function NotesExplorer({ guides }: NotesExplorerProps) {
         guide.category,
         guide.place,
         guide.season,
+        ...guide.tags,
+        ...(guide.aliases ?? []),
       ]
         .join(" ")
         .toLocaleLowerCase()

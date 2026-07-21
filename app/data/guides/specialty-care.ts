@@ -6,6 +6,7 @@ export const specialtyCareGuides: PlantGuide[] = [
   {
     slug: "best-succulent-soil-mix",
     category: "Indoor favorite",
+    tags: ["Succulent soil", "Drainage", "Repotting", "Indoor succulents"],
     title: "The best succulent soil is not one recipe. Here is how to build the right mix.",
     shortTitle: "How to choose succulent soil",
     dek: "A useful mix holds enough moisture for roots, then gives them air again. Start simple and adjust by what the pot does after watering.",
@@ -124,6 +125,7 @@ export const specialtyCareGuides: PlantGuide[] = [
   {
     slug: "desert-rose-yellow-leaves-caudex",
     category: "Indoor favorite",
+    tags: ["Desert rose", "Yellow leaves", "Caudex", "Seasonal care"],
     title: "Desert rose leaves turning yellow: check the season, soil, and caudex.",
     shortTitle: "Desert rose yellow leaves",
     dek: "Leaf drop can be a normal winter pause or a warning from wet roots. The swollen trunk and potting mix help you tell which story fits.",
@@ -238,6 +240,7 @@ export const specialtyCareGuides: PlantGuide[] = [
   {
     slug: "desert-rose-not-blooming",
     category: "Indoor favorite",
+    tags: ["Desert rose", "Not blooming", "Sunlight", "Summer care"],
     title: "Desert rose not blooming? Give it summer sun before more fertilizer.",
     shortTitle: "Why desert rose is not blooming",
     dek: "This flowering succulent runs on abundant light, warmth, active growth, and drainage. Feeding cannot replace a dim location.",
@@ -354,6 +357,7 @@ export const specialtyCareGuides: PlantGuide[] = [
   {
     slug: "string-of-pearls-shriveled-mushy-bald",
     category: "Indoor favorite",
+    tags: ["String of pearls", "Succulent rescue", "Watering", "Light problems"],
     title: "String of pearls shriveled, mushy, or bald? Read the pearls and roots together.",
     shortTitle: "String of pearls problem guide",
     dek: "Wrinkled pearls can mean a dry root ball or roots too damaged to drink. The soil, stem base, and pattern keep you from choosing the opposite cure.",
@@ -469,6 +473,7 @@ export const specialtyCareGuides: PlantGuide[] = [
   {
     slug: "tomato-blossom-end-rot-eggshells",
     category: "Organic-first",
+    tags: ["Tomato", "Blossom-end rot", "Eggshell myths", "Watering"],
     title: "Tomato blossom-end rot: why eggshells usually do not fix the fruit.",
     shortTitle: "Tomato blossom-end rot and eggshells",
     dek: "The black leathery patch is a calcium-delivery problem, usually driven by uneven moisture. Protect the next fruits with water management, mulch, and evidence from a soil test.",

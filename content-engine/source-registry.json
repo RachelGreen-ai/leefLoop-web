@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "reviewCadence": "weekly",
   "markets": ["Bay Area / San Jose", "Southern California", "Central Texas / Austin", "Indoor plant homes"],
   "sources": [
@@ -30,6 +30,26 @@
       "url": "https://www.homedepot.com/b/Outdoors-Garden-Center-Indoor-Plants/N-5yc1vZc8rn",
       "markets": ["United States", "Indoor plant homes"],
       "topics": ["monstera", "philodendron", "pothos", "ficus", "palms"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "daily"
+    },
+    {
+      "id": "target-indoor-live-plants",
+      "publisher": "Target",
+      "kind": "retailer_catalog",
+      "url": "https://www.target.com/c/indoor-live-plants-fresh-flowers-produce-grocery/-/N-r04uw",
+      "markets": ["United States", "Indoor plant homes"],
+      "topics": ["thai constellation", "monstera", "orchid", "succulents", "foliage plants"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "daily"
+    },
+    {
+      "id": "trader-joes-premium-monstera",
+      "publisher": "Trader Joe's",
+      "kind": "retailer_product",
+      "url": "https://www.traderjoes.com/home/products/pdp/premium-monstera-069638",
+      "markets": ["United States", "Indoor plant homes"],
+      "topics": ["premium monstera", "thai constellation", "variegated monstera"],
       "collectionMode": "change_detection_then_editorial_review",
       "cadence": "daily"
     },

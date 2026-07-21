@@ -6,6 +6,7 @@ export const gardenPracticeGuides: PlantGuide[] = [
   {
     slug: "tomato-leaf-curl-summer",
     category: "Farm to table",
+    tags: ["Tomato", "Leaf curl", "Summer garden", "Heat stress"],
     title: "Tomato leaves curling in summer: when to wait and when to worry.",
     shortTitle: "Tomato leaves curling in summer",
     dek: "Older leaves rolling upward in heat can be a stress response. Pale distorted new growth, mottling, or damage across nearby plants deserves a closer diagnosis.",
@@ -121,6 +122,7 @@ export const gardenPracticeGuides: PlantGuide[] = [
   {
     slug: "zucchini-flowers-no-fruit",
     category: "Farm to table",
+    tags: ["Zucchini", "Pollination", "No fruit", "Kitchen garden"],
     title: "Zucchini flowers but no fruit? Learn the male, female, and pollination check.",
     shortTitle: "Zucchini flowers but no fruit",
     dek: "Early flowers are often male. Once both flower types open together, a one-minute morning pollination check can explain the missing squash.",
@@ -236,6 +238,7 @@ export const gardenPracticeGuides: PlantGuide[] = [
   {
     slug: "balcony-snack-garden",
     category: "Farm to table",
+    tags: ["Balcony garden", "Edible plants", "Container gardening", "Small spaces"],
     title: "A balcony snack garden: what to grow for the light and space you actually have.",
     shortTitle: "Build a balcony snack garden",
     dek: "Count sunlight before buying plants, give fruiting crops real root space, and begin with a harvest you already like to eat.",
@@ -354,6 +357,7 @@ export const gardenPracticeGuides: PlantGuide[] = [
   {
     slug: "easy-succulents-propagate-gifts-swaps-sales",
     category: "Indoor favorite",
+    tags: ["Succulent propagation", "Plant swaps", "Plant gifts", "Beginner succulents"],
     title: "Five easy succulents to propagate for gifts, plant swaps, or a small local sale.",
     shortTitle: "Five succulents to propagate and share",
     dek: "Choose the propagation method the plant already wants to use, start from clean stock, and share only after the new plant is healthy and accurately labeled.",
@@ -479,6 +483,7 @@ export const gardenPracticeGuides: PlantGuide[] = [
   {
     slug: "realistic-succulent-selling-plan",
     category: "Indoor favorite",
+    tags: ["Selling plants", "Succulent propagation", "Local plant business", "Plant patents"],
     title: "Can you make money selling succulents locally? A realistic small-batch plan.",
     shortTitle: "A realistic local succulent-selling plan",
     dek: "Test demand before filling a shelf. Clean plants, honest labels, legal checks, and careful cost tracking matter more than a large propagation count.",
@@ -612,6 +617,7 @@ export const gardenPracticeGuides: PlantGuide[] = [
   {
     slug: "how-succulent-breeders-create-new-echeverias",
     category: "Indoor favorite",
+    tags: ["Succulent breeder", "Echeveria", "Plant breeding", "Named cultivars"],
     title: "What does a succulent breeder do? The patient work behind a new Echeveria.",
     shortTitle: "How succulent breeders create new Echeverias",
     dek: "A new rosette begins with two flowers, a careful label, many sibling seedlings, and someone willing to notice the one plant that grows differently.",

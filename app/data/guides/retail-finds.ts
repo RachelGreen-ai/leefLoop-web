@@ -6,6 +6,14 @@ export const retailFindGuides: PlantGuide[] = [
   {
     slug: "trader-joes-premium-monstera-first-week",
     category: "Local find",
+    tags: ["Premium Monstera", "Thai Constellation", "Retail plant finds", "First-week care"],
+    aliases: [
+      "Trader Joe's Premium Monstera",
+      "Target Thai Constellation Plant",
+      "Thai Constellation Monstera",
+      "Variegated Monstera",
+      "Monstera deliciosa Thai Constellation",
+    ],
     title: "Trader Joe's Premium Monstera: what to do in the first week.",
     shortTitle: "Trader Joe's Premium Monstera care",
     dek: "Keep the first week calm: check the label, drainage, light, roots, and leaf backs before changing the pot or adding fertilizer.",
@@ -30,7 +38,8 @@ export const retailFindGuides: PlantGuide[] = [
         id: "name",
         heading: "Start with the name on the shelf",
         paragraphs: [
-          "Trader Joe's currently lists the plant as Premium Monstera. That is the useful shopping name and the phrase many new owners will remember. It is not, by itself, a cultivar identification. Recent cream-speckled plants sold under this label have often been identified as Thai Constellation Monsteras, but the tag and the plant in front of you are better evidence than an online photo from another store.",
+          "Trader Joe's currently lists the plant as Premium Monstera, while Target lists a similar cream-speckled plant as Live 5-inch Thai Constellation Plant. Those are useful shopping names and the phrases new owners will remember, but retailers do not always name the same plant in the same way. A broad shelf phrase such as Premium Monstera is not, by itself, a cultivar identification.",
+          "Recent cream-speckled plants sold under the Premium Monstera label have often been identified as Thai Constellation Monsteras, but the tag and the plant in front of you are better evidence than an online photo from another store. Keep the retail name as a search clue, then confirm the cultivar from the individual label and repeated pattern across several leaves.",
           "Keep the label. A clear photo of the whole plant, the front and back of a leaf, and the stem will make later identification and problem-solving much easier.",
         ],
         callout: "Use the retail name to find the conversation. Use the plant's features to confirm what it is.",
@@ -101,6 +110,12 @@ export const retailFindGuides: PlantGuide[] = [
         note: "The current official retail product name; reviewed July 21, 2026.",
       },
       {
+        title: "Live 5-inch Thai Constellation Plant",
+        publisher: "Target",
+        url: "https://www.target.com/p/-/A-92644900",
+        note: "A current retailer example using the cultivar name directly in its shelf language; reviewed July 21, 2026.",
+      },
+      {
         title: "Monstera deliciosa",
         publisher: "UConn Home & Garden Education Center",
         url: "https://homegarden.cahnr.uconn.edu/factsheets/monstera-deliciosa/",
@@ -128,6 +143,14 @@ export const retailFindGuides: PlantGuide[] = [
   {
     slug: "trader-joes-premium-monstera-thai-constellation",
     category: "Local find",
+    tags: ["Premium Monstera", "Thai Constellation", "Plant identification", "Retail plant names"],
+    aliases: [
+      "Trader Joe's Premium Monstera",
+      "Target Thai Constellation Plant",
+      "Variegated Monstera",
+      "Thai Con Monstera",
+      "Monstera deliciosa Thai Constellation",
+    ],
     title: "Is your Trader Joe's Premium Monstera a Thai Constellation?",
     shortTitle: "Trader Joe's Premium Monstera: Thai Constellation?",
     dek: "The shelf name is useful, but the leaf pattern and plant tag tell you more. Here is a plain-language way to check.",
@@ -152,7 +175,7 @@ export const retailFindGuides: PlantGuide[] = [
         id: "two-names",
         heading: "Premium Monstera and Thai Constellation are different kinds of names",
         paragraphs: [
-          "Premium Monstera is Trader Joe's current product name. Thai Constellation is an accepted cultivar name for Monstera deliciosa. The Royal Horticultural Society describes Thai Constellation as a slower-growing tropical climber with deep-green leaves splashed and streaked with creamy white.",
+          "Premium Monstera is Trader Joe's current product name. Target currently uses Live 5-inch Thai Constellation Plant for a comparable retail offering. Thai Constellation is an accepted cultivar name for Monstera deliciosa, while premium can be a broader merchandising description. The Royal Horticultural Society describes Thai Constellation as a slower-growing tropical climber with deep-green leaves splashed and streaked with creamy white.",
           "A retail name may remain the same while suppliers, plant size, presentation, or assortment changes. That is why the most accurate answer begins with the label attached to your individual pot.",
         ],
       },
@@ -194,6 +217,11 @@ export const retailFindGuides: PlantGuide[] = [
           "Not as a naming rule. Premium Monstera is a Trader Joe's product name. The plant may be variegated, and recent examples have included Thai Constellation, but the individual tag and foliage should confirm that.",
       },
       {
+        question: "Why does Target call it Thai Constellation while Trader Joe's says Premium Monstera?",
+        answer:
+          "Retailers choose their own product titles. Target's current listing names Thai Constellation directly, while Trader Joe's uses Premium Monstera. Treat both as discovery terms, then use the pot label and the pattern across several leaves to confirm the cultivar you actually bought.",
+      },
+      {
         question: "Why does my young Monstera have no leaf splits?",
         answer:
           "Young leaves commonly begin entire. Splits and inner holes become more likely as the plant matures with adequate light, support, and healthy growth. A juvenile unsplit leaf is not enough to identify or reject a cultivar.",
@@ -210,6 +238,12 @@ export const retailFindGuides: PlantGuide[] = [
         publisher: "Trader Joe's",
         url: "https://www.traderjoes.com/home/products/pdp/premium-monstera-069638",
         note: "The official retail product name; reviewed July 21, 2026.",
+      },
+      {
+        title: "Live 5-inch Thai Constellation Plant",
+        publisher: "Target",
+        url: "https://www.target.com/p/-/A-92644900",
+        note: "A current retailer listing that names Thai Constellation directly; reviewed July 21, 2026.",
       },
       {
         title: "Monstera deliciosa 'Thai Constellation'",
@@ -239,6 +273,12 @@ export const retailFindGuides: PlantGuide[] = [
   {
     slug: "premium-monstera-brown-spots",
     category: "Indoor favorite",
+    tags: ["Premium Monstera", "Thai Constellation", "Brown spots", "Plant diagnosis"],
+    aliases: [
+      "Thai Constellation brown spots",
+      "Variegated Monstera brown leaves",
+      "Premium Monstera root rot",
+    ],
     title: "Brown spots on a Premium Monstera: what they mean and what to do.",
     shortTitle: "Premium Monstera brown spots",
     dek: "A dry edge, a bleached patch, a wet halo, and silvery pest damage need different responses. Start with the pattern.",
@@ -358,6 +398,8 @@ export const retailFindGuides: PlantGuide[] = [
   {
     slug: "grocery-store-orchid-after-blooming",
     category: "Local find",
+    tags: ["Orchid", "Grocery-store plants", "After blooming", "Phalaenopsis"],
+    aliases: ["Moth orchid after flowers fall", "Costco orchid care", "Trader Joe's orchid care"],
     title: "Your grocery-store orchid finished blooming. Here is what to do next.",
     shortTitle: "Orchid care after flowers fall",
     dek: "The plant is not finished. Read the spike and roots, keep the light steady, and let it rebuild before asking for another bloom.",
@@ -471,6 +513,8 @@ export const retailFindGuides: PlantGuide[] = [
   {
     slug: "costco-succulent-garden-separate-repot",
     category: "Local find",
+    tags: ["Costco plants", "Succulent garden", "Repotting", "Mixed planters"],
+    aliases: ["Costco succulent bowl", "Costco succulent planter", "Separate succulent arrangement"],
     title: "Should you separate a Costco succulent garden? Read the plants first.",
     shortTitle: "Costco succulent garden care",
     dek: "Some displays hide separate nursery pots; others share one root zone. Check the construction, drainage, and plant needs before pulling anything apart.",

@@ -174,6 +174,10 @@ test("server-renders the notes hub and complete starter guide", async () => {
   const retailGuideHtml = await retailGuideResponse.text();
   assert.match(retailGuideHtml, /Trader Joe&#x27;s Premium Monstera: what to do in the first week\./);
   assert.match(retailGuideHtml, /Premium Monstera/);
+  assert.match(retailGuideHtml, /Target Thai Constellation Plant/);
+  assert.match(retailGuideHtml, /Explore related Plant Notes/);
+  assert.match(retailGuideHtml, /Live 5-inch Thai Constellation Plant/);
+  assert.match(retailGuideHtml, /href="https:\/\/www\.target\.com\/p\/-\/A-92644900"/);
   assert.match(retailGuideHtml, /UC Statewide IPM Program/);
   assert.match(retailGuideHtml, /FAQPage/);
 
