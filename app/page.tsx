@@ -136,22 +136,22 @@ export default function Home() {
       </section>
 
       <section className="trust-strip" aria-label="What subscribers receive">
-        <div>
+        <Link href="/plantpulse#costco-plant-watch">
           <strong>Local finds</strong>
           <span>Plants showing up in nearby shopping and garden conversations</span>
-        </div>
-        <div>
+        </Link>
+        <Link href="/notes/monstera-leaves-curling">
           <strong>Indoor favorites</strong>
           <span>Monstera, pothos, orchids, and potted plant care</span>
-        </div>
-        <div>
+        </Link>
+        <Link href="/notes/basil-first-harvest">
           <strong>Seasonal eating</strong>
           <span>Herbs, harvest ideas, and small farm-to-table prompts</span>
-        </div>
-        <div>
+        </Link>
+        <Link href="/notes">
           <strong>Plain answers</strong>
           <span>What to check first, what to skip, and what can wait</span>
-        </div>
+        </Link>
       </section>
 
       <section id="notes" className="content-band">

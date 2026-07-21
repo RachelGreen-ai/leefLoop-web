@@ -53,6 +53,10 @@ test("homepage navigation points to real content destinations", async () => {
   assert.match(html, /href="\/plantpulse"[^>]*>See Trending Plants<\/a>/);
   assert.match(html, /href="\/garden-blog"[^>]*>Read Garden Stories<\/a>/);
   assert.match(html, /href="\/plantpulse#share-a-plant"/);
+  assert.match(html, /href="\/plantpulse#costco-plant-watch"[^>]*><strong>Local finds<\/strong>/);
+  assert.match(html, /href="\/notes\/monstera-leaves-curling"[^>]*><strong>Indoor favorites<\/strong>/);
+  assert.match(html, /href="\/notes\/basil-first-harvest"[^>]*><strong>Seasonal eating<\/strong>/);
+  assert.match(html, /href="\/notes"[^>]*><strong>Plain answers<\/strong>/);
 
   for (const pathname of ["/notes", "/plantpulse", "/garden-blog"]) {
     const destination = await render(pathname);
@@ -92,6 +96,7 @@ test("server-renders the PlantPulse signal engine page", async () => {
   assert.match(html, /Bay Area \/ San Jose/);
   assert.match(html, /Share a plant signal/);
   assert.match(html, /Costco plant watch/);
+  assert.match(html, /id="costco-plant-watch"/);
   assert.match(html, /Phalaenopsis Orchid Duo/);
   assert.doesNotMatch(html, /Timely enough to notice|How we listen|latest source review/);
   assert.doesNotMatch(html, /places and plant homes we are watching|Checked 2026|source(?:s)?<\/span>/);

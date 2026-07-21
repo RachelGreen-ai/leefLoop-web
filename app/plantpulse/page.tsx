@@ -63,7 +63,7 @@ export default function PlantPulsePage() {
         </div>
       </section>
 
-      <section className="retail-watch">
+      <section id="costco-plant-watch" className="retail-watch">
         <div className="retail-watch-heading">
           <div>
             <p className="eyebrow">Costco plant watch</p>

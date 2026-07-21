@@ -306,13 +306,20 @@ h3 {
   background: var(--surface);
 }
 
-.trust-strip div {
+.trust-strip > a {
+  display: block;
   min-height: 118px;
   padding: 28px clamp(18px, 3vw, 38px);
   border-right: 1px solid var(--line);
+  transition: background-color 180ms ease;
 }
 
-.trust-strip div:last-child {
+.trust-strip > a:hover,
+.trust-strip > a:focus-visible {
+  background: var(--mint);
+}
+
+.trust-strip > a:last-child {
   border-right: 0;
 }
 
@@ -1627,12 +1634,12 @@ h3 {
     grid-column: span 2;
   }
 
-  .trust-strip div {
+  .trust-strip > a {
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
-  .trust-strip div:last-child {
+  .trust-strip > a:last-child {
     border-bottom: 0;
   }
 
