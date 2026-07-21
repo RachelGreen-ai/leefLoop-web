@@ -65,7 +65,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         mainEntityOfPage: pageUrl,
         author: {
           "@type": "Organization",
-          name: "Garden Companion editorial team",
+          name: "Garden Companion",
         },
         publisher: {
           "@type": "Organization",
@@ -114,7 +114,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <h1>{guide.title}</h1>
           <p className="guide-dek">{guide.dek}</p>
           <div className="guide-byline">
-            <span>Garden Companion editorial team</span>
             <span>Updated {formatGuideDate(guide.updatedAt)}</span>
             <span>{guide.readingTime}</span>
           </div>
@@ -128,12 +127,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
         />
 
         <div className="guide-layout">
-          <aside className="guide-aside">
-            <span>{guide.place}</span>
-            <span>{guide.season}</span>
-            <a href="#sources">Sources &amp; review</a>
-          </aside>
-
           <div className="guide-body">
             <section className="answer-box" aria-label="Short answer">
               <p className="eyebrow">The short answer</p>
@@ -178,14 +171,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </div>
             </section>
 
-            <section id="sources" className="sources-section">
-              <p className="eyebrow">Sources &amp; review</p>
-              <h2>Where this guidance comes from</h2>
-              <p>
-                We translate university extension guidance and first-party plant information into
-                plain language. Retail pages help us notice what deserves a timely guide; they do
-                not replace horticultural evidence.
-              </p>
+            <details className="references-disclosure">
+              <summary>References</summary>
               <div className="source-list">
                 {guide.sources.map((source) => (
                   <a
@@ -196,15 +183,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   >
                     <span>{source.publisher}</span>
                     <strong>{source.title}</strong>
-                    <small>{source.note}</small>
                   </a>
                 ))}
               </div>
-              <small className="review-note">
-                Reviewed for source clarity and practical usefulness on {formatGuideDate(guide.updatedAt)}.
-                Plant response varies with climate, potting mix, light, and prior care.
-              </small>
-            </section>
+            </details>
           </div>
         </div>
       </article>

@@ -57,7 +57,7 @@ export const plantPulseRegions: PlantPulseRegion[] = [
   },
   {
     id: "indoor-plants",
-    name: "Indoor plant homes",
+    name: "Indoor plants",
     shortName: "Indoor plants",
     zone: "Light, humidity, room temperature, and pot drainage",
     description:

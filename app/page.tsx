@@ -6,42 +6,27 @@ import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import { guides } from "./data/guides";
 import { getTopSignals, getRegionName } from "./data/plantpulse";
 
-const contentPillars = [
+const sitePaths = [
   {
-    title: "Costco plant notes",
-    detail: "Simple first-week care for the trees, herbs, orchids, and patio plants that suddenly come home with you.",
-    tag: "Local finds",
-    href: "/notes/new-olive-tree-first-week-care",
+    title: "Plant Notes",
+    detail: "Clear help for a new plant, a strange leaf, or a care routine that no longer feels right.",
+    tag: "Practical care",
+    href: "/notes",
+    cta: "Browse Plant Notes",
   },
   {
-    title: "Indoor plant favorites",
-    detail: "Monstera, pothos, orchids, and apartment-friendly plants explained in plain, calm language.",
-    tag: "Houseplants",
-    href: "/notes/monstera-leaves-curling",
-  },
-  {
-    title: "Seasonal farm-to-table",
-    detail: "Herbs, tomatoes, citrus, berries, and small harvest ideas that make dinner feel closer to the garden.",
-    tag: "Kitchen garden",
-    href: "/notes/basil-first-harvest",
-  },
-  {
-    title: "Organic-first fixes",
-    detail: "Soil checks, light, water rhythm, compost, and gentle pest habits before buying another bottle.",
-    tag: "Useful care",
-    href: "/notes/eggshells-in-the-garden",
-  },
-  {
-    title: "What is popular nearby",
-    detail: "A warm look at the plants people are noticing, bringing home, and asking how to keep happy.",
-    tag: "This week",
+    title: "Trending Plants",
+    detail: "Plants people are bringing home now, with the first care questions worth knowing.",
+    tag: "Popular now",
     href: "/plantpulse",
+    cta: "See Trending Plants",
   },
   {
-    title: "Seasonal stories",
+    title: "Garden Stories",
     detail: "Plant notes inspired by farmers markets, home cooking, beautiful films, and quiet seasonal rituals.",
-    tag: "Living well",
+    tag: "Films, books & seasons",
     href: "/garden-blog",
+    cta: "Read Garden Stories",
   },
 ];
 
@@ -125,7 +110,7 @@ export default function Home() {
               Subscribe to plant notes
             </a>
             <Link className="secondary-button" href="/notes">
-              Explore the first guides
+              Browse Plant Notes
             </Link>
           </div>
         </div>
@@ -171,20 +156,20 @@ export default function Home() {
 
       <section id="notes" className="content-band">
         <div className="section-heading">
-          <p className="eyebrow">Start with your plant</p>
-          <h2>Choose the note that feels closest to what you brought home.</h2>
+          <p className="eyebrow">Explore</p>
+          <h2>A good place to begin.</h2>
           <p>
-            Short, useful guides for the plant on your table, the pot by your window, and the
-            season just outside your door.
+            Care for a plant you already have, see what people are bringing home, or wander
+            through a garden story.
           </p>
         </div>
         <div className="guide-grid">
-          {contentPillars.map((pillar) => (
-            <article className="guide-card" key={pillar.title}>
-              <span>{pillar.tag}</span>
-              <h3>{pillar.title}</h3>
-              <p>{pillar.detail}</p>
-              <a href={pillar.href}>Explore this note</a>
+          {sitePaths.map((path) => (
+            <article className="guide-card" key={path.title}>
+              <span>{path.tag}</span>
+              <h3>{path.title}</h3>
+              <p>{path.detail}</p>
+              <Link href={path.href}>{path.cta}</Link>
             </article>
           ))}
         </div>
@@ -198,12 +183,9 @@ export default function Home() {
             A gentle weekly pulse of plants people are bringing home, talking about, growing,
             rescuing, and learning to care for.
           </p>
-          <a className="text-link" href="#newsletter">
-            Get the weekly digest
-          </a>
-          <a className="text-link secondary-text-link" href="/plantpulse">
-            Explore trending plants
-          </a>
+          <Link className="text-link" href="/plantpulse">
+            Explore Trending Plants
+          </Link>
         </div>
         <div className="trend-list" aria-label="Example local plant trends">
           {trends.map((trend) => (
@@ -232,11 +214,6 @@ export default function Home() {
           {guides.slice(0, 3).map((guide) => (
             <GuideCard guide={guide} key={guide.slug} />
           ))}
-        </div>
-        <div className="safety-note">
-          <strong>Seasonal inspiration:</strong> a beautiful film, a farmers market table, or a
-          home-cooking ritual can become a real guide for what to grow, how to care for it, and how
-          to enjoy it.
         </div>
       </section>
 
@@ -276,6 +253,9 @@ export default function Home() {
               </span>
             ))}
           </div>
+          <Link className="text-link journal-link" href="/plantpulse#share-a-plant">
+            Share what you are seeing
+          </Link>
         </div>
       </section>
 

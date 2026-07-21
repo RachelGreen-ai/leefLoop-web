@@ -32,16 +32,32 @@ test("server-renders the Garden Companion MVP homepage", async () => {
   assert.match(html, /Garden Companion \| Weekly Plant Care Notes/);
   assert.match(html, /Fresh plant notes for what is growing around you\./);
   assert.match(html, /Subscribe to plant notes/);
-  assert.match(html, /Start with your plant/);
+  assert.match(html, /A good place to begin\./);
   assert.match(html, /PlantPulse/);
   assert.match(html, /Monstera/);
-  assert.match(html, /Costco plant notes/);
-  assert.match(html, /Seasonal farm-to-table/);
-  assert.match(html, /Seasonal inspiration/);
+  assert.match(html, /Browse Plant Notes/);
+  assert.match(html, /See Trending Plants/);
+  assert.match(html, /Read Garden Stories/);
   assert.match(html, /A calmer plant letter/);
   assert.match(html, /Beautiful, useful, and honest\./);
   assert.match(html, /Garden Stories/);
+  assert.doesNotMatch(html, /Explore this note/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
+});
+
+test("homepage navigation points to real content destinations", async () => {
+  const response = await render();
+  const html = await response.text();
+
+  assert.match(html, /href="\/notes"[^>]*>Browse Plant Notes<\/a>/);
+  assert.match(html, /href="\/plantpulse"[^>]*>See Trending Plants<\/a>/);
+  assert.match(html, /href="\/garden-blog"[^>]*>Read Garden Stories<\/a>/);
+  assert.match(html, /href="\/plantpulse#share-a-plant"/);
+
+  for (const pathname of ["/notes", "/plantpulse", "/garden-blog"]) {
+    const destination = await render(pathname);
+    assert.equal(destination.status, 200, `${pathname} should resolve`);
+  }
 });
 
 test("server-renders the Garden Stories collection and complete Little Forest essay", async () => {
@@ -58,8 +74,10 @@ test("server-renders the Garden Stories collection and complete Little Forest es
   const storyHtml = await storyResponse.text();
   assert.match(storyHtml, /The garden is the calendar/);
   assert.match(storyHtml, /A small way to live with the story/);
+  assert.match(storyHtml, /References/);
   assert.match(storyHtml, /Japanese Film Database/);
   assert.match(storyHtml, /BreadcrumbList/);
+  assert.doesNotMatch(storyHtml, /Sources &amp; notes|Garden Companion editorial team/);
 });
 
 test("server-renders the PlantPulse signal engine page", async () => {
@@ -69,13 +87,14 @@ test("server-renders the PlantPulse signal engine page", async () => {
 
   const html = await response.text();
   assert.match(html, /What plant lovers are noticing this week\./);
-  assert.match(html, /Indoor plant homes/);
+  assert.match(html, /Indoor plants/);
   assert.match(html, /Monstera/);
   assert.match(html, /Bay Area \/ San Jose/);
   assert.match(html, /Share a plant signal/);
-  assert.match(html, /Timely enough to notice\. Careful enough to trust\./);
   assert.match(html, /Costco plant watch/);
   assert.match(html, /Phalaenopsis Orchid Duo/);
+  assert.doesNotMatch(html, /Timely enough to notice|How we listen|latest source review/);
+  assert.doesNotMatch(html, /places and plant homes we are watching|Checked 2026|source(?:s)?<\/span>/);
   assert.doesNotMatch(html, /live inventory|exact store availability/i);
 });
 
@@ -92,15 +111,18 @@ test("server-renders the notes hub and complete starter guide", async () => {
   const guideHtml = await guideResponse.text();
   assert.match(guideHtml, /Monstera leaves are curling\. Start with these five checks\./);
   assert.match(guideHtml, /Three things to check first/);
-  assert.match(guideHtml, /Where this guidance comes from/);
+  assert.match(guideHtml, /References/);
   assert.match(guideHtml, /FAQPage/);
   assert.match(guideHtml, /University of Wisconsin-Madison Horticulture/);
+  assert.doesNotMatch(guideHtml, /Indoor plant homes|Year-round care|Sources &amp; review/);
 });
 
 test("server-renders about and privacy pages", async () => {
   const aboutResponse = await render("/about");
   assert.equal(aboutResponse.status, 200);
-  assert.match(await aboutResponse.text(), /Plant care should leave you calmer and more capable\./);
+  const aboutHtml = await aboutResponse.text();
+  assert.match(aboutHtml, /A useful place for people who like living with plants\./);
+  assert.doesNotMatch(aboutHtml, /From signal to guide|We listen widely/);
 
   const privacyResponse = await render("/privacy");
   assert.equal(privacyResponse.status, 200);

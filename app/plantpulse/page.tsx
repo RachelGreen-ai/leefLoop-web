@@ -2,18 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PlantSignalForm } from "../components/CaptureForms";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
-import {
-  costcoFindCount,
-  costcoPlantFinds,
-  featuredCostcoFinds,
-  retailerSnapshotDate,
-} from "../data/retail-signals";
+import { featuredCostcoFinds } from "../data/retail-signals";
 import {
   getRegionName,
   getSignalsForRegion,
   getTopSignals,
   plantPulseRegions,
-  plantPulseSignals,
 } from "../data/plantpulse";
 
 export const metadata: Metadata = {
@@ -24,11 +18,6 @@ export const metadata: Metadata = {
 
 export default function PlantPulsePage() {
   const topSignals = getTopSignals(4);
-  const snapshotDate = new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  }).format(new Date(retailerSnapshotDate));
 
   return (
     <main className="plantpulse-page">
@@ -38,24 +27,9 @@ export default function PlantPulsePage() {
         <p className="eyebrow">Trending plants</p>
         <h1>What plant lovers are noticing this week.</h1>
         <p>
-          A gentle signal digest for local gardens and indoor plant homes: what is appearing,
-          what the season is asking for, and which care questions deserve a clear answer now.
+          A gentle weekly look at local gardens and indoor favorites: what is appearing, what the
+          season is asking for, and what is helpful to know before a plant comes home.
         </p>
-      </section>
-
-      <section className="pulse-summary" aria-label="PlantPulse summary">
-        <div>
-          <strong>{plantPulseRegions.length}</strong>
-          <span>places and plant homes we are watching</span>
-        </div>
-        <div>
-          <strong>{plantPulseSignals.length}</strong>
-          <span>plant notes warming up this week</span>
-        </div>
-        <div>
-          <strong>Jul 20</strong>
-          <span>latest source review</span>
-        </div>
       </section>
 
       <section className="pulse-band">
@@ -72,7 +46,6 @@ export default function PlantPulsePage() {
             <article className="pulse-card featured" key={signal.id}>
               <div className="pulse-card-top">
                 <span>{getRegionName(signal.regionId)}</span>
-                <strong>{signal.attention}</strong>
               </div>
               <h3>{signal.plant}</h3>
               <p>{signal.whyNow}</p>
@@ -80,26 +53,11 @@ export default function PlantPulsePage() {
                 <span>Care note: {signal.careNote}</span>
                 <span>Watch for: {signal.commonMistake}</span>
               </div>
-              <div className="source-row">
-                {signal.sourceBadges.map((badge) => (
-                  <small key={badge}>{badge}</small>
-                ))}
-              </div>
-              <div className="pulse-card-links">
-                {signal.guideSlug ? (
+              {signal.guideSlug ? (
+                <div className="pulse-card-links">
                   <Link href={`/notes/${signal.guideSlug}`}>Read our guide</Link>
-                ) : null}
-                {signal.sources.slice(0, 1).map((source) => (
-                  <a
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    key={source.url}
-                  >
-                    View {source.publisher} source
-                  </a>
-                ))}
-              </div>
+                </div>
+              ) : null}
             </article>
           ))}
         </div>
@@ -109,12 +67,11 @@ export default function PlantPulsePage() {
         <div className="retail-watch-heading">
           <div>
             <p className="eyebrow">Costco plant watch</p>
-            <h2>Fresh finds shaping our next care notes.</h2>
+            <h2>Plants worth knowing before they come home.</h2>
           </div>
           <p>
-            We found {costcoFindCount} live-plant products in Costco&apos;s official online
-            easy-care collection on {snapshotDate}. These are the ones on our editorial desk
-            first.
+            A few plants appearing in Costco&apos;s online collection now, with the care questions
+            worth knowing before they settle into a new home.
           </p>
         </div>
         <div className="retail-find-grid">
@@ -122,26 +79,16 @@ export default function PlantPulsePage() {
             <a href={product.url} target="_blank" rel="noopener noreferrer" key={product.sku}>
               <span>Costco find</span>
               <strong>{product.name}</strong>
-              <small>Care note in review</small>
+              <small>See the plant at Costco</small>
             </a>
           ))}
         </div>
-        <details className="all-retail-finds">
-          <summary>See all {costcoFindCount} finds from this check</summary>
-          <div>
-            {costcoPlantFinds.map((product) => (
-              <a href={product.url} target="_blank" rel="noopener noreferrer" key={product.sku}>
-                {product.name}
-              </a>
-            ))}
-          </div>
-        </details>
       </section>
 
       <section className="pulse-regions">
         <div className="section-heading">
-          <p className="eyebrow">By place and plant home</p>
-          <h2>Start local, but include indoor plant life.</h2>
+          <p className="eyebrow">By place and growing space</p>
+          <h2>Local gardens and indoor favorites.</h2>
           <p>
             Some trends are regional, like tomato heat stress. Others live inside apartments and
             living rooms, like Monstera leaves unfurling by a bright window.
@@ -159,16 +106,11 @@ export default function PlantPulsePage() {
                 {getSignalsForRegion(region.id).map((signal) => (
                   <article className="signal-row" key={signal.id}>
                     <div>
-                      <div className="signal-meta">
-                        <span>{signal.momentum}</span>
-                        <span>Checked {signal.updatedAt}</span>
-                      </div>
                       <h4>{signal.plant}</h4>
                       <p>{signal.contentAngle}</p>
-                    </div>
-                    <div className="signal-score">
-                      <strong>{signal.attention}</strong>
-                      <span>{signal.sources.length} source{signal.sources.length === 1 ? "" : "s"}</span>
+                      {signal.guideSlug ? (
+                        <Link href={`/notes/${signal.guideSlug}`}>Read the plant note</Link>
+                      ) : null}
                     </div>
                   </article>
                 ))}
@@ -178,29 +120,10 @@ export default function PlantPulsePage() {
         </div>
       </section>
 
-      <section className="pulse-method">
+      <section id="share-a-plant" className="pulse-submit">
         <div>
-          <p className="eyebrow">How we listen</p>
-          <h2>Timely enough to notice. Careful enough to trust.</h2>
-        </div>
-        <div className="method-grid">
-          {[
-            "Official retailer plant pages",
-            "University extension calendars",
-            "Search and care questions",
-            "Community and newsletter notes",
-            "Dated source observations",
-            "Human review before publishing",
-          ].map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
-      </section>
-
-      <section className="pulse-submit">
-        <div>
-          <p className="eyebrow">Help the signal grow</p>
-          <h2>Tell us what plant keeps showing up around you.</h2>
+          <p className="eyebrow">What are you seeing?</p>
+          <h2>Share a plant that keeps showing up around you.</h2>
           <p>
             A plant at your local store, a Monstera in every apartment window, a tomato question in
             every neighborhood group: small observations help us prepare better guides and weekly

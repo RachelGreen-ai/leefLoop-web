@@ -5,26 +5,28 @@ import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 export const metadata: Metadata = {
   title: "About Garden Companion",
   description:
-    "How Garden Companion turns seasonal plant signals and evidence-based horticulture into warm, practical care notes for real homes.",
+    "Garden Companion is a calm place for useful plant notes, seasonal finds, and stories about living with plants.",
   alternates: { canonical: "/about" },
 };
 
-const principles = [
+const placesToBegin = [
   {
-    title: "Begin with what you can see",
-    copy: "Soil moisture, light, drainage, roots, weather, and pests usually tell us more than a shopping list does.",
+    title: "Plant Notes",
+    copy: "Plain-language help for the plant on your table, patio, windowsill, or garden bed.",
+    href: "/notes",
+    cta: "Browse Plant Notes",
   },
   {
-    title: "Prefer the gentlest useful step",
-    copy: "We favor small, affordable corrections and honest organic habits before reaching for a product.",
+    title: "Trending Plants",
+    copy: "A timely look at plants people are noticing, bringing home, and learning to care for.",
+    href: "/plantpulse",
+    cta: "See Trending Plants",
   },
   {
-    title: "Name uncertainty",
-    copy: "A photo or symptom can narrow the possibilities, but it does not always prove one diagnosis. We say what to check next.",
-  },
-  {
-    title: "Keep guidance close to place",
-    copy: "Weather, season, window direction, pot size, and local growing conditions can change the right answer.",
+    title: "Garden Stories",
+    copy: "Plants in films, books, kitchens, and the small seasonal rituals that make a home feel alive.",
+    href: "/garden-blog",
+    cta: "Read Garden Stories",
   },
 ];
 
@@ -34,52 +36,28 @@ export default function AboutPage() {
       <SiteHeader />
       <section className="about-hero">
         <p className="eyebrow">About garden companion</p>
-        <h1>Plant care should leave you calmer and more capable.</h1>
+        <h1>A useful place for people who like living with plants.</h1>
         <p>
-          We notice what people are bringing home, then pair that timely curiosity with careful
-          horticultural sources and plain-language next steps.
+          Come for help with a plant you already have, stay for what is growing nearby, what is in
+          season, and the stories that make us notice the living world a little more closely.
         </p>
       </section>
 
       <section className="principles-band">
         <div className="section-heading">
-          <p className="eyebrow">What guides every note</p>
-          <h2>Useful before impressive.</h2>
+          <p className="eyebrow">Explore</p>
+          <h2>Choose what brought you here.</h2>
         </div>
-        <div className="principles-grid">
-          {principles.map((principle, index) => (
-            <article key={principle.title}>
-              <span>0{index + 1}</span>
-              <h3>{principle.title}</h3>
-              <p>{principle.copy}</p>
+        <div className="guide-grid">
+          {placesToBegin.map((place) => (
+            <article className="guide-card" key={place.title}>
+              <span>Garden Companion</span>
+              <h3>{place.title}</h3>
+              <p>{place.copy}</p>
+              <Link href={place.href}>{place.cta}</Link>
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="editorial-method">
-        <div>
-          <p className="eyebrow">From signal to guide</p>
-          <h2>We listen widely, then review carefully.</h2>
-        </div>
-        <ol>
-          <li>
-            <strong>Notice</strong>
-            <span>Retailer plant pages, seasonal timing, search questions, community notes, and subscriber replies.</span>
-          </li>
-          <li>
-            <strong>Verify</strong>
-            <span>University extension, integrated pest management, botanical, and first-party plant sources.</span>
-          </li>
-          <li>
-            <strong>Translate</strong>
-            <span>A short answer, the first three checks, realistic steps, and the situations that need more help.</span>
-          </li>
-          <li>
-            <strong>Refresh</strong>
-            <span>Dated source observations, reader feedback, and seasonal updates keep the note useful.</span>
-          </li>
-        </ol>
       </section>
 
       <section className="about-letter">

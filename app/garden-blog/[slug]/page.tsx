@@ -64,7 +64,7 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
         articleSection: story.category,
         inLanguage: "en-US",
         mainEntityOfPage: pageUrl,
-        author: { "@type": "Organization", name: "Garden Companion editorial team" },
+        author: { "@type": "Organization", name: "Garden Companion" },
         publisher: { "@type": "Organization", name: "Garden Companion" },
         citation: story.sources.map((source) => source.url),
       },
@@ -98,7 +98,6 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
           <h1>{story.title}</h1>
           <p className="guide-dek">{story.dek}</p>
           <div className="guide-byline">
-            <span>Garden Companion editorial team</span>
             <span>{formatGardenStoryDate(story.publishedAt)}</span>
             <span>{story.readingTime}</span>
           </div>
@@ -112,12 +111,6 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
         />
 
         <div className="guide-layout">
-          <aside className="guide-aside">
-            <span>{story.setting}</span>
-            <span>{story.theme}</span>
-            <a href="#sources">Sources &amp; notes</a>
-          </aside>
-
           <div className="guide-body">
             <section className="answer-box story-opening" aria-label="Opening note">
               <p className="eyebrow">A garden reading</p>
@@ -150,24 +143,17 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
               </ol>
             </section>
 
-            <section id="sources" className="sources-section story-sources">
-              <p className="eyebrow">Sources &amp; notes</p>
-              <h2>Where this story began</h2>
-              <p>
-                We use official film materials, original texts, and university horticulture
-                guidance where practical plant details matter. The reflection and interpretation
-                are our own.
-              </p>
+            <details className="references-disclosure">
+              <summary>References</summary>
               <div className="source-list">
                 {story.sources.map((source) => (
                   <a href={source.url} target="_blank" rel="noopener noreferrer" key={source.url}>
                     <span>{source.publisher}</span>
                     <strong>{source.title}</strong>
-                    <small>{source.note}</small>
                   </a>
                 ))}
               </div>
-            </section>
+            </details>
           </div>
         </div>
       </article>
