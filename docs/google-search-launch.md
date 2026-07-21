@@ -50,7 +50,7 @@ The Vercel URL can stay public for review. If the domain decision will take more
 3. Copy the Google DNS TXT verification record into the domain provider's DNS settings.
 4. Wait for DNS propagation, then select **Verify** in Search Console.
 5. Open **Sitemaps** and submit `sitemap.xml`.
-6. Confirm the sitemap status is successful and that 35 URLs are discovered.
+6. Confirm the sitemap status is successful and that 36 URLs are discovered.
 7. Use **URL inspection** on the first priority pages and select **Request indexing**.
 
 If a URL-prefix property is used instead, add the token value from Google's HTML meta-tag method to the Vercel environment variable `GOOGLE_SITE_VERIFICATION`, redeploy, and verify. Do not include the surrounding `<meta>` tag or `google-site-verification=` label in the value.

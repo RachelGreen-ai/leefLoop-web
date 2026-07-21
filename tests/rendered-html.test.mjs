@@ -82,6 +82,7 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(hubHtml, /Where plants meet stories, seasons, and everyday life\./);
   assert.match(hubHtml, /What Little Forest understands about growing a life/);
   assert.match(hubHtml, /What The Secret History of the British Garden teaches us about time/);
+  assert.match(hubHtml, /Japanese Gardens teaches us to notice/);
   assert.match(hubHtml, /The Secret Garden is really a story about paying attention/);
   assert.match(hubHtml, /The small magic of keeping one herb beside the kitchen/);
 
@@ -106,6 +107,18 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(documentaryHtml, /Gardening With Monty Don/);
   assert.match(documentaryHtml, /Rousham House &amp; Gardens/);
   assert.match(documentaryHtml, /BreadcrumbList/);
+
+  const japaneseGardensResponse = await render(
+    "/garden-blog/monty-don-japanese-gardens-noticing",
+  );
+  assert.equal(japaneseGardensResponse.status, 200);
+  const japaneseGardensHtml = await japaneseGardensResponse.text();
+  assert.match(japaneseGardensHtml, /The garden is not a collection of objects/);
+  assert.match(japaneseGardensHtml, /The path teaches the body how to look/);
+  assert.match(japaneseGardensHtml, /A borrowed view begins beyond the boundary/);
+  assert.match(japaneseGardensHtml, /Murin-an/);
+  assert.match(japaneseGardensHtml, /Kenrokuen Digital Archive/);
+  assert.match(japaneseGardensHtml, /BreadcrumbList/);
 });
 
 test("server-renders the PlantPulse signal engine page", async () => {
@@ -274,6 +287,10 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
   assert.match(
     sitemapXml,
     /rachelsgarden\.example\/garden-blog\/secret-history-british-garden-time/,
+  );
+  assert.match(
+    sitemapXml,
+    /rachelsgarden\.example\/garden-blog\/monty-don-japanese-gardens-noticing/,
   );
   const noteLinks = new Set(
     [...notesHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),

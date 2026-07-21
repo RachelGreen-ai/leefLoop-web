@@ -126,9 +126,9 @@ export const gardenStories: GardenStory[] = [
       },
     ],
     relatedSlugs: [
+      "monty-don-japanese-gardens-noticing",
       "secret-history-british-garden-time",
       "secret-garden-paying-attention",
-      "one-herb-by-the-kitchen",
     ],
   },
   {
@@ -270,9 +270,155 @@ export const gardenStories: GardenStory[] = [
       },
     ],
     relatedSlugs: [
+      "monty-don-japanese-gardens-noticing",
       "little-forest-growing-a-life",
       "secret-garden-paying-attention",
-      "one-herb-by-the-kitchen",
+    ],
+  },
+  {
+    slug: "monty-don-japanese-gardens-noticing",
+    category: "On screen",
+    title: "What Monty Don's Japanese Gardens teaches us to notice",
+    shortTitle: "Learning to notice with Japanese gardens",
+    dek: "Spring blossom, autumn leaves, stepping stones, moss, and borrowed mountains reveal a garden made through attention rather than ornament.",
+    opening:
+      "A Japanese garden can be easy to misread from a distance. We see a lantern, a maple, gravel, and moss, then assume the style can be assembled from recognizable parts. Monty Don's Japanese Gardens keeps returning to something slower: the garden is not a set of objects, but a relationship among season, place, movement, and care.",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-21",
+    readingTime: "9 min read",
+    setting: "Documentary & Japanese gardens",
+    theme: "Attention, season, restraint",
+    image: "/garden-stories-japanese-gardens.webp",
+    imageAlt: "The Murin-an garden in Kyoto framed by the open rooms of its main house",
+    imagePosition: "center 52%",
+    sections: [
+      {
+        id: "not-objects",
+        heading: "The garden is not a collection of objects",
+        paragraphs: [
+          "Across two episodes, filmed in spring and autumn, Monty Don visits strolling gardens, temple gardens, dry landscapes, tea gardens, contemporary spaces, urban rooftops, and bonsai collections. A stone lantern may appear in one place and moss in another, but those objects are not what holds the journey together.",
+          "What matters is the relationship between them: a path that changes pace, a branch that frames a mountain, an opening that makes light feel momentary. The garden is experienced through time and movement. Its character cannot be ordered from a catalog because it lives in the space between things.",
+        ],
+        callout: "The garden does not ask to be copied. It asks to be noticed.",
+      },
+      {
+        id: "two-seasons",
+        heading: "Spring and autumn make two different gardens",
+        paragraphs: [
+          "The series begins in the brightness of spring and returns in autumn, when color, weather, and work have changed. At Kenroku-en in Kanazawa, blossom can make the garden feel almost weightless in one season. Later, maples deepen the scene and preparations for winter become part of what visitors see.",
+          "Kenroku-en's famous yukitsuri uses ropes suspended from tall poles to protect pine branches from heavy snow. It is practical care, but it also gives the winter garden its own unmistakable outline. Season is not a decorative theme added after design. It changes the garden's work, structure, and meaning.",
+        ],
+      },
+      {
+        id: "path",
+        heading: "The path teaches the body how to look",
+        paragraphs: [
+          "In tea gardens and strolling gardens, the route is part of the composition. A stepping stone can shorten a stride. A turn can withhold a view for a few seconds. At Murin-an in Kyoto, stones, water, and changing viewpoints guide visitors through the garden rather than offering everything at once.",
+          "The official history of Murin-an describes stepping stones arranged to influence both the line of sight and the speed of walking. Some encourage a pause; others lead the eye forward. This is a quietly useful idea for a small home garden too. Even the few steps from a door to a chair can create a moment of arrival.",
+        ],
+      },
+      {
+        id: "borrowed-scenery",
+        heading: "A borrowed view begins beyond the boundary",
+        paragraphs: [
+          "Murin-an was created in the 1890s by landscape gardener Ogawa Jihei VII for statesman Yamagata Aritomo. Its composition reaches beyond its own ground, drawing the Higashiyama mountains into the scene. Trees are cared for not only as individual specimens, but as living frames for a landscape the garden does not own.",
+          "Borrowed scenery does not require a mountain. From a balcony or window, it might be a street tree, a patch of evening sky, a neighbor's vine, or the line of light between buildings. The question is not what can be added, but what is already present and worth framing.",
+        ],
+      },
+      {
+        id: "space",
+        heading: "Empty space is doing real work",
+        paragraphs: [
+          "Dry landscape gardens can look spare, but spareness is not the same as absence. The position of a rock, the surface of gravel, the clipped edge of planting, and the open interval around them all affect how the composition is read. Restraint requires choices and continued maintenance.",
+          "That makes empty space practical at home. Removing one competing ornament may let the shape of a plant become clearer. Leaving a little ground visible can make rain, fallen leaves, shadows, and the change of season easier to see. Fewer things can create more attention.",
+        ],
+      },
+      {
+        id: "visible-care",
+        heading: "Care is allowed to remain visible",
+        paragraphs: [
+          "The ropes and supports at Kenroku-en reveal something the series returns to often: maintenance need not be hidden for a garden to feel beautiful. Pruning, tying, sweeping, guiding water, and protecting old trees are not backstage activities. They are part of the garden's present form.",
+          "Murin-an carries a gentler example of adaptation. Yamagata first imagined expanses of lawn, but Kyoto's humid conditions favored moss. Rather than forcing the original idea indefinitely, the garden accepted what the place could grow; today more than fifty moss species contribute to its character. Care here means paying enough attention to change one's mind.",
+        ],
+      },
+      {
+        id: "living-tradition",
+        heading: "Tradition stays alive by changing",
+        paragraphs: [
+          "The documentary does not end with historic gardens. It visits modern work, rooftop planting, contemporary tea spaces, and bonsai, showing a tradition that continues to answer new lives and limited urban space. The Omiya Bonsai Art Museum likewise changes its displays with the season, presenting living trees whose condition and best viewing moment keep moving.",
+          "This is a more respectful lesson than reproducing a generic Japanese look. Begin with local weather, local materials, and the life already happening around the garden. Then borrow principles: reveal a view slowly, mark one season precisely, make room for weather, and care for a plant long enough to learn its character.",
+        ],
+      },
+      {
+        id: "watching",
+        heading: "Watch it once with a gardener's eye",
+        paragraphs: [
+          "The first viewing is easy to spend admiring blossom, moss, stone, and water. On a second viewing, watch what the garden asks the visitor to do. Its most portable ideas are often invisible until a person moves through them.",
+        ],
+        items: [
+          "Where does the path make someone slow, turn, or stop?",
+          "What has been deliberately left out of the composition?",
+          "Which view begins outside the garden's boundary?",
+          "How does the season change both the work and the meaning of the place?",
+          "Which forms of maintenance have been allowed to remain visible?",
+        ],
+      },
+    ],
+    bringHome: [
+      "Choose one seasonal marker already suited to your climate: a flowering bulb, a deciduous leaf, a summer herb, or a branch that holds rain.",
+      "Rework one short route or threshold so there is a reason to pause before the whole space is revealed.",
+      "Sit in your usual place and frame one borrowed view with careful pruning or the position of a single pot.",
+      "Remove one decorative object for a week and notice whether the plants, light, and weather become easier to see.",
+      "Let care be honest and local: use a stake, tie, repair, or climate-suited groundcover when the garden needs it instead of forcing a borrowed look.",
+    ],
+    sources: [
+      {
+        title: "Television: Monty Don's Japanese Gardens",
+        publisher: "Monty Don",
+        url: "https://www.montydon.com/television/",
+        note: "Official series overview of the spring and autumn journey through historic and contemporary Japanese gardens.",
+      },
+      {
+        title: "Monty Don's Japanese Gardens",
+        publisher: "Apple TV",
+        url: "https://tv.apple.com/gb/show/monty-dons-japanese-gardens/umc.cmc.44lu363ax94ruuxgrwy2u88bj",
+        note: "Episode guide for the two-part structure, from garden history to modern urban interpretations.",
+      },
+      {
+        title: "What Is Kenrokuen Garden?",
+        publisher: "Kenrokuen Digital Archive",
+        url: "https://kenrokuen-archive.pref.ishikawa.lg.jp/en/what-is-kenrokuen-garden/",
+        note: "Official history of Kenroku-en, its strolling design, and the six qualities behind its name.",
+      },
+      {
+        title: "Kenrokuen Garden",
+        publisher: "Kanazawa City Tourism Association",
+        url: "https://visitkanazawa.jp/en/attractions/detail_10106.html",
+        note: "Seasonal garden context and an explanation of yukitsuri winter rope supports.",
+      },
+      {
+        title: "About Murin-an",
+        publisher: "Murin-an",
+        url: "https://murin-an.jp/en/about/",
+        note: "Primary history of the garden's borrowed scenery, water, paths, viewpoints, moss, and long-term care.",
+      },
+      {
+        title: "Facilities and Services",
+        publisher: "Omiya Bonsai Art Museum",
+        url: "https://www.bonsai-art-museum.jp/en/facilities/service/",
+        note: "Museum information about its seasonal, changing displays of living bonsai.",
+      },
+      {
+        title: "View of Murin-an garden from main house",
+        publisher: "Wikimedia Commons",
+        url: "https://commons.wikimedia.org/wiki/File:View_of_Murin-an_garden_from_main_house.jpg",
+        note: "Hero photograph by Yasu, used under CC BY-SA 3.0 and GFDL, resized and converted to WebP.",
+      },
+    ],
+    relatedSlugs: [
+      "secret-history-british-garden-time",
+      "little-forest-growing-a-life",
+      "secret-garden-paying-attention",
     ],
   },
   {

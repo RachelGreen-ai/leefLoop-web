@@ -18,8 +18,8 @@ Current build checkpoint:
 - Twenty-five source-backed Plant Notes are in the release build: four foundation notes, the twenty-note search-intent sprint, and a new research-backed feature on succulent breeding.
 - Retail-first naming now follows the words readers see and search, such as `Trader Joe's Premium Monstera`; cultivar and botanical distinctions are explained inside the note.
 - The new library covers retail finds, beginner succulent care, desert rose, string of pearls, tomato and zucchini problems, balcony food growing, propagation, and realistic local plant selling.
-- `/garden-blog` and four complete Garden Stories connect plant care with film, documentaries, literature, and everyday rituals.
-- The culture-led collection now includes seasonal growing through the Japanese films *Little Forest* and four centuries of garden history through Monty Don's *The Secret History of the British Garden*.
+- `/garden-blog` and five complete Garden Stories connect plant care with film, documentaries, literature, and everyday rituals.
+- The culture-led collection now includes seasonal growing through the Japanese films *Little Forest*, four centuries of garden history through Monty Don's *The Secret History of the British Garden*, and a close reading of attention, season, and care in *Monty Don's Japanese Gardens*.
 - PlantPulse now links to dated evidence instead of displaying invented precision.
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
 - Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
@@ -121,7 +121,7 @@ Goal: use films, books, markets, and seasonal living as inspiration, then turn t
 
 Reference style:
 - Japanese seasonal living and food-centered films such as *Little Forest*
-- Garden documentaries such as *The Secret History of the British Garden*, read through design, labor, access, plant movement, and everyday practice
+- Garden documentaries such as *The Secret History of the British Garden* and *Monty Don's Japanese Gardens*, read through design, labor, season, movement, and everyday practice
 - botanical essays, home cooking, farmers markets, quiet garden rituals
 - visually beautiful plant moments from everyday life
 
@@ -369,6 +369,7 @@ Tasks:
 - Publish the twenty-note search-intent sprint across retail, succulent, edible, and community topics. Done.
 - Publish a source-backed introduction to succulent breeders using Echeveria 'Cubic Frost' as a documented case study. Done.
 - Publish a source-backed Garden Story on *The Secret History of the British Garden*, with a practical reading of four centuries of garden design. Done.
+- Publish a source-backed Garden Story on *Monty Don's Japanese Gardens*, turning paths, borrowed scenery, seasonal care, and restraint into locally useful ideas. Done.
 - Split the guide library into typed topic modules so larger batches remain maintainable. Done.
 - Add rendered release coverage for all 25 notes and their internal links. Done.
 - Add editorial approach and privacy pages. Done.
