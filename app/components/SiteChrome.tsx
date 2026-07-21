@@ -4,9 +4,9 @@ export function SiteHeader() {
   return (
     <header className="site-header" aria-label="Main navigation">
       <Link className="brand-mark" href="/" aria-label="Garden Companion home">
-        <span className="brand-symbol">g</span>
+        <span className="brand-symbol">G</span>
         <span>
-          <strong>garden companion</strong>
+          <strong>Garden Companion</strong>
           <small>plant notes for real homes</small>
         </span>
       </Link>
@@ -26,7 +26,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
-        <strong>garden companion</strong>
+        <strong>Garden Companion</strong>
         <p>
           Fresh, practical plant notes for indoor corners, local finds, small gardens, and
           seasonal tables.

@@ -300,27 +300,40 @@ h3 {
 
 .trust-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding: 18px clamp(18px, 4vw, 56px);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: var(--surface);
+  background: var(--warm-white);
 }
 
 .trust-strip > a {
   display: block;
-  min-height: 118px;
-  padding: 28px clamp(18px, 3vw, 38px);
-  border-right: 1px solid var(--line);
-  transition: background-color 180ms ease;
+  min-height: 126px;
+  padding: 26px clamp(18px, 2.4vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 6px 20px rgba(41, 51, 45, 0.04);
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
-.trust-strip > a:hover,
+.trust-strip > a:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 125, 74, 0.5);
+  background: #f5fbf6;
+  box-shadow: 0 18px 38px rgba(41, 51, 45, 0.14);
+}
+
 .trust-strip > a:focus-visible {
-  background: var(--mint);
-}
-
-.trust-strip > a:last-child {
-  border-right: 0;
+  outline: 3px solid rgba(47, 125, 74, 0.28);
+  outline-offset: 3px;
+  border-color: var(--leaf);
 }
 
 .trust-strip strong,
@@ -1605,7 +1618,6 @@ h3 {
     display: none;
   }
 
-  .trust-strip,
   .editorial-note,
   .pulse-card-grid,
   .region-panel,
@@ -1617,6 +1629,10 @@ h3 {
   .beta-section,
   .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .trust-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .article-grid,
@@ -1635,12 +1651,7 @@ h3 {
   }
 
   .trust-strip > a {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .trust-strip > a:last-child {
-    border-bottom: 0;
+    min-height: 118px;
   }
 
   .plantpulse-copy {
@@ -1724,6 +1735,12 @@ h3 {
 
   .hero-actions a {
     width: 100%;
+  }
+
+  .trust-strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px 16px;
   }
 
   .trend-row {

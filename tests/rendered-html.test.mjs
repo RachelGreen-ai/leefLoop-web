@@ -30,6 +30,7 @@ test("server-renders the Garden Companion MVP homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /Garden Companion \| Weekly Plant Care Notes/);
+  assert.match(html, /<strong>Garden Companion<\/strong>/);
   assert.match(html, /Fresh plant notes for what is growing around you\./);
   assert.match(html, /Subscribe to plant notes/);
   assert.match(html, /A good place to begin\./);
