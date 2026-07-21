@@ -55,11 +55,27 @@ const communityPrompts = [
   },
 ];
 
-const subscriberPerks = [
-  "Weekly local plant notes",
-  "Indoor plant care prompts",
-  "Seasonal farm-to-table ideas",
-  "Organic-first troubleshooting",
+const newsletterTopics = [
+  {
+    title: "Local finds",
+    detail: "Plants appearing in nearby shopping and garden conversations",
+    href: "/plantpulse#costco-plant-watch",
+  },
+  {
+    title: "Indoor favorites",
+    detail: "Monstera, orchids, pothos, and life beside the window",
+    href: "/notes/monstera-leaves-curling",
+  },
+  {
+    title: "Seasonal eating",
+    detail: "Herbs, harvests, and small farm-to-table ideas",
+    href: "/notes/basil-first-harvest",
+  },
+  {
+    title: "Plain answers",
+    detail: "What to check first, what can wait, and what to skip",
+    href: "/notes",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -144,25 +160,6 @@ export default function Home() {
           Maybe it is a Costco olive tree on the patio, a Monstera by the window, or basil you hope
           will become dinner. We write for those small, real moments.
         </p>
-      </section>
-
-      <section className="trust-strip" aria-label="What subscribers receive">
-        <Link href="/plantpulse#costco-plant-watch">
-          <strong>Local finds</strong>
-          <span>Plants showing up in nearby shopping and garden conversations</span>
-        </Link>
-        <Link href="/notes/monstera-leaves-curling">
-          <strong>Indoor favorites</strong>
-          <span>Monstera, pothos, orchids, and potted plant care</span>
-        </Link>
-        <Link href="/notes/basil-first-harvest">
-          <strong>Seasonal eating</strong>
-          <span>Herbs, harvest ideas, and small farm-to-table prompts</span>
-        </Link>
-        <Link href="/notes">
-          <strong>Plain answers</strong>
-          <span>What to check first, what to skip, and what can wait</span>
-        </Link>
       </section>
 
       <section id="notes" className="content-band">
@@ -271,20 +268,23 @@ export default function Home() {
       </section>
 
       <section id="newsletter" className="beta-section">
-        <div>
+        <div className="newsletter-copy">
           <p className="eyebrow">A calmer plant letter</p>
           <h2>Get weekly plant notes shaped by place, season, and real questions.</h2>
           <p>
-            Join for local plant finds, indoor care, farm-to-table ideas, and practical guides that
-            feel friendly enough to actually use.
+            One thoughtful note each week, timed to what people are bringing home, tending, and
+            cooking with.
           </p>
-          <div className="tool-list compact-list">
-            {subscriberPerks.map((perk) => (
-              <span key={perk}>{perk}</span>
-            ))}
-          </div>
         </div>
         <WaitlistForm source="newsletter" />
+        <div className="newsletter-links" aria-label="Topics in the weekly plant letter">
+          {newsletterTopics.map((topic) => (
+            <Link href={topic.href} key={topic.title}>
+              <strong>{topic.title}</strong>
+              <span>{topic.detail}</span>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <SiteFooter />

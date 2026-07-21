@@ -58,6 +58,13 @@ test("homepage navigation points to real content destinations", async () => {
   assert.match(html, /href="\/notes\/monstera-leaves-curling"[^>]*><strong>Indoor favorites<\/strong>/);
   assert.match(html, /href="\/notes\/basil-first-harvest"[^>]*><strong>Seasonal eating<\/strong>/);
   assert.match(html, /href="\/notes"[^>]*><strong>Plain answers<\/strong>/);
+  assert.ok(
+    html.indexOf('id="newsletter"') <
+      html.indexOf('href="/plantpulse#costco-plant-watch"'),
+    "topic links should live inside the final newsletter section",
+  );
+  assert.equal((html.match(/<strong>Local finds<\/strong>/g) ?? []).length, 1);
+  assert.doesNotMatch(html, /class="trust-strip"|Weekly local plant notes/);
 
   for (const pathname of ["/notes", "/plantpulse", "/garden-blog"]) {
     const destination = await render(pathname);
