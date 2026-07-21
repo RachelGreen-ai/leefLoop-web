@@ -14,6 +14,8 @@ const cormorant = Cormorant_Garamond({
   weight: ["500", "600", "700"],
 });
 
+const googleVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Garden Companion",
   },
   description:
-    "Subscribe to practical weekly plant notes about local plant finds, indoor potted plants, seasonal care, organic fixes, farm-to-table ideas, and PlantPulse trend signals.",
+    "Weekly plant notes for indoor favorites, local finds, seasonal growing, organic fixes, and small farm-to-table gardens.",
   keywords: [
     "plant care newsletter",
     "Costco plant care",
@@ -40,6 +42,8 @@ export const metadata: Metadata = {
     description:
       "Practical plant-care notes for local plant finds, indoor favorites, seasonal growing, and small farm-to-table rituals.",
     type: "website",
+    siteName: "Garden Companion",
+    url: "/",
     images: [
       {
         url: "/og.png",
@@ -62,8 +66,12 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
+  verification: googleVerification ? { google: googleVerification } : undefined,
 };
 
 export default function RootLayout({

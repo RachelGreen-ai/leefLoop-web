@@ -3,9 +3,12 @@ import Link from "next/link";
 import { GardenStoryCard } from "../components/GardenStoryCard";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { gardenStories } from "../data/garden-stories";
+import { getSiteUrl } from "../lib/site-url";
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Garden Stories | Plants In Film, Books, And Everyday Life",
+  title: "Garden Stories: Plants In Film & Books",
   description:
     "Thoughtful garden essays about plants in film and literature, seasonal kitchens, useful beauty, and the small rituals that make growing feel personal.",
   alternates: { canonical: "/garden-blog" },
@@ -41,7 +44,7 @@ export default function GardenBlogPage() {
       itemListElement: gardenStories.map((story, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `/garden-blog/${story.slug}`,
+        url: `${siteUrl}/garden-blog/${story.slug}`,
         name: story.title,
       })),
     },

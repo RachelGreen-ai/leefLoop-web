@@ -5,6 +5,9 @@ import { GuideCard } from "./components/GuideCard";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import { guides } from "./data/guides";
 import { getTopSignals, getRegionName } from "./data/plantpulse";
+import { getSiteUrl } from "./lib/site-url";
+
+const siteUrl = getSiteUrl();
 
 const sitePaths = [
   {
@@ -56,9 +59,10 @@ const subscriberPerks = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Garden Companion | Weekly Plant Care Notes And Local Plant Trends" },
+  title: { absolute: "Garden Companion | Plant Care & Local Trends" },
   description:
-    "Subscribe to a calm, practical plant-care publication covering local Costco plant finds, indoor potted plants, seasonal care, farm-to-table ideas, and PlantPulse trend notes.",
+    "Weekly plant notes for indoor favorites, local finds, seasonal growing, organic fixes, and small farm-to-table gardens.",
+  alternates: { canonical: "/" },
 };
 
 export default function Home() {
@@ -68,22 +72,25 @@ export default function Home() {
     "@graph": [
       {
         "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
         name: "Garden Companion",
+        url: siteUrl,
         description:
           "A weekly plant-care publication for local plant finds, indoor potted plants, seasonal care, and farm-to-table ideas.",
         inLanguage: "en-US",
         potentialAction: {
           "@type": "SubscribeAction",
-          target: "#newsletter",
+          target: `${siteUrl}/#newsletter`,
           name: "Subscribe to weekly plant notes",
         },
       },
       {
         "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
         name: "Garden Companion",
         description:
           "An independent plant-care publication translating timely plant signals and horticultural sources into practical notes.",
-        url: "/",
+        url: siteUrl,
       },
     ],
   };

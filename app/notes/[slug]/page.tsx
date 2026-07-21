@@ -9,6 +9,9 @@ import {
   getRelatedGuides,
   guides,
 } from "../../data/guides";
+import { getSiteUrl } from "../../lib/site-url";
+
+const siteUrl = getSiteUrl();
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -32,6 +35,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     alternates: { canonical: `/notes/${guide.slug}` },
     openGraph: {
       type: "article",
+      url: `/notes/${guide.slug}`,
       title: guide.title,
       description: guide.dek,
       images: [{ url: guide.image, alt: guide.imageAlt }],
@@ -50,7 +54,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   }
 
   const relatedGuides = getRelatedGuides(guide.relatedSlugs);
-  const pageUrl = `/notes/${guide.slug}`;
+  const pageUrl = `${siteUrl}/notes/${guide.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -58,7 +62,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         "@type": "Article",
         headline: guide.title,
         description: guide.answer,
-        image: guide.image,
+        image: new URL(guide.image, `${siteUrl}/`).toString(),
         datePublished: guide.publishedAt,
         dateModified: guide.updatedAt,
         inLanguage: "en-US",
@@ -69,6 +73,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         },
         publisher: {
           "@type": "Organization",
+          "@id": `${siteUrl}/#organization`,
           name: "Garden Companion",
         },
         citation: guide.sources.map((source) => source.url),
@@ -87,8 +92,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-          { "@type": "ListItem", position: 2, name: "Plant notes", item: "/notes" },
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Plant notes", item: `${siteUrl}/notes` },
           { "@type": "ListItem", position: 3, name: guide.shortTitle, item: pageUrl },
         ],
       },

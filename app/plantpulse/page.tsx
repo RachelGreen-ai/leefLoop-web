@@ -9,18 +9,35 @@ import {
   getTopSignals,
   plantPulseRegions,
 } from "../data/plantpulse";
+import { getSiteUrl } from "../lib/site-url";
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Trending Plants | Local And Indoor Plant Notes",
+  title: "Trending Plants & Local Plant Notes",
   description:
     "A warm plant signal digest for local gardens, indoor potted plants, seasonal care notes, Costco plant finds, search trends, and community prompts.",
+  alternates: { canonical: "/plantpulse" },
 };
 
 export default function PlantPulsePage() {
   const topSignals = getTopSignals(4);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Trending plants and local plant notes",
+    description:
+      "A weekly collection of timely indoor plant, local garden, seasonal growing, and plant-care signals.",
+    url: `${siteUrl}/plantpulse`,
+    isPartOf: { "@id": `${siteUrl}/#website` },
+  };
 
   return (
     <main className="plantpulse-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SiteHeader />
 
       <section className="pulse-hero">

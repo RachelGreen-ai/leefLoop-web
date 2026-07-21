@@ -20,6 +20,7 @@ Current build checkpoint:
 - PlantPulse now links to dated evidence instead of displaying invented precision.
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
 - Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
+- Google search launch foundation now includes truthful dynamic sitemap dates, image sitemap entries, complete canonicals, absolute structured-data URLs, and optional Search Console verification metadata.
 
 ## 0. Strategic Decision
 
@@ -190,6 +191,10 @@ Current implementation:
 - `CollectionPage` and `ItemList` schema on `/notes`.
 - `Article`, `FAQPage`, and `BreadcrumbList` schema on every guide.
 - Canonical metadata, Open Graph image, X card, expanded sitemap, and AI crawler access.
+- Sitemap hub dates now follow actual content/source updates instead of a shared manual date.
+- Plant Note and Garden Story images are included in the sitemap.
+- Structured-data page, article, image, and breadcrumb URLs are absolute.
+- Search Console setup and the ongoing publishing workflow are documented in `docs/google-search-launch.md`.
 - Answer-first intros, visible update dates, source notes, FAQ sections, and related links.
 
 ## 4A. Automated Signal Engine
@@ -304,7 +309,7 @@ Tasks:
 
 ### Phase 1: Search Foundation
 
-Status: Done for first content release.
+Status: Code complete; custom domain ownership and Search Console submission pending.
 
 Tasks:
 - Add SEO/GEO metadata. Done.
@@ -313,6 +318,10 @@ Tasks:
 - Add homepage `WebSite` JSON-LD. Done.
 - Add article, FAQ, breadcrumb, collection, and organization schema. Done.
 - Add canonical URLs and full sitemap coverage. Done.
+- Derive sitemap `lastmod` from real content and PlantPulse source dates. Done.
+- Add article and story image entries to the sitemap. Done.
+- Add optional Google verification metadata. Done.
+- Document domain, sitemap submission, URL inspection, and weekly optimization operations. Done.
 - Add a bespoke social sharing image. Done.
 
 ### Phase 2: Content Page System
@@ -353,7 +362,7 @@ Tasks:
 - Add source registry and freshness monitor. Done.
 - Extract the current Costco online product list from structured data. Done.
 - Show selected and complete Costco watch lists on PlantPulse. Done.
-- Add Search Console after deployment. Not started.
+- Add Search Console after the final custom domain is connected. Not started.
 - Add manual Google Trends worksheet. Not started.
 
 ### Phase 5: Brand And Visual Refinement
@@ -368,21 +377,22 @@ Tasks:
 
 ### Phase 6: Release And Learning Loop
 
-Status: Next.
+Status: In progress.
 
 Tasks:
-- Publish the validated site.
+- Publish the validated site. Done on the Vercel review domain.
 - Connect the production Google Sheet webhook.
-- Verify the domain in Google Search Console and Bing Webmaster Tools.
-- Submit the sitemap.
+- Connect the final custom domain. Not started.
+- Verify the final domain in Google Search Console and Bing Webmaster Tools. Not started.
+- Submit the production-domain sitemap. Not started.
 - Add privacy-aware analytics and newsletter conversion events.
 - Send the first weekly issue using the four published guides.
 - Review subscriber source, interest, region, and reply patterns after two issues.
 
 ## 9. Next Build Priorities
 
-1. Publish the website and connect the production Google Sheet webhook.
-2. Verify Search Console and Bing, then submit the sitemap.
+1. Choose and connect the final custom domain, then set `NEXT_PUBLIC_SITE_URL` in Vercel.
+2. Verify the domain in Search Console and submit `sitemap.xml` using `docs/google-search-launch.md`.
 3. Turn the current Costco list into the next three guides: orchid, Monstera Esqueleto, and kumquat.
 4. Add the Search Console query import after enough impressions exist.
 5. Publish the first weekly letter and record topic-level conversion.

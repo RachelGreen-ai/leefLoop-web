@@ -29,12 +29,12 @@ test("server-renders the Garden Companion MVP homepage", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /Garden Companion \| Weekly Plant Care Notes/);
+  assert.match(html, /Garden Companion \| Plant Care &amp; Local Trends/);
   assert.match(html, /<strong>Garden Companion<\/strong>/);
   assert.match(html, /Fresh plant notes for what is growing around you\./);
   assert.match(html, /Subscribe to plant notes/);
   assert.match(html, /A good place to begin\./);
-  assert.match(html, /PlantPulse/);
+  assert.match(html, /Trending Plants/);
   assert.match(html, /Monstera/);
   assert.match(html, /Browse Plant Notes/);
   assert.match(html, /See Trending Plants/);
@@ -133,6 +133,41 @@ test("server-renders about and privacy pages", async () => {
   const privacyResponse = await render("/privacy");
   assert.equal(privacyResponse.status, 200);
   assert.match(await privacyResponse.text(), /We do not sell personal information\./);
+});
+
+test("publishes canonical URLs, search directives, and a complete image sitemap", async () => {
+  const [homeResponse, pulseResponse, guideResponse, sitemapResponse, robotsResponse] =
+    await Promise.all([
+      render("/"),
+      render("/plantpulse"),
+      render("/notes/monstera-leaves-curling"),
+      render("/sitemap.xml"),
+      render("/robots.txt"),
+    ]);
+
+  const [homeHtml, pulseHtml, guideHtml, sitemapXml, robotsTxt] = await Promise.all([
+    homeResponse.text(),
+    pulseResponse.text(),
+    guideResponse.text(),
+    sitemapResponse.text(),
+    robotsResponse.text(),
+  ]);
+
+  assert.match(homeHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/"/);
+  assert.match(pulseHtml, /rel="canonical" href="https:\/\/gardencompanion\.example\/plantpulse"/);
+  assert.match(homeHtml, /name="googlebot" content="[^\"]*max-image-preview:large/);
+  assert.match(guideHtml, /https:\/\/gardencompanion\.example\/notes\/monstera-leaves-curling/);
+
+  assert.equal(sitemapResponse.status, 200);
+  assert.match(sitemapResponse.headers.get("content-type") ?? "", /xml/i);
+  assert.match(sitemapXml, /<image:image>/);
+  assert.match(sitemapXml, /gardencompanion\.example\/notes\/monstera-leaves-curling/);
+  assert.match(sitemapXml, /gardencompanion\.example\/garden-blog\/little-forest-growing-a-life/);
+  assert.equal((sitemapXml.match(/<url>/g) ?? []).length, 13);
+
+  assert.equal(robotsResponse.status, 200);
+  assert.match(robotsTxt, /User-Agent: \*/i);
+  assert.match(robotsTxt, /Sitemap: https:\/\/gardencompanion\.example\/sitemap\.xml/i);
 });
 
 test("starter preview files and dependency are removed", async () => {

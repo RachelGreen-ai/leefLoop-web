@@ -9,6 +9,9 @@ import {
   getGardenStory,
   getRelatedGardenStories,
 } from "../../data/garden-stories";
+import { getSiteUrl } from "../../lib/site-url";
+
+const siteUrl = getSiteUrl();
 
 type GardenStoryPageProps = {
   params: Promise<{ slug: string }>;
@@ -32,6 +35,7 @@ export async function generateMetadata({ params }: GardenStoryPageProps): Promis
     alternates: { canonical: `/garden-blog/${story.slug}` },
     openGraph: {
       type: "article",
+      url: `/garden-blog/${story.slug}`,
       title: story.title,
       description: story.dek,
       images: [{ url: story.image, alt: story.imageAlt }],
@@ -50,7 +54,7 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
   }
 
   const relatedStories = getRelatedGardenStories(story.relatedSlugs);
-  const pageUrl = `/garden-blog/${story.slug}`;
+  const pageUrl = `${siteUrl}/garden-blog/${story.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -58,21 +62,30 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
         "@type": "Article",
         headline: story.title,
         description: story.dek,
-        image: story.image,
+        image: new URL(story.image, `${siteUrl}/`).toString(),
         datePublished: story.publishedAt,
         dateModified: story.updatedAt,
         articleSection: story.category,
         inLanguage: "en-US",
         mainEntityOfPage: pageUrl,
         author: { "@type": "Organization", name: "Garden Companion" },
-        publisher: { "@type": "Organization", name: "Garden Companion" },
+        publisher: {
+          "@type": "Organization",
+          "@id": `${siteUrl}/#organization`,
+          name: "Garden Companion",
+        },
         citation: story.sources.map((source) => source.url),
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-          { "@type": "ListItem", position: 2, name: "Garden Stories", item: "/garden-blog" },
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Garden Stories",
+            item: `${siteUrl}/garden-blog`,
+          },
           { "@type": "ListItem", position: 3, name: story.shortTitle, item: pageUrl },
         ],
       },

@@ -21,11 +21,12 @@ The first release candidate is now implemented and deployed to Vercel:
 - newsletter and plant-signal capture
 - editorial approach and privacy pages
 - technical SEO/GEO foundation and social preview
+- dynamic sitemap dates, image discovery, canonical URLs, and a documented Google Search launch workflow
 - automated source freshness and Costco product-change monitor
 
 Production: `https://garden-companion-notes.vercel.app`
 
-Remaining release work is production form storage, analytics/search verification, a custom domain, GitHub-Vercel integration, and the first newsletter send.
+Remaining release work is production form storage, a custom domain, Search Console ownership and sitemap submission, analytics, GitHub-Vercel integration, and the first newsletter send.
 
 ## 2026-07-20 Strategy Update
 

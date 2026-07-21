@@ -3,6 +3,9 @@ import Link from "next/link";
 import { GuideCard } from "../components/GuideCard";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { guides } from "../data/guides";
+import { getSiteUrl } from "../lib/site-url";
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   title: "Plant Notes For Everyday Growing",
@@ -25,7 +28,7 @@ export default function NotesPage() {
       itemListElement: guides.map((guide, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `/notes/${guide.slug}`,
+        url: `${siteUrl}/notes/${guide.slug}`,
         name: guide.title,
       })),
     },
