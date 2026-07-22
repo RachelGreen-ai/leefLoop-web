@@ -86,6 +86,10 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.equal(hubResponse.status, 200);
   const hubHtml = await hubResponse.text();
   assert.match(hubHtml, /Where plants meet stories, seasons, and everyday life\./);
+  assert.doesNotMatch(
+    hubHtml,
+    /story-shelves|Gardens we can almost step into|When a plant changes the story|The poetry hiding in useful things/,
+  );
   assert.match(hubHtml, /What Little Forest understands about growing a life/);
   assert.match(hubHtml, /What The Secret History of the British Garden teaches us about time/);
   assert.match(hubHtml, /Japanese Gardens teaches us to notice/);

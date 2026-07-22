@@ -1485,44 +1485,6 @@ h3 {
   margin-top: 14px;
 }
 
-.story-shelves {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--surface);
-}
-
-.story-shelves article {
-  min-height: 260px;
-  padding: 38px clamp(24px, 4vw, 58px);
-  border-right: 1px solid var(--line);
-}
-
-.story-shelves article:last-child {
-  border-right: 0;
-}
-
-.story-shelves span {
-  color: var(--clay);
-  font-size: 11px;
-  font-weight: 850;
-  text-transform: uppercase;
-}
-
-.story-shelves h2 {
-  margin: 52px 0 14px;
-  font-size: 32px;
-  line-height: 1.06;
-}
-
-.story-shelves p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.62;
-}
-
 .stories-index,
 .related-stories {
   padding: clamp(72px, 10vw, 128px) clamp(18px, 5vw, 72px);
@@ -1831,24 +1793,6 @@ h3 {
 
   .stories-hero h1 {
     font-size: 62px;
-  }
-
-  .story-shelves {
-    grid-template-columns: 1fr;
-  }
-
-  .story-shelves article {
-    min-height: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .story-shelves article:last-child {
-    border-bottom: 0;
-  }
-
-  .story-shelves h2 {
-    margin-top: 28px;
   }
 
   .story-card.featured {

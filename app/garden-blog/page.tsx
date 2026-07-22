@@ -18,24 +18,6 @@ export const metadata: Metadata = {
   ...buildSocialMetadata({ title: pageTitle, description: pageDescription, path: "/garden-blog" }),
 };
 
-const shelves = [
-  {
-    label: "On screen",
-    title: "Gardens we can almost step into",
-    copy: "Films and documentaries where gardens, weather, work, and the lives around them carry the story.",
-  },
-  {
-    label: "On the page",
-    title: "When a plant changes the story",
-    copy: "Literary gardens, memorable trees, unruly flowers, and the people who learn to notice them.",
-  },
-  {
-    label: "Small wonders",
-    title: "The poetry hiding in useful things",
-    copy: "A windowsill herb, an opening leaf, a jar of summer fruit, or one small ritual worth keeping.",
-  },
-];
-
 export default function GardenBlogPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -74,16 +56,6 @@ export default function GardenBlogPage() {
             Read our Little Forest story
           </Link>
         </div>
-      </section>
-
-      <section className="story-shelves" aria-label="Garden story collections">
-        {shelves.map((shelf) => (
-          <article key={shelf.label}>
-            <span>{shelf.label}</span>
-            <h2>{shelf.title}</h2>
-            <p>{shelf.copy}</p>
-          </article>
-        ))}
       </section>
 
       <section className="stories-index">
