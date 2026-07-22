@@ -15,18 +15,18 @@ Current build checkpoint:
 - Audience-facing content website is complete for the first public MVP.
 - Production deployment is live at `https://garden-companion-notes.vercel.app`.
 - `/notes` hub, search, topic filters, and reusable guide template are live.
-- Twenty-five source-backed Plant Notes are in the release build: four foundation notes, the twenty-note search-intent sprint, and a new research-backed feature on succulent breeding.
+- Thirty-three source-backed Plant Notes are in the release build: the prior 25-note library plus an eight-note retail rescue cluster shaped by current Costco, Lowe's, and Target signals.
 - Retail-first naming now follows the words readers see and search, such as `Trader Joe's Premium Monstera`; cultivar and botanical distinctions are explained inside the note.
-- All 25 Plant Notes now have visible, searchable editorial tags; retailer aliases and common search names are included in onsite search and article metadata.
+- All 33 Plant Notes have visible, searchable editorial tags; retailer aliases and common search names are included in onsite search and article metadata.
 - The first shared plant entity joins Trader Joe's `Premium Monstera`, Target's `Live 5-inch Thai Constellation Plant`, Home Depot's Thai Constellation wording, common shorthand, and the accepted cultivar name without duplicating articles.
-- The new library covers retail finds, beginner succulent care, desert rose, string of pearls, tomato and zucchini problems, balcony food growing, propagation, and realistic local plant selling.
+- The library now adds high-intent diagnosis for drooping peace lilies, falling snake plant leaves, yellow pothos, fiddle-leaf fig leaf drop, brown Boston ferns, yellow Alocasia Polly leaves, brown coffee plants, and newly moved kumquat trees.
 - `/garden-blog` and five complete Garden Stories connect plant care with film, documentaries, literature, and everyday rituals.
 - The culture-led collection now includes seasonal growing through the Japanese films *Little Forest*, four centuries of garden history through Monty Don's *The Secret History of the British Garden*, and a close reading of attention, season, and care in *Monty Don's Japanese Gardens*.
 - PlantPulse now links to dated evidence instead of displaying invented precision.
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
 - Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
 - Google search launch foundation now includes truthful dynamic sitemap dates, image sitemap entries, complete canonicals, absolute structured-data URLs, and optional Search Console verification metadata.
-- Release tests now render all 25 notes, verify every internal note link, and require FAQ and reference sections before publication.
+- Release tests now render all 33 notes, verify every internal note link, and require FAQ and reference sections before publication.
 
 ## 0. Strategic Decision
 
@@ -366,7 +366,7 @@ Tasks:
 
 ### Phase 2: Content Page System
 
-Status: Done for the 25-note public content MVP.
+Status: Done for the 33-note public content MVP.
 
 Tasks:
 - Add `/notes` hub. Done.
@@ -378,10 +378,11 @@ Tasks:
 - Publish olive tree, Monstera, basil, and eggshell guides. Done.
 - Publish the twenty-note search-intent sprint across retail, succulent, edible, and community topics. Done.
 - Publish a source-backed introduction to succulent breeders using Echeveria 'Cubic Frost' as a documented case study. Done.
+- Publish an eight-note retail rescue cluster connecting current Costco, Lowe's, and Target shelf signals with recurring symptom searches. Done.
 - Publish a source-backed Garden Story on *The Secret History of the British Garden*, with a practical reading of four centuries of garden design. Done.
 - Publish a source-backed Garden Story on *Monty Don's Japanese Gardens*, turning paths, borrowed scenery, seasonal care, and restraint into locally useful ideas. Done.
 - Split the guide library into typed topic modules so larger batches remain maintainable. Done.
-- Add rendered release coverage for all 25 notes and their internal links. Done.
+- Add rendered release coverage for all 33 notes and their internal links. Done.
 - Add editorial approach and privacy pages. Done.
 - Add a taxonomy-driven Plant Notes library with working topic filters, live search, result counts, empty states, and shareable `topic`/`q` URLs. Done.
 - Link every guide card and article breadcrumb back to its relevant Plant Notes topic. Done.
@@ -417,7 +418,7 @@ Tasks:
 - Add source registry and freshness monitor. Done.
 - Extract the current Costco online product list from structured data. Done.
 - Show selected and complete Costco watch lists on PlantPulse. Done.
-- Add Target and Trader Joe's to the source registry. Done.
+- Add Target, Trader Joe's, and Lowe's to the source registry. Done.
 - Add canonical plant entities with retailer aliases, search names, question patterns, and existing coverage. Done.
 - Add a validated Google Trends CSV input and automatically scored topic queue. Done; weekly observations pending.
 - Add visible tags and alias-aware onsite search to all Plant Notes. Done.
@@ -455,5 +456,5 @@ Tasks:
 3. Publish a first newsletter issue that links to Trader Joe's Premium Monstera, the honest succulent ranking, and the balcony snack garden; record clicks by topic.
 4. Add privacy-aware analytics for note view, search, topic filter, related-note click, source click, and newsletter conversion.
 5. Import the first official Google Trends comparison rows, then use the generated queue with Search Console queries, onsite search gaps, subscriber replies, retailer signals, and seasonal timing to rank the next briefs.
-6. Build the next cluster only after demand review: pothos low-light truth, coffee grounds, blueberry containers, patio citrus, pet-aware plant choices, and hydrangea heat stress.
+6. Build the next cluster only after demand review: fungus gnats, coffee grounds, banana water, pet-aware plant choices, blueberry containers, and hydrangea heat stress.
 7. Automate brief generation and source-change alerts while keeping claim review and final editorial approval human-led.

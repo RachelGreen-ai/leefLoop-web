@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-21T19:19:34.388Z",
+  "generatedAt": "2026-07-22T04:15:20.792Z",
   "entityRegistryVersion": 1,
-  "sourceSnapshotGeneratedAt": "2026-07-21T19:16:29.933Z",
+  "sourceSnapshotGeneratedAt": "2026-07-22T04:15:16.168Z",
   "googleTrendsObservationCount": 0,
   "scoringNotice": "Scores are editorial prioritization aids, not public popularity claims. Missing evidence always scores zero.",
   "queue": [
@@ -80,6 +80,337 @@
       "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
     },
     {
+      "entityId": "boston-fern",
+      "canonicalName": "Boston fern",
+      "botanicalName": "Nephrolepis exaltata",
+      "score": 34,
+      "band": "watch",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 20,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 10,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 4
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Boston fern",
+        "Boston Fern",
+        "Boston Fern in 2-Gallon Planter",
+        "Boston fern turning brown",
+        "Boston fern crispy leaves"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Boston+fern%2CBoston+Fern%2CBoston+Fern+in+2-Gallon+Planter%2CBoston+fern+turning+brown%2CBoston+fern+crispy+leaves",
+      "aliases": [
+        "Boston Fern",
+        "Boston Fern in 2-Gallon Planter",
+        "Boston fern turning brown",
+        "Boston fern crispy leaves"
+      ],
+      "tags": [
+        "Boston fern",
+        "Brown leaves",
+        "Humidity",
+        "Porch plants"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Boston Fern",
+          "url": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        },
+        {
+          "retailer": "Costco",
+          "label": "Easy to Care Boston Fern Houseplant in 10 in. Nursery Pot 2-pack",
+          "url": "https://www.costco.com/.product.4000300411.html",
+          "observedAt": "2026-07-22",
+          "collection": "automated_structured_product_check"
+        },
+        {
+          "retailer": "Lowe's",
+          "label": "Boston Fern in 2-Gallon Planter",
+          "url": "https://www.lowes.com/pd/Lowe-s-Boston-Fern-in-2-Gallon-s-Planter-1-Pack/5014206137",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why is my Boston fern turning brown and crispy?",
+        "Should I mist a Boston fern every day?",
+        "Are brown dots under Boston fern leaves pests?"
+      ],
+      "coverageSlugs": [
+        "boston-fern-brown-crispy-leaves"
+      ],
+      "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
+    },
+    {
+      "entityId": "fiddle-leaf-fig",
+      "canonicalName": "Fiddle-leaf fig",
+      "botanicalName": "Ficus lyrata",
+      "score": 29,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 20,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 4,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Fiddle-leaf fig",
+        "Fiddle Leaf Fig",
+        "Fiddle Leaf Fig House Plant",
+        "Fiddle leaf fig dropping leaves",
+        "Ficus lyrata leaf drop"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Fiddle-leaf+fig%2CFiddle+Leaf+Fig%2CFiddle+Leaf+Fig+House+Plant%2CFiddle+leaf+fig+dropping+leaves%2CFicus+lyrata+leaf+drop",
+      "aliases": [
+        "Fiddle Leaf Fig",
+        "Fiddle Leaf Fig House Plant",
+        "Fiddle leaf fig dropping leaves",
+        "Ficus lyrata leaf drop"
+      ],
+      "tags": [
+        "Fiddle-leaf fig",
+        "Leaf drop",
+        "Ficus",
+        "Plant stress"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Fiddle Leaf Fig",
+          "url": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        },
+        {
+          "retailer": "Costco",
+          "label": "Costa Farms Fiddle Leaf Fig Tree Ficus Lyrata Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000300225.html",
+          "observedAt": "2026-07-22",
+          "collection": "automated_structured_product_check"
+        },
+        {
+          "retailer": "Lowe's",
+          "label": "Fiddle Leaf Fig House Plant",
+          "url": "https://www.lowes.com/pd/Lowe-s-Fiddleleaf-Fig-House-Plant-in-2-Gallon-Pot/5015749681",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why is my fiddle-leaf fig dropping leaves?",
+        "Will fiddle-leaf fig leaves grow back?",
+        "Should I fertilize a fiddle-leaf fig after leaf drop?"
+      ],
+      "coverageSlugs": [
+        "fiddle-leaf-fig-dropping-leaves"
+      ],
+      "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
+    },
+    {
+      "entityId": "peace-lily",
+      "canonicalName": "Peace lily",
+      "botanicalName": "Spathiphyllum",
+      "score": 29,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 20,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 5,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 4
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Peace lily",
+        "Peace Lily",
+        "2-Gallon Spathiphyllum Peace Lily",
+        "Peace lily drooping after watering",
+        "Peace lily wilting"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Peace+lily%2CPeace+Lily%2C2-Gallon+Spathiphyllum+Peace+Lily%2CPeace+lily+drooping+after+watering%2CPeace+lily+wilting",
+      "aliases": [
+        "Peace Lily",
+        "2-Gallon Spathiphyllum Peace Lily",
+        "Peace lily drooping after watering",
+        "Peace lily wilting"
+      ],
+      "tags": [
+        "Peace lily",
+        "Drooping leaves",
+        "Watering",
+        "Root health"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Peace Lily",
+          "url": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        },
+        {
+          "retailer": "Costco",
+          "label": "Costa Farms Peace Lily Spathiphyllum Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000300222.html",
+          "observedAt": "2026-07-22",
+          "collection": "automated_structured_product_check"
+        },
+        {
+          "retailer": "Lowe's",
+          "label": "2-Gallon Spathiphyllum Peace Lily",
+          "url": "https://www.lowes.com/pd/Lowe-s-2-00-Gal-Spathiphyllum-Prem/5014551277",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why is my peace lily drooping after watering?",
+        "Is my peace lily underwatered or overwatered?",
+        "How can I tell whether peace lily roots are rotting?"
+      ],
+      "coverageSlugs": [
+        "peace-lily-drooping-after-watering"
+      ],
+      "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
+    },
+    {
+      "entityId": "snake-plant",
+      "canonicalName": "Snake plant",
+      "botanicalName": "Dracaena trifasciata",
+      "score": 28,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 20,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 4,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 4
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Snake plant",
+        "Snake Plant Houseplant in Decor",
+        "Costa Farms Snake Plant",
+        "Snake plant leaves falling over",
+        "Sansevieria leaves bending"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Snake+plant%2CSnake+Plant+Houseplant+in+Decor%2CCosta+Farms+Snake+Plant%2CSnake+plant+leaves+falling+over%2CSansevieria+leaves+bending",
+      "aliases": [
+        "Snake Plant Houseplant in Decor",
+        "Costa Farms Snake Plant",
+        "Snake plant leaves falling over",
+        "Sansevieria leaves bending"
+      ],
+      "tags": [
+        "Snake plant",
+        "Falling leaves",
+        "Root rot",
+        "Low-light plants"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Snake Plant Houseplant in Decor",
+          "url": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        },
+        {
+          "retailer": "Costco",
+          "label": "Costa Farms Sansevieria Snake Plant Houseplant in Decor Planter",
+          "url": "https://www.costco.com/.product.4000364122.html",
+          "observedAt": "2026-07-22",
+          "collection": "automated_structured_product_check"
+        },
+        {
+          "retailer": "Lowe's",
+          "label": "Costa Farms Snake Plant",
+          "url": "https://www.lowes.com/pd/Costa-Farms-Snake-Plant-House-Plant-in-6-in-Pot/5013595873",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are my snake plant leaves falling over?",
+        "Can a snake plant with mushy leaves be saved?",
+        "Should I cut off a bent snake plant leaf?"
+      ],
+      "coverageSlugs": [
+        "snake-plant-leaves-falling-over"
+      ],
+      "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
+    },
+    {
+      "entityId": "nagami-kumquat",
+      "canonicalName": "Nagami kumquat tree",
+      "botanicalName": "Citrus japonica 'Nagami'",
+      "score": 26,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 11,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Nagami kumquat tree",
+        "Kumquat Nagami Tree",
+        "Costco kumquat tree",
+        "Kumquat tree dropping leaves",
+        "Potted kumquat care"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Nagami+kumquat+tree%2CKumquat+Nagami+Tree%2CCostco+kumquat+tree%2CKumquat+tree+dropping+leaves%2CPotted+kumquat+care",
+      "aliases": [
+        "Kumquat Nagami Tree",
+        "Costco kumquat tree",
+        "Kumquat tree dropping leaves",
+        "Potted kumquat care"
+      ],
+      "tags": [
+        "Kumquat tree",
+        "Leaf drop",
+        "Container citrus",
+        "Costco plants"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Kumquat Nagami Tree",
+          "url": "https://www.costco.com/.product.100540928.html",
+          "observedAt": "2026-07-22",
+          "collection": "automated_structured_product_check"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why is my new kumquat tree dropping leaves?",
+        "Can a potted kumquat tree live indoors?",
+        "How often should I water a potted kumquat?"
+      ],
+      "coverageSlugs": [
+        "costco-kumquat-tree-dropping-leaves"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
       "entityId": "phalaenopsis-orchid",
       "canonicalName": "Phalaenopsis orchid",
       "botanicalName": "Phalaenopsis",
@@ -119,7 +450,7 @@
           "retailer": "Costco",
           "label": "10\" Phalaenopsis Orchid Duo",
           "url": "https://www.costco.com/.product.100454594.html",
-          "observedAt": "2026-07-21",
+          "observedAt": "2026-07-22",
           "collection": "automated_structured_product_check"
         }
       ],
@@ -131,6 +462,61 @@
       ],
       "coverageSlugs": [
         "grocery-store-orchid-after-blooming"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "alocasia-polly",
+      "canonicalName": "Alocasia Polly",
+      "botanicalName": "Alocasia x amazonica 'Polly'",
+      "score": 22,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 7,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Alocasia Polly",
+        "Live 6-inch Alocasia Polly Houseplant",
+        "African mask plant",
+        "African shield plant",
+        "Alocasia Polly yellow leaves"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Alocasia+Polly%2CLive+6-inch+Alocasia+Polly+Houseplant%2CAfrican+mask+plant%2CAfrican+shield+plant%2CAlocasia+Polly+yellow+leaves",
+      "aliases": [
+        "Live 6-inch Alocasia Polly Houseplant",
+        "African mask plant",
+        "African shield plant",
+        "Alocasia Polly yellow leaves"
+      ],
+      "tags": [
+        "Alocasia Polly",
+        "Yellow leaves",
+        "Elephant ear",
+        "Target plants"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Target",
+          "label": "Live 6-inch Alocasia Polly Houseplant",
+          "url": "https://www.target.com/p/-/A-93272698",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are my Alocasia Polly leaves turning yellow?",
+        "Does Alocasia Polly go dormant indoors?",
+        "Why is my Alocasia drooping in wet soil?"
+      ],
+      "coverageSlugs": [
+        "alocasia-polly-yellow-leaves"
       ],
       "recommendedAction": "Keep watching and add the next official Google Trends export."
     },
@@ -174,7 +560,7 @@
           "retailer": "Costco",
           "label": "Echeveria Succulent Garden",
           "url": "https://www.costco.com/.product.4000120803.html",
-          "observedAt": "2026-07-21",
+          "observedAt": "2026-07-22",
           "collection": "automated_structured_product_check"
         }
       ],
@@ -186,6 +572,61 @@
       ],
       "coverageSlugs": [
         "costco-succulent-garden-separate-repot"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "arabica-coffee-plant",
+      "canonicalName": "Arabica coffee plant",
+      "botanicalName": "Coffea arabica",
+      "score": 20,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 5,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Arabica coffee plant",
+        "Live 5-inch Coffee Arabica Houseplant",
+        "Coffee plant brown leaves",
+        "Coffee tree houseplant",
+        "Coffee plant growing coffee beans indoors"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Arabica+coffee+plant%2CLive+5-inch+Coffee+Arabica+Houseplant%2CCoffee+plant+brown+leaves%2CCoffee+tree+houseplant%2CCoffee+plant+growing+coffee+beans+indoors",
+      "aliases": [
+        "Live 5-inch Coffee Arabica Houseplant",
+        "Coffee plant brown leaves",
+        "Coffee tree houseplant",
+        "Coffee plant growing coffee beans indoors"
+      ],
+      "tags": [
+        "Coffee plant",
+        "Brown leaves",
+        "Coffea arabica",
+        "Target plants"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Target",
+          "label": "Live 5-inch Coffee Arabica Houseplant",
+          "url": "https://www.target.com/p/-/A-93405842",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are my coffee plant leaves turning brown?",
+        "Can a coffee plant grow coffee beans indoors?",
+        "Why is my coffee plant dropping leaves in winter?"
+      ],
+      "coverageSlugs": [
+        "coffee-plant-brown-leaves"
       ],
       "recommendedAction": "Keep watching and add the next official Google Trends export."
     },
@@ -275,7 +716,7 @@
           "retailer": "Costco",
           "label": "Costa Farms Money Tree Houseplant in Decor Basket",
           "url": "https://www.costco.com/.product.4000331746.html",
-          "observedAt": "2026-07-21",
+          "observedAt": "2026-07-22",
           "collection": "automated_structured_product_check"
         }
       ],
@@ -289,6 +730,68 @@
         "money-tree-yellow-leaves"
       ],
       "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "golden-pothos",
+      "canonicalName": "Golden pothos",
+      "botanicalName": "Epipremnum aureum",
+      "score": 18,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 4,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 4
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Golden pothos",
+        "Golden Pothos",
+        "Pothos leaves turning yellow",
+        "Devil's ivy yellow leaves",
+        "Epipremnum aureum yellow leaves"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Golden+pothos%2CGolden+Pothos%2CPothos+leaves+turning+yellow%2CDevil%27s+ivy+yellow+leaves%2CEpipremnum+aureum+yellow+leaves",
+      "aliases": [
+        "Golden Pothos",
+        "Pothos leaves turning yellow",
+        "Devil's ivy yellow leaves",
+        "Epipremnum aureum yellow leaves"
+      ],
+      "tags": [
+        "Pothos",
+        "Yellow leaves",
+        "Watering",
+        "Indoor vines"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "Costco",
+          "label": "Golden Pothos",
+          "url": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        },
+        {
+          "retailer": "Costco",
+          "label": "Costa Farms Golden Pothos Devil's Ivy Houseplant in Nursery Pot 2-pack",
+          "url": "https://www.costco.com/.product.4000300277.html",
+          "observedAt": "2026-07-22",
+          "collection": "automated_structured_product_check"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are my pothos leaves turning yellow?",
+        "Can a yellow pothos leaf turn green again?",
+        "Why is my pothos losing leaves near the pot?"
+      ],
+      "coverageSlugs": [
+        "pothos-leaves-turning-yellow"
+      ],
+      "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
     },
     {
       "entityId": "potted-olive-tree",

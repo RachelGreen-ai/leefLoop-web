@@ -194,19 +194,27 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(breederGuideHtml, /FAQPage/);
 });
 
-test("publishes the complete 25-note library with valid internal note links", async () => {
+test("publishes the complete 33-note library with valid internal note links", async () => {
   const hubResponse = await render("/notes");
   const hubHtml = await hubResponse.text();
   const noteLinks = new Set(
     [...hubHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );
 
-  assert.equal(noteLinks.size, 25);
+  assert.equal(noteLinks.size, 33);
   assert.ok(noteLinks.has("/notes/trader-joes-premium-monstera-first-week"));
   assert.ok(noteLinks.has("/notes/easiest-indoor-succulents-ranked"));
   assert.ok(noteLinks.has("/notes/tomato-blossom-end-rot-eggshells"));
   assert.ok(noteLinks.has("/notes/realistic-succulent-selling-plan"));
   assert.ok(noteLinks.has("/notes/how-succulent-breeders-create-new-echeverias"));
+  assert.ok(noteLinks.has("/notes/peace-lily-drooping-after-watering"));
+  assert.ok(noteLinks.has("/notes/snake-plant-leaves-falling-over"));
+  assert.ok(noteLinks.has("/notes/pothos-leaves-turning-yellow"));
+  assert.ok(noteLinks.has("/notes/fiddle-leaf-fig-dropping-leaves"));
+  assert.ok(noteLinks.has("/notes/boston-fern-brown-crispy-leaves"));
+  assert.ok(noteLinks.has("/notes/alocasia-polly-yellow-leaves"));
+  assert.ok(noteLinks.has("/notes/coffee-plant-brown-leaves"));
+  assert.ok(noteLinks.has("/notes/costco-kumquat-tree-dropping-leaves"));
 
   const renderedNotes = await Promise.all(
     [...noteLinks].map(async (pathname) => {

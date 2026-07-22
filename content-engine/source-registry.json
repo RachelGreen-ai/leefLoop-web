@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "reviewCadence": "weekly",
   "markets": ["Bay Area / San Jose", "Southern California", "Central Texas / Austin", "Indoor plant homes"],
   "sources": [
@@ -30,6 +30,16 @@
       "url": "https://www.homedepot.com/b/Outdoors-Garden-Center-Indoor-Plants/N-5yc1vZc8rn",
       "markets": ["United States", "Indoor plant homes"],
       "topics": ["monstera", "philodendron", "pothos", "ficus", "palms"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "daily"
+    },
+    {
+      "id": "lowes-houseplants",
+      "publisher": "Lowe's",
+      "kind": "retailer_catalog",
+      "url": "https://www.lowes.com/pl/plants-bulbs-seeds/indoor-plants/house-plants/4294392549",
+      "markets": ["United States", "Indoor plant homes"],
+      "topics": ["peace lily", "snake plant", "fiddle leaf fig", "boston fern", "pothos"],
       "collectionMode": "change_detection_then_editorial_review",
       "cadence": "daily"
     },

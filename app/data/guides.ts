@@ -1,5 +1,6 @@
 import type { GuideSummary, PlantGuide } from "./guide-types";
 import { gardenPracticeGuides } from "./guides/garden-practice";
+import { retailRescueGuides } from "./guides/retail-rescue";
 import { retailFindGuides } from "./guides/retail-finds";
 import { specialtyCareGuides } from "./guides/specialty-care";
 import { succulentBasicsGuides } from "./guides/succulent-basics";
@@ -425,6 +426,7 @@ export const guides: PlantGuide[] = [
     relatedSlugs: ["basil-first-harvest", "monstera-leaves-curling"],
   },
   ...retailFindGuides,
+  ...retailRescueGuides,
   ...succulentBasicsGuides,
   ...specialtyCareGuides,
   ...gardenPracticeGuides,

@@ -143,6 +143,238 @@
       "seasonalScore": 15,
       "visualScore": 5,
       "coverageSlugs": ["tomato-leaf-curl-summer", "tomato-blossom-end-rot-eggshells"]
+    },
+    {
+      "id": "peace-lily",
+      "canonicalName": "Peace lily",
+      "botanicalName": "Spathiphyllum",
+      "tags": ["Peace lily", "Drooping leaves", "Watering", "Root health"],
+      "aliases": [
+        {
+          "term": "Peace Lily",
+          "kind": "retail_name",
+          "retailer": "Costco",
+          "sourceUrl": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21"
+        },
+        {
+          "term": "2-Gallon Spathiphyllum Peace Lily",
+          "kind": "retail_name",
+          "retailer": "Lowe's",
+          "sourceUrl": "https://www.lowes.com/pd/Lowe-s-2-00-Gal-Spathiphyllum-Prem/5014551277",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Peace lily drooping after watering", "kind": "common_search" },
+        { "term": "Peace lily wilting", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why is my peace lily drooping after watering?",
+        "Is my peace lily underwatered or overwatered?",
+        "How can I tell whether peace lily roots are rotting?"
+      ],
+      "seasonalScore": 5,
+      "visualScore": 4,
+      "coverageSlugs": ["peace-lily-drooping-after-watering"]
+    },
+    {
+      "id": "snake-plant",
+      "canonicalName": "Snake plant",
+      "botanicalName": "Dracaena trifasciata",
+      "tags": ["Snake plant", "Falling leaves", "Root rot", "Low-light plants"],
+      "aliases": [
+        {
+          "term": "Snake Plant Houseplant in Decor",
+          "kind": "retail_name",
+          "retailer": "Costco",
+          "sourceUrl": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21"
+        },
+        {
+          "term": "Costa Farms Snake Plant",
+          "kind": "retail_name",
+          "retailer": "Lowe's",
+          "sourceUrl": "https://www.lowes.com/pd/Costa-Farms-Snake-Plant-House-Plant-in-6-in-Pot/5013595873",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Snake plant leaves falling over", "kind": "common_search" },
+        { "term": "Sansevieria leaves bending", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why are my snake plant leaves falling over?",
+        "Can a snake plant with mushy leaves be saved?",
+        "Should I cut off a bent snake plant leaf?"
+      ],
+      "seasonalScore": 4,
+      "visualScore": 4,
+      "coverageSlugs": ["snake-plant-leaves-falling-over"]
+    },
+    {
+      "id": "golden-pothos",
+      "canonicalName": "Golden pothos",
+      "botanicalName": "Epipremnum aureum",
+      "tags": ["Pothos", "Yellow leaves", "Watering", "Indoor vines"],
+      "aliases": [
+        {
+          "term": "Golden Pothos",
+          "kind": "retail_name",
+          "retailer": "Costco",
+          "sourceUrl": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Pothos leaves turning yellow", "kind": "common_search" },
+        { "term": "Devil's ivy yellow leaves", "kind": "common_search" },
+        { "term": "Epipremnum aureum yellow leaves", "kind": "botanical_name" }
+      ],
+      "questionPatterns": [
+        "Why are my pothos leaves turning yellow?",
+        "Can a yellow pothos leaf turn green again?",
+        "Why is my pothos losing leaves near the pot?"
+      ],
+      "seasonalScore": 4,
+      "visualScore": 4,
+      "coverageSlugs": ["pothos-leaves-turning-yellow"]
+    },
+    {
+      "id": "fiddle-leaf-fig",
+      "canonicalName": "Fiddle-leaf fig",
+      "botanicalName": "Ficus lyrata",
+      "tags": ["Fiddle-leaf fig", "Leaf drop", "Ficus", "Plant stress"],
+      "aliases": [
+        {
+          "term": "Fiddle Leaf Fig",
+          "kind": "retail_name",
+          "retailer": "Costco",
+          "sourceUrl": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21"
+        },
+        {
+          "term": "Fiddle Leaf Fig House Plant",
+          "kind": "retail_name",
+          "retailer": "Lowe's",
+          "sourceUrl": "https://www.lowes.com/pd/Lowe-s-Fiddleleaf-Fig-House-Plant-in-2-Gallon-Pot/5015749681",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Fiddle leaf fig dropping leaves", "kind": "common_search" },
+        { "term": "Ficus lyrata leaf drop", "kind": "botanical_name" }
+      ],
+      "questionPatterns": [
+        "Why is my fiddle-leaf fig dropping leaves?",
+        "Will fiddle-leaf fig leaves grow back?",
+        "Should I fertilize a fiddle-leaf fig after leaf drop?"
+      ],
+      "seasonalScore": 4,
+      "visualScore": 5,
+      "coverageSlugs": ["fiddle-leaf-fig-dropping-leaves"]
+    },
+    {
+      "id": "boston-fern",
+      "canonicalName": "Boston fern",
+      "botanicalName": "Nephrolepis exaltata",
+      "tags": ["Boston fern", "Brown leaves", "Humidity", "Porch plants"],
+      "aliases": [
+        {
+          "term": "Boston Fern",
+          "kind": "retail_name",
+          "retailer": "Costco",
+          "sourceUrl": "https://www.costco.com/opt/easy-to-grow-indoor-plants",
+          "observedAt": "2026-07-21"
+        },
+        {
+          "term": "Boston Fern in 2-Gallon Planter",
+          "kind": "retail_name",
+          "retailer": "Lowe's",
+          "sourceUrl": "https://www.lowes.com/pd/Lowe-s-Boston-Fern-in-2-Gallon-s-Planter-1-Pack/5014206137",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Boston fern turning brown", "kind": "common_search" },
+        { "term": "Boston fern crispy leaves", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why is my Boston fern turning brown and crispy?",
+        "Should I mist a Boston fern every day?",
+        "Are brown dots under Boston fern leaves pests?"
+      ],
+      "seasonalScore": 10,
+      "visualScore": 4,
+      "coverageSlugs": ["boston-fern-brown-crispy-leaves"]
+    },
+    {
+      "id": "alocasia-polly",
+      "canonicalName": "Alocasia Polly",
+      "botanicalName": "Alocasia x amazonica 'Polly'",
+      "tags": ["Alocasia Polly", "Yellow leaves", "Elephant ear", "Target plants"],
+      "aliases": [
+        {
+          "term": "Live 6-inch Alocasia Polly Houseplant",
+          "kind": "retail_name",
+          "retailer": "Target",
+          "sourceUrl": "https://www.target.com/p/-/A-93272698",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "African mask plant", "kind": "common_search" },
+        { "term": "African shield plant", "kind": "common_search" },
+        { "term": "Alocasia Polly yellow leaves", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why are my Alocasia Polly leaves turning yellow?",
+        "Does Alocasia Polly go dormant indoors?",
+        "Why is my Alocasia drooping in wet soil?"
+      ],
+      "seasonalScore": 7,
+      "visualScore": 5,
+      "coverageSlugs": ["alocasia-polly-yellow-leaves"]
+    },
+    {
+      "id": "arabica-coffee-plant",
+      "canonicalName": "Arabica coffee plant",
+      "botanicalName": "Coffea arabica",
+      "tags": ["Coffee plant", "Brown leaves", "Coffea arabica", "Target plants"],
+      "aliases": [
+        {
+          "term": "Live 5-inch Coffee Arabica Houseplant",
+          "kind": "retail_name",
+          "retailer": "Target",
+          "sourceUrl": "https://www.target.com/p/-/A-93405842",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Coffee plant brown leaves", "kind": "common_search" },
+        { "term": "Coffee tree houseplant", "kind": "common_search" },
+        { "term": "Coffee plant growing coffee beans indoors", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why are my coffee plant leaves turning brown?",
+        "Can a coffee plant grow coffee beans indoors?",
+        "Why is my coffee plant dropping leaves in winter?"
+      ],
+      "seasonalScore": 5,
+      "visualScore": 5,
+      "coverageSlugs": ["coffee-plant-brown-leaves"]
+    },
+    {
+      "id": "nagami-kumquat",
+      "canonicalName": "Nagami kumquat tree",
+      "botanicalName": "Citrus japonica 'Nagami'",
+      "tags": ["Kumquat tree", "Leaf drop", "Container citrus", "Costco plants"],
+      "aliases": [
+        {
+          "term": "Kumquat Nagami Tree",
+          "kind": "retail_name",
+          "retailer": "Costco",
+          "sourceUrl": "https://www.costco.com/.product.100540928.html",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Costco kumquat tree", "kind": "common_search" },
+        { "term": "Kumquat tree dropping leaves", "kind": "common_search" },
+        { "term": "Potted kumquat care", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why is my new kumquat tree dropping leaves?",
+        "Can a potted kumquat tree live indoors?",
+        "How often should I water a potted kumquat?"
+      ],
+      "seasonalScore": 11,
+      "visualScore": 5,
+      "coverageSlugs": ["costco-kumquat-tree-dropping-leaves"]
     }
   ]
 }

@@ -56,12 +56,13 @@ test("the topic queue never invents a missing Google Trends score", async () => 
   assert.match(monstera.trendStatus, /score held at 0/);
 });
 
-test("the source registry monitors Target and Trader Joe's without inventory claims", async () => {
+test("the source registry monitors major retail plant signals", async () => {
   const registry = await readJson("content-engine/source-registry.json");
   const sourceIds = new Set(registry.sources.map((source) => source.id));
 
   assert.ok(sourceIds.has("target-indoor-live-plants"));
   assert.ok(sourceIds.has("trader-joes-premium-monstera"));
+  assert.ok(sourceIds.has("lowes-houseplants"));
   assert.ok(
     registry.sources.every((source) =>
       [
