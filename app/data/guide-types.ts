@@ -20,7 +20,12 @@ export type GuideFaq = {
 
 export type PlantGuide = {
   slug: string;
-  category: "Local find" | "Indoor favorite" | "Farm to table" | "Organic-first";
+  category:
+    | "Local find"
+    | "Indoor favorite"
+    | "Farm to table"
+    | "Organic-first"
+    | "Seasonal";
   tags: string[];
   aliases?: string[];
   title: string;

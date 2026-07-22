@@ -34,6 +34,16 @@
       "cadence": "daily"
     },
     {
+      "id": "home-depot-holiday-plants",
+      "publisher": "The Home Depot",
+      "kind": "retailer_catalog",
+      "url": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery/Holiday-Plants/N-5yc1vZc3tkZ1z18bd1",
+      "markets": ["United States", "Indoor plant homes"],
+      "topics": ["poinsettia", "holiday cactus", "amaryllis", "rosemary topiary", "Norfolk Island pine"],
+      "collectionMode": "change_detection_then_editorial_review",
+      "cadence": "daily"
+    },
+    {
       "id": "lowes-houseplants",
       "publisher": "Lowe's",
       "kind": "retailer_catalog",
@@ -99,7 +109,7 @@
       "kind": "search_interest",
       "url": "https://trends.google.com/trends/",
       "markets": ["United States", "Japan", "United Kingdom"],
-      "topics": ["houseplants", "monstera", "orchid", "plant care", "vegetable garden", "Costco plants"],
+      "topics": ["houseplants", "monstera", "orchid", "plant care", "vegetable garden", "Costco plants", "Halloween plants", "Thanksgiving cactus", "Christmas plants"],
       "collectionMode": "weekly_export_or_approved_api",
       "cadence": "weekly"
     },

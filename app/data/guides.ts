@@ -2,6 +2,7 @@ import type { GuideSummary, PlantGuide } from "./guide-types";
 import { gardenPracticeGuides } from "./guides/garden-practice";
 import { retailRescueGuides } from "./guides/retail-rescue";
 import { retailFindGuides } from "./guides/retail-finds";
+import { seasonalGuides } from "./guides/seasonal";
 import { specialtyCareGuides } from "./guides/specialty-care";
 import { succulentBasicsGuides } from "./guides/succulent-basics";
 
@@ -427,6 +428,7 @@ export const guides: PlantGuide[] = [
   },
   ...retailFindGuides,
   ...retailRescueGuides,
+  ...seasonalGuides,
   ...succulentBasicsGuides,
   ...specialtyCareGuides,
   ...gardenPracticeGuides,

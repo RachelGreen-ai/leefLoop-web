@@ -79,6 +79,17 @@ const newsletterTopics = [
   },
 ];
 
+const seasonalStarterSlugs = [
+  "fall-mums-after-halloween",
+  "thanksgiving-cactus-vs-christmas-cactus",
+  "rosemary-christmas-tree-turning-brown",
+];
+
+const seasonalStarterGuides = seasonalStarterSlugs.flatMap((slug) => {
+  const guide = guides.find((candidate) => candidate.slug === slug);
+  return guide ? [guide] : [];
+});
+
 export const metadata: Metadata = {
   title: { absolute: homeTitle },
   description: homeDescription,
@@ -212,15 +223,18 @@ export default function Home() {
 
       <section id="seasonal" className="content-band warm">
         <div className="section-heading">
-          <p className="eyebrow">This week&apos;s starter guides</p>
-          <h2>Useful answers for plants people are likely bringing home now.</h2>
+          <p className="eyebrow">A little ahead of the season</p>
+          <h2>Useful answers for fall plants before the questions arrive.</h2>
           <p>
-            Start with small answers that matter right away: the first week, a strange leaf, a
-            watering question, or the first meal from a pot of herbs.
+            Mums, holiday cactus, and rosemary trees arrive quickly once the season turns. These
+            notes are ready before the shelf labels and first cold nights begin raising questions.
           </p>
+          <Link className="text-link" href="/notes?topic=seasonal">
+            Browse seasonal Plant Notes
+          </Link>
         </div>
         <div className="article-grid homepage-article-grid">
-          {guides.slice(0, 3).map((guide) => (
+          {seasonalStarterGuides.map((guide) => (
             <GuideCard guide={guide} key={guide.slug} />
           ))}
         </div>

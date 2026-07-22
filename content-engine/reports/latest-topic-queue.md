@@ -1,6 +1,6 @@
 # Rachel's Garden Topic Queue
 
-Generated: 2026-07-22T04:46:35.582Z
+Generated: 2026-07-22T05:07:10.902Z
 
 Google Trends observations imported: 0
 
@@ -10,7 +10,11 @@ Google Trends observations imported: 0
 | ---: | --- | --- | --- | --- | --- |
 | 35 | Thai Constellation Monstera | watch | Target, The Home Depot, Trader Joe's | No Google Trends observation imported; search score held at 0 | Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends. |
 | 34 | Boston fern | watch | Costco, Lowe's | No Google Trends observation imported; search score held at 0 | Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends. |
+| 30 | Holiday amaryllis | watch | The Home Depot | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
+| 30 | Holiday cactus | watch | The Home Depot | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
+| 30 | Poinsettia | watch | The Home Depot | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
 | 29 | Fiddle-leaf fig | hold | Costco, Lowe's | No Google Trends observation imported; search score held at 0 | Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends. |
+| 29 | Holiday rosemary topiary | hold | The Home Depot | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
 | 29 | Peace lily | hold | Costco, Lowe's | No Google Trends observation imported; search score held at 0 | Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends. |
 | 28 | Snake plant | hold | Costco, Lowe's | No Google Trends observation imported; search score held at 0 | Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends. |
 | 26 | Nagami kumquat tree | hold | Costco | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
@@ -18,6 +22,9 @@ Google Trends observations imported: 0
 | 22 | Alocasia Polly | hold | Target | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
 | 21 | Mixed succulent garden | hold | Costco | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
 | 20 | Arabica coffee plant | hold | Target | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
+| 20 | Fall mums | hold | None | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
+| 20 | Halloween pumpkins | hold | None | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
+| 20 | Paperwhite narcissus | hold | None | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
 | 20 | Summer tomato problems | hold | None | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
 | 19 | Money tree | hold | Costco | No Google Trends observation imported; search score held at 0 | Keep watching and add the next official Google Trends export. |
 | 18 | Golden pothos | hold | Costco | No Google Trends observation imported; search score held at 0 | Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends. |
@@ -45,6 +52,36 @@ Existing coverage: `/notes/boston-fern-brown-crispy-leaves`
 
 Next action: Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends.
 
+### Holiday amaryllis
+
+Aliases: Waxed Red Blooming Giant Amaryllis Bulb, Waxed amaryllis, Amaryllis bulb no water, Amaryllis after blooming
+
+Google Trends panel: [compare Holiday amaryllis, Waxed Red Blooming Giant Amaryllis Bulb, Waxed amaryllis, Amaryllis bulb no water, Amaryllis after blooming](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Holiday+amaryllis%2CWaxed+Red+Blooming+Giant+Amaryllis+Bulb%2CWaxed+amaryllis%2CAmaryllis+bulb+no+water%2CAmaryllis+after+blooming)
+
+Existing coverage: `/notes/waxed-amaryllis-after-blooming`
+
+Next action: Keep watching and add the next official Google Trends export.
+
+### Holiday cactus
+
+Aliases: Zygo Christmas Cactus Holiday Plant, Thanksgiving cactus, Christmas cactus, False Christmas cactus
+
+Google Trends panel: [compare Holiday cactus, Zygo Christmas Cactus Holiday Plant, Thanksgiving cactus, Christmas cactus, False Christmas cactus](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Holiday+cactus%2CZygo+Christmas+Cactus+Holiday+Plant%2CThanksgiving+cactus%2CChristmas+cactus%2CFalse+Christmas+cactus)
+
+Existing coverage: `/notes/thanksgiving-cactus-vs-christmas-cactus`, `/notes/holiday-cactus-buds-falling-off`
+
+Next action: Keep watching and add the next official Google Trends export.
+
+### Poinsettia
+
+Aliases: Poinsettia Holiday Plant, Christmas poinsettia, Poinsettia leaves falling off, Poinsettia poisonous to pets
+
+Google Trends panel: [compare Poinsettia, Poinsettia Holiday Plant, Christmas poinsettia, Poinsettia leaves falling off, Poinsettia poisonous to pets](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Poinsettia%2CPoinsettia+Holiday+Plant%2CChristmas+poinsettia%2CPoinsettia+leaves+falling+off%2CPoinsettia+poisonous+to+pets)
+
+Existing coverage: `/notes/poinsettia-leaves-falling-pet-safety`
+
+Next action: Keep watching and add the next official Google Trends export.
+
 ### Fiddle-leaf fig
 
 Aliases: Fiddle Leaf Fig, Fiddle Leaf Fig House Plant, Fiddle leaf fig dropping leaves, Ficus lyrata leaf drop
@@ -54,6 +91,16 @@ Google Trends panel: [compare Fiddle-leaf fig, Fiddle Leaf Fig, Fiddle Leaf Fig 
 Existing coverage: `/notes/fiddle-leaf-fig-dropping-leaves`
 
 Next action: Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends.
+
+### Holiday rosemary topiary
+
+Aliases: Rosemary Evergreen Holiday Plant, Rosemary Christmas tree, Rosemary topiary, Rosemary tree turning brown
+
+Google Trends panel: [compare Holiday rosemary topiary, Rosemary Evergreen Holiday Plant, Rosemary Christmas tree, Rosemary topiary, Rosemary tree turning brown](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Holiday+rosemary+topiary%2CRosemary+Evergreen+Holiday+Plant%2CRosemary+Christmas+tree%2CRosemary+topiary%2CRosemary+tree+turning+brown)
+
+Existing coverage: `/notes/rosemary-christmas-tree-turning-brown`
+
+Next action: Keep watching and add the next official Google Trends export.
 
 ### Peace lily
 
@@ -122,6 +169,36 @@ Aliases: Live 5-inch Coffee Arabica Houseplant, Coffee plant brown leaves, Coffe
 Google Trends panel: [compare Arabica coffee plant, Live 5-inch Coffee Arabica Houseplant, Coffee plant brown leaves, Coffee tree houseplant, Coffee plant growing coffee beans indoors](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Arabica+coffee+plant%2CLive+5-inch+Coffee+Arabica+Houseplant%2CCoffee+plant+brown+leaves%2CCoffee+tree+houseplant%2CCoffee+plant+growing+coffee+beans+indoors)
 
 Existing coverage: `/notes/coffee-plant-brown-leaves`
+
+Next action: Keep watching and add the next official Google Trends export.
+
+### Fall mums
+
+Aliases: Potted mums, Garden mums, Hardy mums, Florist mums
+
+Google Trends panel: [compare Fall mums, Potted mums, Garden mums, Hardy mums, Florist mums](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Fall+mums%2CPotted+mums%2CGarden+mums%2CHardy+mums%2CFlorist+mums)
+
+Existing coverage: `/notes/fall-mums-after-halloween`
+
+Next action: Keep watching and add the next official Google Trends export.
+
+### Halloween pumpkins
+
+Aliases: Carving pumpkin, Jack-o'-lantern, Pumpkin compost, Roasted pumpkin seeds
+
+Google Trends panel: [compare Halloween pumpkins, Carving pumpkin, Jack-o'-lantern, Pumpkin compost, Roasted pumpkin seeds](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Halloween+pumpkins%2CCarving+pumpkin%2CJack-o%27-lantern%2CPumpkin+compost%2CRoasted+pumpkin+seeds)
+
+Existing coverage: `/notes/halloween-pumpkin-after-october-31`
+
+Next action: Keep watching and add the next official Google Trends export.
+
+### Paperwhite narcissus
+
+Aliases: Paperwhite bulbs, Paperwhites in water, Paperwhite daffodils, Paperwhite narcissus
+
+Google Trends panel: [compare Paperwhite narcissus, Paperwhite bulbs, Paperwhites in water, Paperwhite daffodils, Paperwhite narcissus](https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Paperwhite+narcissus%2CPaperwhite+bulbs%2CPaperwhites+in+water%2CPaperwhite+daffodils%2CPaperwhite+narcissus)
+
+Existing coverage: `/notes/paperwhite-bulbs-in-water-flopping`
 
 Next action: Keep watching and add the next official Google Trends export.
 

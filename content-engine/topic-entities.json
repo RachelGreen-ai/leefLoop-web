@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-07-21",
   "entities": [
     {
@@ -375,6 +375,173 @@
       "seasonalScore": 11,
       "visualScore": 5,
       "coverageSlugs": ["costco-kumquat-tree-dropping-leaves"]
+    },
+    {
+      "id": "fall-mums",
+      "canonicalName": "Fall mums",
+      "botanicalName": "Chrysanthemum x morifolium",
+      "tags": ["Fall mums", "Chrysanthemums", "Halloween plants", "Overwintering"],
+      "aliases": [
+        { "term": "Potted mums", "kind": "common_search" },
+        { "term": "Garden mums", "kind": "common_search" },
+        { "term": "Hardy mums", "kind": "common_search" },
+        { "term": "Florist mums", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "What should I do with mums after Halloween?",
+        "Can potted mums survive winter?",
+        "Should I plant fall mums before they finish blooming?"
+      ],
+      "seasonalScore": 15,
+      "visualScore": 5,
+      "coverageSlugs": ["fall-mums-after-halloween"]
+    },
+    {
+      "id": "halloween-pumpkins",
+      "canonicalName": "Halloween pumpkins",
+      "botanicalName": "Cucurbita pepo",
+      "tags": ["Halloween pumpkins", "Composting", "Pumpkin seeds", "Food waste"],
+      "aliases": [
+        { "term": "Carving pumpkin", "kind": "common_search" },
+        { "term": "Jack-o'-lantern", "kind": "common_search" },
+        { "term": "Pumpkin compost", "kind": "common_search" },
+        { "term": "Roasted pumpkin seeds", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "What should I do with pumpkins after Halloween?",
+        "Can I compost a carved pumpkin?",
+        "Can I eat a pumpkin after it was used as decoration?"
+      ],
+      "seasonalScore": 15,
+      "visualScore": 5,
+      "coverageSlugs": ["halloween-pumpkin-after-october-31"]
+    },
+    {
+      "id": "holiday-cactus",
+      "canonicalName": "Holiday cactus",
+      "botanicalName": "Schlumbergera",
+      "tags": ["Holiday cactus", "Thanksgiving cactus", "Christmas cactus", "Bud drop"],
+      "aliases": [
+        {
+          "term": "Zygo Christmas Cactus Holiday Plant",
+          "kind": "retail_name",
+          "retailer": "The Home Depot",
+          "sourceUrl": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery/Holiday-Plants/N-5yc1vZc3tkZ1z18bd1",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Thanksgiving cactus", "kind": "common_search" },
+        { "term": "Christmas cactus", "kind": "common_search" },
+        { "term": "False Christmas cactus", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Is this a Thanksgiving cactus or Christmas cactus?",
+        "Why are my Christmas cactus buds falling off?",
+        "How do I make a holiday cactus bloom?"
+      ],
+      "seasonalScore": 15,
+      "visualScore": 5,
+      "coverageSlugs": [
+        "thanksgiving-cactus-vs-christmas-cactus",
+        "holiday-cactus-buds-falling-off"
+      ]
+    },
+    {
+      "id": "holiday-rosemary-topiary",
+      "canonicalName": "Holiday rosemary topiary",
+      "botanicalName": "Salvia rosmarinus",
+      "tags": ["Rosemary tree", "Brown rosemary", "Holiday herbs", "Indoor herbs"],
+      "aliases": [
+        {
+          "term": "Rosemary Evergreen Holiday Plant",
+          "kind": "retail_name",
+          "retailer": "The Home Depot",
+          "sourceUrl": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery-Christmas-Plants/N-5yc1vZcgxx",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Rosemary Christmas tree", "kind": "common_search" },
+        { "term": "Rosemary topiary", "kind": "common_search" },
+        { "term": "Rosemary tree turning brown", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why is my rosemary Christmas tree turning brown?",
+        "How often should I water a rosemary topiary indoors?",
+        "Can I cook with a holiday rosemary tree?"
+      ],
+      "seasonalScore": 14,
+      "visualScore": 5,
+      "coverageSlugs": ["rosemary-christmas-tree-turning-brown"]
+    },
+    {
+      "id": "poinsettia",
+      "canonicalName": "Poinsettia",
+      "botanicalName": "Euphorbia pulcherrima",
+      "tags": ["Poinsettia", "Falling leaves", "Pet safety", "Christmas plants"],
+      "aliases": [
+        {
+          "term": "Poinsettia Holiday Plant",
+          "kind": "retail_name",
+          "retailer": "The Home Depot",
+          "sourceUrl": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery/Holiday-Plants/N-5yc1vZc3tkZ1z18bd1",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Christmas poinsettia", "kind": "common_search" },
+        { "term": "Poinsettia leaves falling off", "kind": "common_search" },
+        { "term": "Poinsettia poisonous to pets", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Why are my poinsettia leaves falling off?",
+        "Are poinsettias poisonous to cats and dogs?",
+        "Can I keep a poinsettia after Christmas?"
+      ],
+      "seasonalScore": 15,
+      "visualScore": 5,
+      "coverageSlugs": ["poinsettia-leaves-falling-pet-safety"]
+    },
+    {
+      "id": "holiday-amaryllis",
+      "canonicalName": "Holiday amaryllis",
+      "botanicalName": "Hippeastrum hybrids",
+      "tags": ["Waxed amaryllis", "Amaryllis care", "Holiday bulbs", "Reblooming"],
+      "aliases": [
+        {
+          "term": "Waxed Red Blooming Giant Amaryllis Bulb",
+          "kind": "retail_name",
+          "retailer": "The Home Depot",
+          "sourceUrl": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery-Christmas-Plants/N-5yc1vZcgxx",
+          "observedAt": "2026-07-21"
+        },
+        { "term": "Waxed amaryllis", "kind": "common_search" },
+        { "term": "Amaryllis bulb no water", "kind": "common_search" },
+        { "term": "Amaryllis after blooming", "kind": "common_search" }
+      ],
+      "questionPatterns": [
+        "Can a waxed amaryllis live after blooming?",
+        "Should I water a waxed amaryllis bulb?",
+        "How do I make an amaryllis rebloom?"
+      ],
+      "seasonalScore": 15,
+      "visualScore": 5,
+      "coverageSlugs": ["waxed-amaryllis-after-blooming"]
+    },
+    {
+      "id": "paperwhite-narcissus",
+      "canonicalName": "Paperwhite narcissus",
+      "botanicalName": "Narcissus papyraceus",
+      "tags": ["Paperwhites", "Indoor bulbs", "Flopping stems", "Christmas flowers"],
+      "aliases": [
+        { "term": "Paperwhite bulbs", "kind": "common_search" },
+        { "term": "Paperwhites in water", "kind": "common_search" },
+        { "term": "Paperwhite daffodils", "kind": "common_search" },
+        { "term": "Paperwhite narcissus", "kind": "botanical_name" }
+      ],
+      "questionPatterns": [
+        "Why are my paperwhites falling over?",
+        "How long do paperwhite bulbs take to bloom?",
+        "Can paperwhites bloom again after forcing?"
+      ],
+      "seasonalScore": 15,
+      "visualScore": 5,
+      "coverageSlugs": ["paperwhite-bulbs-in-water-flopping"]
     }
   ]
 }

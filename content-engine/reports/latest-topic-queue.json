@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-22T04:46:35.582Z",
-  "entityRegistryVersion": 1,
+  "generatedAt": "2026-07-22T05:07:10.902Z",
+  "entityRegistryVersion": 2,
   "sourceSnapshotGeneratedAt": "2026-07-22T04:15:16.168Z",
   "googleTrendsObservationCount": 0,
   "scoringNotice": "Scores are editorial prioritization aids, not public popularity claims. Missing evidence always scores zero.",
@@ -149,6 +149,172 @@
       "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
     },
     {
+      "entityId": "holiday-amaryllis",
+      "canonicalName": "Holiday amaryllis",
+      "botanicalName": "Hippeastrum hybrids",
+      "score": 30,
+      "band": "watch",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 15,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Holiday amaryllis",
+        "Waxed Red Blooming Giant Amaryllis Bulb",
+        "Waxed amaryllis",
+        "Amaryllis bulb no water",
+        "Amaryllis after blooming"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Holiday+amaryllis%2CWaxed+Red+Blooming+Giant+Amaryllis+Bulb%2CWaxed+amaryllis%2CAmaryllis+bulb+no+water%2CAmaryllis+after+blooming",
+      "aliases": [
+        "Waxed Red Blooming Giant Amaryllis Bulb",
+        "Waxed amaryllis",
+        "Amaryllis bulb no water",
+        "Amaryllis after blooming"
+      ],
+      "tags": [
+        "Waxed amaryllis",
+        "Amaryllis care",
+        "Holiday bulbs",
+        "Reblooming"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "The Home Depot",
+          "label": "Waxed Red Blooming Giant Amaryllis Bulb",
+          "url": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery-Christmas-Plants/N-5yc1vZcgxx",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Can a waxed amaryllis live after blooming?",
+        "Should I water a waxed amaryllis bulb?",
+        "How do I make an amaryllis rebloom?"
+      ],
+      "coverageSlugs": [
+        "waxed-amaryllis-after-blooming"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "holiday-cactus",
+      "canonicalName": "Holiday cactus",
+      "botanicalName": "Schlumbergera",
+      "score": 30,
+      "band": "watch",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 15,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Holiday cactus",
+        "Zygo Christmas Cactus Holiday Plant",
+        "Thanksgiving cactus",
+        "Christmas cactus",
+        "False Christmas cactus"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Holiday+cactus%2CZygo+Christmas+Cactus+Holiday+Plant%2CThanksgiving+cactus%2CChristmas+cactus%2CFalse+Christmas+cactus",
+      "aliases": [
+        "Zygo Christmas Cactus Holiday Plant",
+        "Thanksgiving cactus",
+        "Christmas cactus",
+        "False Christmas cactus"
+      ],
+      "tags": [
+        "Holiday cactus",
+        "Thanksgiving cactus",
+        "Christmas cactus",
+        "Bud drop"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "The Home Depot",
+          "label": "Zygo Christmas Cactus Holiday Plant",
+          "url": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery/Holiday-Plants/N-5yc1vZc3tkZ1z18bd1",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Is this a Thanksgiving cactus or Christmas cactus?",
+        "Why are my Christmas cactus buds falling off?",
+        "How do I make a holiday cactus bloom?"
+      ],
+      "coverageSlugs": [
+        "thanksgiving-cactus-vs-christmas-cactus",
+        "holiday-cactus-buds-falling-off"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "poinsettia",
+      "canonicalName": "Poinsettia",
+      "botanicalName": "Euphorbia pulcherrima",
+      "score": 30,
+      "band": "watch",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 15,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Poinsettia",
+        "Poinsettia Holiday Plant",
+        "Christmas poinsettia",
+        "Poinsettia leaves falling off",
+        "Poinsettia poisonous to pets"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Poinsettia%2CPoinsettia+Holiday+Plant%2CChristmas+poinsettia%2CPoinsettia+leaves+falling+off%2CPoinsettia+poisonous+to+pets",
+      "aliases": [
+        "Poinsettia Holiday Plant",
+        "Christmas poinsettia",
+        "Poinsettia leaves falling off",
+        "Poinsettia poisonous to pets"
+      ],
+      "tags": [
+        "Poinsettia",
+        "Falling leaves",
+        "Pet safety",
+        "Christmas plants"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "The Home Depot",
+          "label": "Poinsettia Holiday Plant",
+          "url": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery/Holiday-Plants/N-5yc1vZc3tkZ1z18bd1",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are my poinsettia leaves falling off?",
+        "Are poinsettias poisonous to cats and dogs?",
+        "Can I keep a poinsettia after Christmas?"
+      ],
+      "coverageSlugs": [
+        "poinsettia-leaves-falling-pet-safety"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
       "entityId": "fiddle-leaf-fig",
       "canonicalName": "Fiddle-leaf fig",
       "botanicalName": "Ficus lyrata",
@@ -216,6 +382,61 @@
         "fiddle-leaf-fig-dropping-leaves"
       ],
       "recommendedAction": "Refresh existing guides with verified retailer aliases, then compare the entity and aliases in Google Trends."
+    },
+    {
+      "entityId": "holiday-rosemary-topiary",
+      "canonicalName": "Holiday rosemary topiary",
+      "botanicalName": "Salvia rosmarinus",
+      "score": 29,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 10,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 14,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Holiday rosemary topiary",
+        "Rosemary Evergreen Holiday Plant",
+        "Rosemary Christmas tree",
+        "Rosemary topiary",
+        "Rosemary tree turning brown"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Holiday+rosemary+topiary%2CRosemary+Evergreen+Holiday+Plant%2CRosemary+Christmas+tree%2CRosemary+topiary%2CRosemary+tree+turning+brown",
+      "aliases": [
+        "Rosemary Evergreen Holiday Plant",
+        "Rosemary Christmas tree",
+        "Rosemary topiary",
+        "Rosemary tree turning brown"
+      ],
+      "tags": [
+        "Rosemary tree",
+        "Brown rosemary",
+        "Holiday herbs",
+        "Indoor herbs"
+      ],
+      "retailEvidence": [
+        {
+          "retailer": "The Home Depot",
+          "label": "Rosemary Evergreen Holiday Plant",
+          "url": "https://www.homedepot.com/b/Holiday-Decorations-Christmas-Decorations-Christmas-Greenery-Christmas-Plants/N-5yc1vZcgxx",
+          "observedAt": "2026-07-21",
+          "collection": "dated_editorial_observation"
+        }
+      ],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why is my rosemary Christmas tree turning brown?",
+        "How often should I water a rosemary topiary indoors?",
+        "Can I cook with a holiday rosemary tree?"
+      ],
+      "coverageSlugs": [
+        "rosemary-christmas-tree-turning-brown"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
     },
     {
       "entityId": "peace-lily",
@@ -627,6 +848,147 @@
       ],
       "coverageSlugs": [
         "coffee-plant-brown-leaves"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "fall-mums",
+      "canonicalName": "Fall mums",
+      "botanicalName": "Chrysanthemum x morifolium",
+      "score": 20,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 0,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 15,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Fall mums",
+        "Potted mums",
+        "Garden mums",
+        "Hardy mums",
+        "Florist mums"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Fall+mums%2CPotted+mums%2CGarden+mums%2CHardy+mums%2CFlorist+mums",
+      "aliases": [
+        "Potted mums",
+        "Garden mums",
+        "Hardy mums",
+        "Florist mums"
+      ],
+      "tags": [
+        "Fall mums",
+        "Chrysanthemums",
+        "Halloween plants",
+        "Overwintering"
+      ],
+      "retailEvidence": [],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "What should I do with mums after Halloween?",
+        "Can potted mums survive winter?",
+        "Should I plant fall mums before they finish blooming?"
+      ],
+      "coverageSlugs": [
+        "fall-mums-after-halloween"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "halloween-pumpkins",
+      "canonicalName": "Halloween pumpkins",
+      "botanicalName": "Cucurbita pepo",
+      "score": 20,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 0,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 15,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Halloween pumpkins",
+        "Carving pumpkin",
+        "Jack-o'-lantern",
+        "Pumpkin compost",
+        "Roasted pumpkin seeds"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Halloween+pumpkins%2CCarving+pumpkin%2CJack-o%27-lantern%2CPumpkin+compost%2CRoasted+pumpkin+seeds",
+      "aliases": [
+        "Carving pumpkin",
+        "Jack-o'-lantern",
+        "Pumpkin compost",
+        "Roasted pumpkin seeds"
+      ],
+      "tags": [
+        "Halloween pumpkins",
+        "Composting",
+        "Pumpkin seeds",
+        "Food waste"
+      ],
+      "retailEvidence": [],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "What should I do with pumpkins after Halloween?",
+        "Can I compost a carved pumpkin?",
+        "Can I eat a pumpkin after it was used as decoration?"
+      ],
+      "coverageSlugs": [
+        "halloween-pumpkin-after-october-31"
+      ],
+      "recommendedAction": "Keep watching and add the next official Google Trends export."
+    },
+    {
+      "entityId": "paperwhite-narcissus",
+      "canonicalName": "Paperwhite narcissus",
+      "botanicalName": "Narcissus papyraceus",
+      "score": 20,
+      "band": "hold",
+      "scoreBreakdown": {
+        "officialRetailerAppearance": 0,
+        "searchAcceleration": 0,
+        "repeatedCareQuestion": 0,
+        "seasonalFit": 15,
+        "existingAudienceResponse": 0,
+        "visualSharePotential": 5
+      },
+      "trendStatus": "No Google Trends observation imported; search score held at 0",
+      "trendTerms": [
+        "Paperwhite narcissus",
+        "Paperwhite bulbs",
+        "Paperwhites in water",
+        "Paperwhite daffodils",
+        "Paperwhite narcissus"
+      ],
+      "trendExploreUrl": "https://trends.google.com/trends/explore?date=today+12-m&geo=US&q=Paperwhite+narcissus%2CPaperwhite+bulbs%2CPaperwhites+in+water%2CPaperwhite+daffodils%2CPaperwhite+narcissus",
+      "aliases": [
+        "Paperwhite bulbs",
+        "Paperwhites in water",
+        "Paperwhite daffodils",
+        "Paperwhite narcissus"
+      ],
+      "tags": [
+        "Paperwhites",
+        "Indoor bulbs",
+        "Flopping stems",
+        "Christmas flowers"
+      ],
+      "retailEvidence": [],
+      "relatedQueries": [],
+      "questionPatterns": [
+        "Why are my paperwhites falling over?",
+        "How long do paperwhite bulbs take to bloom?",
+        "Can paperwhites bloom again after forcing?"
+      ],
+      "coverageSlugs": [
+        "paperwhite-bulbs-in-water-flopping"
       ],
       "recommendedAction": "Keep watching and add the next official Google Trends export."
     },

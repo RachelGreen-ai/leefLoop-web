@@ -37,6 +37,8 @@ test("server-renders the Rachel’s Garden MVP homepage", async () => {
   assert.match(html, /Fresh plant notes for what is growing around you\./);
   assert.match(html, /Subscribe to plant notes/);
   assert.match(html, /A good place to begin\./);
+  assert.match(html, /A little ahead of the season/);
+  assert.match(html, /Browse seasonal Plant Notes/);
   assert.match(html, /Trending Plants/);
   assert.match(html, /Monstera/);
   assert.match(html, /Browse Plant Notes/);
@@ -61,6 +63,10 @@ test("homepage navigation points to real content destinations", async () => {
   assert.match(html, /href="\/notes\/monstera-leaves-curling"[^>]*><strong>Indoor favorites<\/strong>/);
   assert.match(html, /href="\/notes\/basil-first-harvest"[^>]*><strong>Seasonal eating<\/strong>/);
   assert.match(html, /href="\/notes"[^>]*><strong>Plain answers<\/strong>/);
+  assert.match(html, /href="\/notes\?topic=seasonal"[^>]*>Browse seasonal Plant Notes<\/a>/);
+  assert.match(html, /href="\/notes\/fall-mums-after-halloween"/);
+  assert.match(html, /href="\/notes\/thanksgiving-cactus-vs-christmas-cactus"/);
+  assert.match(html, /href="\/notes\/rosemary-christmas-tree-turning-brown"/);
   assert.ok(
     html.indexOf('id="newsletter"') <
       html.indexOf('href="/plantpulse#costco-plant-watch"'),
@@ -161,6 +167,7 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(hubHtml, /Search Plant Notes/);
   assert.match(hubHtml, /href="\/notes\?topic=local-finds"/);
   assert.match(hubHtml, /href="\/notes\?topic=indoor-plants"/);
+  assert.match(hubHtml, /href="\/notes\?topic=seasonal"/);
   assert.match(hubHtml, /href="\/notes\?topic=farm-to-table"/);
   assert.match(hubHtml, /href="\/notes\?topic=organic-first"/);
   assert.match(hubHtml, /New olive tree: first-week care/);
@@ -204,16 +211,44 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(breederGuideHtml, /Cactus and Succulent Society of America/);
   assert.match(breederGuideHtml, /U\.S\. Patent and Trademark Office/);
   assert.match(breederGuideHtml, /FAQPage/);
+
+  const holidayCactusResponse = await render(
+    "/notes/thanksgiving-cactus-vs-christmas-cactus",
+  );
+  assert.equal(holidayCactusResponse.status, 200);
+  const holidayCactusHtml = await holidayCactusResponse.text();
+  assert.match(holidayCactusHtml, /Pointed teeth suggest Thanksgiving cactus/);
+  assert.match(holidayCactusHtml, /Those green pieces are flattened stems/);
+  assert.match(holidayCactusHtml, /Iowa State University Extension and Outreach/);
+  assert.match(holidayCactusHtml, /href="\/notes\?topic=seasonal"[^>]*>Seasonal<\/a>/);
+
+  const poinsettiaResponse = await render(
+    "/notes/poinsettia-leaves-falling-pet-safety",
+  );
+  assert.equal(poinsettiaResponse.status, 200);
+  const poinsettiaHtml = await poinsettiaResponse.text();
+  assert.match(poinsettiaHtml, /Not deadly does not mean edible/);
+  assert.match(poinsettiaHtml, /Are poinsettias poisonous to cats and dogs\?/);
+  assert.match(poinsettiaHtml, /University of Minnesota Extension/);
+
+  const paperwhiteResponse = await render(
+    "/notes/paperwhite-bulbs-in-water-flopping",
+  );
+  assert.equal(paperwhiteResponse.status, 200);
+  const paperwhiteHtml = await paperwhiteResponse.text();
+  assert.match(paperwhiteHtml, /The roots need water; the bulb does not need a bath/);
+  assert.match(paperwhiteHtml, /one part alcohol to eleven parts water/);
+  assert.match(paperwhiteHtml, /Toxic and Non-toxic Plants: Paper White/);
 });
 
-test("publishes the complete 33-note library with valid internal note links", async () => {
+test("publishes the complete 41-note library with valid internal note links", async () => {
   const hubResponse = await render("/notes");
   const hubHtml = await hubResponse.text();
   const noteLinks = new Set(
     [...hubHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );
 
-  assert.equal(noteLinks.size, 33);
+  assert.equal(noteLinks.size, 41);
   assert.ok(noteLinks.has("/notes/trader-joes-premium-monstera-first-week"));
   assert.ok(noteLinks.has("/notes/easiest-indoor-succulents-ranked"));
   assert.ok(noteLinks.has("/notes/tomato-blossom-end-rot-eggshells"));
@@ -227,6 +262,14 @@ test("publishes the complete 33-note library with valid internal note links", as
   assert.ok(noteLinks.has("/notes/alocasia-polly-yellow-leaves"));
   assert.ok(noteLinks.has("/notes/coffee-plant-brown-leaves"));
   assert.ok(noteLinks.has("/notes/costco-kumquat-tree-dropping-leaves"));
+  assert.ok(noteLinks.has("/notes/fall-mums-after-halloween"));
+  assert.ok(noteLinks.has("/notes/halloween-pumpkin-after-october-31"));
+  assert.ok(noteLinks.has("/notes/thanksgiving-cactus-vs-christmas-cactus"));
+  assert.ok(noteLinks.has("/notes/holiday-cactus-buds-falling-off"));
+  assert.ok(noteLinks.has("/notes/rosemary-christmas-tree-turning-brown"));
+  assert.ok(noteLinks.has("/notes/poinsettia-leaves-falling-pet-safety"));
+  assert.ok(noteLinks.has("/notes/waxed-amaryllis-after-blooming"));
+  assert.ok(noteLinks.has("/notes/paperwhite-bulbs-in-water-flopping"));
 
   const renderedNotes = await Promise.all(
     [...noteLinks].map(async (pathname) => {

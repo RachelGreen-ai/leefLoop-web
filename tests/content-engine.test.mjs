@@ -63,6 +63,7 @@ test("the source registry monitors major retail plant signals", async () => {
   assert.ok(sourceIds.has("target-indoor-live-plants"));
   assert.ok(sourceIds.has("trader-joes-premium-monstera"));
   assert.ok(sourceIds.has("lowes-houseplants"));
+  assert.ok(sourceIds.has("home-depot-holiday-plants"));
   assert.ok(
     registry.sources.every((source) =>
       [

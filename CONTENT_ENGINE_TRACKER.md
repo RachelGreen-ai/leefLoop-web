@@ -15,11 +15,12 @@ Current build checkpoint:
 - Audience-facing content website is complete for the first public MVP.
 - Production deployment is live at `https://garden-companion-notes.vercel.app`.
 - `/notes` hub, search, topic filters, and reusable guide template are live.
-- Thirty-three source-backed Plant Notes are in the release build: the prior 25-note library plus an eight-note retail rescue cluster shaped by current Costco, Lowe's, and Target signals.
+- Forty-one source-backed Plant Notes are in the release build: the prior 33-note library plus an eight-note Halloween, Thanksgiving, and Christmas cluster.
 - Retail-first naming now follows the words readers see and search, such as `Trader Joe's Premium Monstera`; cultivar and botanical distinctions are explained inside the note.
-- All 33 Plant Notes have visible, searchable editorial tags; retailer aliases and common search names are included in onsite search and article metadata.
+- All 41 Plant Notes have visible, searchable editorial tags; retailer aliases and common search names are included in onsite search and article metadata.
 - The first shared plant entity joins Trader Joe's `Premium Monstera`, Target's `Live 5-inch Thai Constellation Plant`, Home Depot's Thai Constellation wording, common shorthand, and the accepted cultivar name without duplicating articles.
 - The library now adds high-intent diagnosis for drooping peace lilies, falling snake plant leaves, yellow pothos, fiddle-leaf fig leaf drop, brown Boston ferns, yellow Alocasia Polly leaves, brown coffee plants, and newly moved kumquat trees.
+- The first holiday cluster covers fall mums, post-Halloween pumpkins, holiday cactus identity and bud drop, rosemary topiary browning, poinsettia leaf drop and pet-safety context, waxed amaryllis recovery, and flopping paperwhites.
 - `/garden-blog` and six complete Garden Stories connect plant care with film, documentaries, literature, seasonal projects, and everyday rituals.
 - The culture-led collection now includes seasonal growing through the Japanese films *Little Forest*, four centuries of garden history through Monty Don's *The Secret History of the British Garden*, and a close reading of attention, season, and care in *Monty Don's Japanese Gardens*.
 - The first seasonal project story turns a real miniature Christmas garden into a reusable winter tradition, while separating short-stay outdoor conifers from long-term indoor Norfolk Island pines.
@@ -27,7 +28,7 @@ Current build checkpoint:
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
 - Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
 - Google search launch foundation now includes truthful dynamic sitemap dates, image sitemap entries, complete canonicals, absolute structured-data URLs, and optional Search Console verification metadata.
-- Release tests now render all 33 notes, verify every internal note link, and require FAQ and reference sections before publication.
+- Release tests now render all 41 notes, verify every internal note link, and require FAQ and reference sections before publication.
 
 ## 0. Strategic Decision
 
@@ -139,6 +140,21 @@ Example topics:
 - Preserving herbs when a plant grows faster than you cook
 - A rainy-week plant journal prompt
 - From market plant to kitchen ritual: how to make a care note useful
+
+### Holiday Plant Moments
+
+Goal: prepare answer-first content before seasonal search peaks, connecting the plants people decorate with to accurate care, safety, and a useful after-holiday plan.
+
+Current cluster:
+- Halloween: fall mums after the porch display; food-first and compost-aware pumpkin cleanup
+- Thanksgiving: Thanksgiving cactus versus Christmas cactus; preventing holiday cactus bud drop
+- Christmas: rosemary topiary browning, poinsettia leaf drop and pet safety, waxed amaryllis recovery, and paperwhites in water
+
+Rules:
+- Lead with the phrase readers see on the shelf, then explain botanical identity or uncertainty inside the note.
+- Include arrival stress, display conditions, pet or child safety where relevant, and the plant's realistic life after the holiday.
+- Never turn a retail listing into an availability claim or a decorative hack into care advice without authoritative support.
+- Refresh each evergreen note 8-12 weeks before its annual peak and compare its query performance against the prior season.
 
 ### PlantPulse Trend Notes
 
@@ -375,7 +391,7 @@ Tasks:
 
 ### Phase 2: Content Page System
 
-Status: Done for the 33-note public content MVP.
+Status: Done for the 41-note public content MVP.
 
 Tasks:
 - Add `/notes` hub. Done.
@@ -388,11 +404,12 @@ Tasks:
 - Publish the twenty-note search-intent sprint across retail, succulent, edible, and community topics. Done.
 - Publish a source-backed introduction to succulent breeders using Echeveria 'Cubic Frost' as a documented case study. Done.
 - Publish an eight-note retail rescue cluster connecting current Costco, Lowe's, and Target shelf signals with recurring symptom searches. Done.
+- Publish an eight-note Halloween, Thanksgiving, and Christmas cluster with a dedicated Seasonal library filter. Done.
 - Publish a source-backed Garden Story on *The Secret History of the British Garden*, with a practical reading of four centuries of garden design. Done.
 - Publish a source-backed Garden Story on *Monty Don's Japanese Gardens*, turning paths, borrowed scenery, seasonal care, and restraint into locally useful ideas. Done.
 - Publish a source-backed seasonal Garden Story on making a living miniature Christmas garden that continues after the decorations come down. Done.
 - Split the guide library into typed topic modules so larger batches remain maintainable. Done.
-- Add rendered release coverage for all 33 notes and their internal links. Done.
+- Add rendered release coverage for all 41 notes and their internal links. Done.
 - Add editorial approach and privacy pages. Done.
 - Add a taxonomy-driven Plant Notes library with working topic filters, live search, result counts, empty states, and shareable `topic`/`q` URLs. Done.
 - Link every guide card and article breadcrumb back to its relevant Plant Notes topic. Done.
@@ -463,8 +480,8 @@ Tasks:
 
 1. Choose and connect the final custom domain, then set `NEXT_PUBLIC_SITE_URL` in Vercel.
 2. Verify the domain in Search Console and submit `sitemap.xml` using `docs/google-search-launch.md`.
-3. Publish a first newsletter issue that links to Trader Joe's Premium Monstera, the honest succulent ranking, and the balcony snack garden; record clicks by topic.
+3. Prepare the first fall newsletter sequence around mums, pumpkins, and holiday cactus identification; record clicks by holiday and question type.
 4. Add privacy-aware analytics for note view, search, topic filter, related-note click, source click, and newsletter conversion.
 5. Import the first official Google Trends comparison rows, then use the generated queue with Search Console queries, onsite search gaps, subscriber replies, retailer signals, and seasonal timing to rank the next briefs.
-6. Build the next cluster only after demand review: fungus gnats, coffee grounds, banana water, pet-aware plant choices, blueberry containers, and hydrangea heat stress.
+6. Review early impressions for the holiday cluster, then build the next seasonal layer: cyclamen, Norfolk pine browning, living Christmas tree transitions, Thanksgiving herb centerpieces, and post-holiday tree reuse.
 7. Automate brief generation and source-change alerts while keeping claim review and final editorial approval human-led.
