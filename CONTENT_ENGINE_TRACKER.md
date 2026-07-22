@@ -20,8 +20,9 @@ Current build checkpoint:
 - All 33 Plant Notes have visible, searchable editorial tags; retailer aliases and common search names are included in onsite search and article metadata.
 - The first shared plant entity joins Trader Joe's `Premium Monstera`, Target's `Live 5-inch Thai Constellation Plant`, Home Depot's Thai Constellation wording, common shorthand, and the accepted cultivar name without duplicating articles.
 - The library now adds high-intent diagnosis for drooping peace lilies, falling snake plant leaves, yellow pothos, fiddle-leaf fig leaf drop, brown Boston ferns, yellow Alocasia Polly leaves, brown coffee plants, and newly moved kumquat trees.
-- `/garden-blog` and five complete Garden Stories connect plant care with film, documentaries, literature, and everyday rituals.
+- `/garden-blog` and six complete Garden Stories connect plant care with film, documentaries, literature, seasonal projects, and everyday rituals.
 - The culture-led collection now includes seasonal growing through the Japanese films *Little Forest*, four centuries of garden history through Monty Don's *The Secret History of the British Garden*, and a close reading of attention, season, and care in *Monty Don's Japanese Gardens*.
+- The first seasonal project story turns a real miniature Christmas garden into a reusable winter tradition, while separating short-stay outdoor conifers from long-term indoor Norfolk Island pines.
 - PlantPulse now links to dated evidence instead of displaying invented precision.
 - Costco official online plant monitoring extracts 24 structured product records as of July 20, 2026.
 - Newsletter, privacy, about, sitemap, robots, and social preview are implemented.
@@ -231,6 +232,7 @@ Current source result on July 21, 2026:
 - Costco easy-care indoor collection: reachable; 24 structured product records extracted
 - Costco alternate live-plants collection: automated access blocked; editorial review required
 - Home Depot indoor category: automated access blocked; official product URLs reviewed manually
+- Lowe's houseplant category: automated access blocked; official product pages and shelf language reviewed manually
 - Target indoor live-plants category: reachable; product names require editorial review because the page exposes no Product JSON-LD
 - Trader Joe's Premium Monstera product page: reachable; exact shelf name stored as dated alias evidence
 - Texas A&M, UC ANR, Google Trends landing page, and Search Console landing page: reachable
@@ -267,6 +269,13 @@ Weekly newsletter structure:
 3. One seasonal farm-to-table idea.
 4. One organic-first troubleshooting tip.
 5. One community prompt or reply request.
+
+Seasonal publishing rule:
+- Publish durable seasonal guides 8-12 weeks before peak interest so search engines and readers have time to discover them.
+- Keep the evergreen URL free of a year unless the story depends on a specific annual event.
+- Refresh the article's sources, links, images, and short answer before each seasonal return instead of creating a duplicate post.
+- Build one seasonal idea into a small campaign: one Garden Story, one practical Plant Note, one newsletter feature, and several social crops from the same researched brief.
+- After the peak, keep the article live and useful; remove only temporary homepage promotion.
 
 ## 6. Twenty-Note Search Sprint
 
@@ -381,6 +390,7 @@ Tasks:
 - Publish an eight-note retail rescue cluster connecting current Costco, Lowe's, and Target shelf signals with recurring symptom searches. Done.
 - Publish a source-backed Garden Story on *The Secret History of the British Garden*, with a practical reading of four centuries of garden design. Done.
 - Publish a source-backed Garden Story on *Monty Don's Japanese Gardens*, turning paths, borrowed scenery, seasonal care, and restraint into locally useful ideas. Done.
+- Publish a source-backed seasonal Garden Story on making a living miniature Christmas garden that continues after the decorations come down. Done.
 - Split the guide library into typed topic modules so larger batches remain maintainable. Done.
 - Add rendered release coverage for all 33 notes and their internal links. Done.
 - Add editorial approach and privacy pages. Done.

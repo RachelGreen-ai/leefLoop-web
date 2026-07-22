@@ -576,6 +576,143 @@ export const gardenStories: GardenStory[] = [
       "secret-garden-paying-attention",
     ],
   },
+  {
+    slug: "miniature-christmas-garden-living-tree",
+    category: "Small wonders",
+    title: "How to make a miniature Christmas garden that stays alive",
+    shortTitle: "A real miniature Christmas garden",
+    dek: "One living tree, one little path, and a few warm lights can hold more wonder than a crowded holiday display.",
+    opening:
+      "A miniature Christmas garden works because the eye understands two things at once: this is a tiny imagined world, and every needle, root, stone, and patch of green is real. The magic lasts longer when the garden is designed around what the plants need after the decorations come down.",
+    publishedAt: "2026-07-21",
+    updatedAt: "2026-07-21",
+    readingTime: "8 min read",
+    setting: "Winter & miniature gardening",
+    theme: "Living tradition, small scale",
+    image: "/garden-stories-miniature-christmas.webp",
+    imageAlt: "A real miniature Christmas garden with a tiny conifer, stone path, bench, and warm lights",
+    imagePosition: "center 48%",
+    sections: [
+      {
+        id: "why-small-feels-magical",
+        heading: "Why a tiny living world stops people in their tracks",
+        paragraphs: [
+          "Miniature garden artist Janit Calvo describes watching shoppers realize that the little Christmas tree, shrubs, path, and garden were all alive. That moment of recognition is the heart of the idea. A miniature is not impressive because it contains many things. It is moving because familiar things have become small enough to notice again.",
+          "The best scene therefore needs very little: one tree with a clear silhouette, one path that suggests where a person might walk, and one reason to pause. A bench, gate, lantern, or tiny stack of wood can imply a whole story without covering the soil in objects.",
+        ],
+        callout: "Make the world small, but keep the plants' lives full-sized in your decisions.",
+      },
+      {
+        id: "two-kinds-of-tree",
+        heading: "First choose which kind of Christmas tree you are actually growing",
+        paragraphs: [
+          "A hardy dwarf spruce and an indoor Norfolk Island pine may look similar on a holiday table, but they need different winters. A dormant outdoor spruce belongs outside. Penn State recommends acclimating a living outdoor tree through a cool sheltered place, displaying it indoors only briefly, and then reversing the transition. Four or five indoor days is ideal, and no more than a week.",
+          "A Norfolk Island pine is a tropical houseplant, not a true pine and not a cold-hardy miniature spruce. Illinois Extension recommends bright light, moderate moisture with drainage, and protection from cold. It can remain indoors after the holidays and slowly become a much larger houseplant over the years.",
+        ],
+        items: [
+          "For an outdoor miniature garden: choose a conifer hardy in your climate and treat indoor display as a short visit.",
+          "For a permanent indoor scene: choose an indoor plant such as Norfolk Island pine and use companions with similar light and moisture needs.",
+          "Keep the label. The shelf phrase mini Christmas tree does not tell you which winter the plant needs.",
+        ],
+      },
+      {
+        id: "miniature-not-forever",
+        heading: "Miniature is a design scale, not a promise that nothing will grow",
+        paragraphs: [
+          "Plants sold as dwarf still have a mature size. Dwarf Alberta spruce is a useful warning: NC State says it may be only three to four feet tall after ten years, yet can eventually reach ten to thirteen feet. In a container it will need pruning, root care, a larger home, or a future place in the landscape.",
+          "Before buying, read the mature height, width, hardiness zone, and light requirement. Then decide whether the tree can anchor this container for several seasons or whether the miniature garden is one chapter in a longer life outdoors.",
+        ],
+      },
+      {
+        id: "build-scene",
+        heading: "Build the garden before decorating the holiday",
+        paragraphs: [
+          "Start with a broad container that has a real drainage hole and enough depth for the tree's roots. Position the tree off center, then test a path with small stones before planting low companions. Leave visible soil and open space; the scene needs room for watering, growth, and the imagination.",
+          "Choose companion plants by shared care rather than scale alone. University of Minnesota's terrarium guidance makes the same practical point: plants living together should prefer similar water and light, and their mature size matters. A plant that looks like perfect tiny groundcover today may overwhelm the tree or demand a wetter root zone later.",
+        ],
+        items: [
+          "One anchor tree gives the eye a place to begin.",
+          "A curved path makes the shallow container feel deeper.",
+          "One low plant mass feels more garden-like than many unrelated specimens.",
+          "One removable object suggests a story without becoming clutter.",
+        ],
+      },
+      {
+        id: "lights",
+        heading: "Let the lights touch the scene lightly",
+        paragraphs: [
+          "Use a short strand of cool-running micro LEDs and drape it loosely. Penn State recommends LED or other low-temperature lights for living Christmas trees, while Minnesota Extension cautions against heavy ornaments on Norfolk Island pine. Tiny branches can bend or break long before a decoration looks heavy to us.",
+          "Keep the battery pack and electrical connections away from irrigation water. Do not wind wire tightly around a growing trunk or branch. The lights should be simple to remove in January without cutting, pulling, or leaving a hidden loop behind.",
+        ],
+      },
+      {
+        id: "indoor-visit",
+        heading: "Treat a hardy outdoor garden's indoor stay as a visit",
+        paragraphs: [
+          "Move the container first to a protected, cool transition space rather than straight from freezing air to a heated room. Indoors, choose the coolest useful location away from fireplaces, radiators, heating vents, and harsh direct sun. Check the root ball daily and keep it moist without leaving the pot in standing water.",
+          "After the brief display, return through the same cool transition. The goal is to keep a dormant outdoor tree from waking into spring growth in the middle of winter. If the ground is frozen or the container needs winter protection, follow local Extension guidance for your climate rather than improvising indoors.",
+        ],
+      },
+      {
+        id: "after-holiday",
+        heading: "The loveliest tradition begins after the decorations come down",
+        paragraphs: [
+          "Remove lights and accessories carefully, clear any fallen material from the soil, and return the plant to the conditions its label requires. Photograph the scene before taking it apart. Next year, you can use the same path and bench while allowing the living garden to look a little older.",
+          "That continuity is what a disposable decoration cannot offer. A branch grows, a groundcover reaches the path, and the tiny world records another year of care. The tradition is not recreating one perfect image. It is meeting the same garden again.",
+        ],
+      },
+    ],
+    bringHome: [
+      "Choose the plant first, then decide whether the finished garden will live indoors or outdoors.",
+      "Keep the full plant label and write its mature size and hardiness beside the container plan.",
+      "Design with one tree, one path, one low planting, and one small object before adding lights.",
+      "Use loose, cool-running micro LEDs and remove them without pulling on branches.",
+      "Take one photograph each December so the plant's growth becomes part of the holiday tradition.",
+    ],
+    sources: [
+      {
+        title: "Real Miniature Christmas Magic in a Real Miniature Garden",
+        publisher: "Mini Garden Guru",
+        url: "https://minigardenguru.com/2024/12/13/all-about-miniature-christmas-tree-traditions/",
+        note: "Creative inspiration, miniature scene-making, lights, and the practice of briefly staging an outdoor miniature garden indoors.",
+      },
+      {
+        title: "Caring for a Living Christmas Tree",
+        publisher: "Penn State Extension",
+        url: "https://extension.psu.edu/caring-for-a-living-christmas-tree",
+        note: "Acclimation, short indoor display, moisture, cool placement, lighting, and return-to-outdoors guidance.",
+      },
+      {
+        title: "Norfolk Island Pines",
+        publisher: "Illinois Extension",
+        url: "https://extension.illinois.edu/blogs/good-growing/2020-01-22-norfolk-island-pines",
+        note: "Indoor identity, light, moisture, humidity, temperature, growth, and post-holiday care.",
+      },
+      {
+        title: "Dwarf Alberta Spruce",
+        publisher: "NC State Extension",
+        url: "https://plants.ces.ncsu.edu/plants/picea-laxa-conica/common-name/dwarf-alberta-spruce/",
+        note: "Long-term size, growth habit, climate, light, and container context for a commonly sold miniature-looking conifer.",
+      },
+      {
+        title: "Terrarium Gardening",
+        publisher: "University of Minnesota Extension",
+        url: "https://extension.umn.edu/news/writers-guild-article-terrarium-gardening",
+        note: "Matching companion plants by light, water, mature size, and container conditions.",
+      },
+      {
+        title: "Your Holiday Plant Survival Guide",
+        publisher: "University of Minnesota Extension",
+        url: "https://extension.umn.edu/yard-and-garden-news/your-holiday-plant-survival-guide",
+        note: "Norfolk Island pine as a living mini tree, bright-light care, moderate watering, and lightweight decoration guidance.",
+      },
+    ],
+    relatedSlugs: [
+      "one-herb-by-the-kitchen",
+      "secret-garden-paying-attention",
+      "little-forest-growing-a-life",
+    ],
+  },
 ];
 
 export function getGardenStory(slug: string) {

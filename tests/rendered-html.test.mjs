@@ -85,6 +85,7 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(hubHtml, /Japanese Gardens teaches us to notice/);
   assert.match(hubHtml, /The Secret Garden is really a story about paying attention/);
   assert.match(hubHtml, /The small magic of keeping one herb beside the kitchen/);
+  assert.match(hubHtml, /How to make a miniature Christmas garden that stays alive/);
 
   const storyResponse = await render("/garden-blog/little-forest-growing-a-life");
   assert.equal(storyResponse.status, 200);
@@ -119,6 +120,17 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(japaneseGardensHtml, /Murin-an/);
   assert.match(japaneseGardensHtml, /Kenrokuen Digital Archive/);
   assert.match(japaneseGardensHtml, /BreadcrumbList/);
+
+  const miniatureChristmasResponse = await render(
+    "/garden-blog/miniature-christmas-garden-living-tree",
+  );
+  assert.equal(miniatureChristmasResponse.status, 200);
+  const miniatureChristmasHtml = await miniatureChristmasResponse.text();
+  assert.match(miniatureChristmasHtml, /First choose which kind of Christmas tree/);
+  assert.match(miniatureChristmasHtml, /Miniature is a design scale/);
+  assert.match(miniatureChristmasHtml, /Caring for a Living Christmas Tree/);
+  assert.match(miniatureChristmasHtml, /Norfolk Island Pines/);
+  assert.match(miniatureChristmasHtml, /BreadcrumbList/);
 });
 
 test("server-renders the PlantPulse signal engine page", async () => {
@@ -303,6 +315,10 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
   assert.match(
     sitemapXml,
     /rachelsgarden\.example\/garden-blog\/monty-don-japanese-gardens-noticing/,
+  );
+  assert.match(
+    sitemapXml,
+    /rachelsgarden\.example\/garden-blog\/miniature-christmas-garden-living-tree/,
   );
   const noteLinks = new Set(
     [...notesHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
