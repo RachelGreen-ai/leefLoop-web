@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleImage } from "../../components/ArticleImage";
 import { GuideCard } from "../../components/GuideCard";
+import { getArticleSectionImages } from "../../data/article-media";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 import {
   formatGuideDate,
@@ -58,6 +60,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
   const relatedGuides = getRelatedGuides(guide.relatedSlugs);
   const guideTopic = getNoteTopicForCategory(guide.category);
+  const guideImages = [
+    guide.image,
+    ...getArticleSectionImages(guide.sections).map((image) => image.src),
+  ].map((image) => new URL(image, `${siteUrl}/`).toString());
   const pageUrl = `${siteUrl}/notes/${guide.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -66,7 +72,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         "@type": "Article",
         headline: guide.title,
         description: guide.answer,
-        image: new URL(guide.image, `${siteUrl}/`).toString(),
+        image: guideImages,
         datePublished: guide.publishedAt,
         dateModified: guide.updatedAt,
         articleSection: guide.category,
@@ -168,6 +174,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <section id={section.id} className="guide-section" key={section.id}>
                 <h2>{section.heading}</h2>
                 {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.image ? <ArticleImage image={section.image} /> : null}
                 {section.items ? (
                   <ul>
                     {section.items.map((item) => (

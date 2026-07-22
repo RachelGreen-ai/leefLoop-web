@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getArticleSectionImages } from "./data/article-media";
 import { gardenStories } from "./data/garden-stories";
 import { guides } from "./data/guides";
 import { plantPulseSignals } from "./data/plantpulse";
@@ -71,14 +72,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: asDate(guide.updatedAt),
       changeFrequency: "monthly" as const,
       priority: 0.85,
-      images: [absoluteUrl(guide.image)],
+      images: [
+        absoluteUrl(guide.image),
+        ...getArticleSectionImages(guide.sections).map((image) => absoluteUrl(image.src)),
+      ],
     })),
     ...gardenStories.map((story) => ({
       url: `${siteUrl}/garden-blog/${story.slug}`,
       lastModified: asDate(story.updatedAt),
       changeFrequency: "monthly" as const,
       priority: 0.8,
-      images: [absoluteUrl(story.image)],
+      images: [
+        absoluteUrl(story.image),
+        ...getArticleSectionImages(story.sections).map((image) => absoluteUrl(image.src)),
+      ],
     })),
   ];
 }

@@ -1,3 +1,5 @@
+import type { ArticleImageData } from "./article-media";
+
 export type GardenStorySource = {
   title: string;
   publisher: string;
@@ -11,6 +13,7 @@ export type GardenStorySection = {
   paragraphs: string[];
   items?: string[];
   callout?: string;
+  image?: ArticleImageData;
 };
 
 export type GardenStory = {
@@ -44,7 +47,7 @@ export const gardenStories: GardenStory[] = [
     opening:
       "Little Forest is often described as comforting, but its comfort does not come from pretending country life is effortless. It comes from watching ordinary work become a rhythm: sow, weed, harvest, cook, preserve, begin again.",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-07-20",
+    updatedAt: "2026-07-21",
     readingTime: "8 min read",
     setting: "Film & seasonal living",
     theme: "Grow, cook, preserve",
@@ -68,6 +71,11 @@ export const gardenStories: GardenStory[] = [
           "The films linger on turning a brief abundance into something that lasts: tomatoes become pantry food, fruit becomes jam, and nuts become a spread. Preserving is practical, but it is also emotional. A jar made in August can carry a little sunlight into a colder month.",
           "This changes the meaning of a harvest. The goal is not simply to produce more. It is to notice the moment when there is enough to share, save, or transform.",
         ],
+        image: {
+          src: "/editorial/little-forest-preserving-harvest.webp",
+          alt: "Tomato preserves, fresh tomatoes, shiso leaves, and chestnuts on a kitchen table beside a summer garden",
+          caption: "Tomatoes, shiso, and chestnuts ready to be carried into another season.",
+        },
       },
       {
         id: "wild-cultivated",
@@ -180,6 +188,11 @@ export const gardenStories: GardenStory[] = [
           "The nineteenth-century garden grew through plant hunting, new transport, the Wardian case, iron, glass, coal, and the enormous reach of the British Empire. Kew's Palm House made tropical plants into a public spectacle of engineering as much as botany. The same century also widened access through public parks, nurseries, magazines, and a growing middle-class enthusiasm for gardening.",
           "Beauty and extraction sit together in this history. Plants were gathered, moved, displayed, and sometimes stripped from wild populations in the pursuit of novelty and prestige. Looking closely at a familiar houseplant can therefore lead outward: where did it first grow, who carried it, and what systems made it ordinary in our homes? Knowing that story need not lessen delight. It can make our delight more responsible.",
         ],
+        image: {
+          src: "/editorial/british-garden-working-glasshouse.webp",
+          alt: "A working glasshouse with terracotta pots, seed trays, tools, vines, and a view into an established garden",
+          caption: "A working glasshouse, where every generation leaves useful traces.",
+        },
       },
       {
         id: "twentieth-century",
@@ -316,6 +329,11 @@ export const gardenStories: GardenStory[] = [
           "In tea gardens and strolling gardens, the route is part of the composition. A stepping stone can shorten a stride. A turn can withhold a view for a few seconds. At Murin-an in Kyoto, stones, water, and changing viewpoints guide visitors through the garden rather than offering everything at once.",
           "The official history of Murin-an describes stepping stones arranged to influence both the line of sight and the speed of walking. Some encourage a pause; others lead the eye forward. This is a quietly useful idea for a small home garden too. Even the few steps from a door to a chair can create a moment of arrival.",
         ],
+        image: {
+          src: "/editorial/japanese-garden-moss-path.webp",
+          alt: "Rain-darkened stepping stones turning through moss beside a shallow stream in a Japanese garden",
+          caption: "Moss and stepping stones change the pace of a garden walk.",
+        },
       },
       {
         id: "borrowed-scenery",
@@ -430,7 +448,7 @@ export const gardenStories: GardenStory[] = [
     opening:
       "The garden in Frances Hodgson Burnett's novel does not wake all at once. It returns through curiosity, observation, fresh air, shared work, and the stubborn belief that something neglected may still be alive.",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-07-20",
+    updatedAt: "2026-07-21",
     readingTime: "6 min read",
     setting: "Books & garden memory",
     theme: "Attention, repair, return",
@@ -454,6 +472,11 @@ export const gardenStories: GardenStory[] = [
           "The novel keeps returning to bulbs, shoots, buds, nesting birds, and swelling stems. These are modest events, but paying attention to them gives the children a relationship with time beyond their own moods.",
           "A garden journal works for the same reason. One sentence about a new shoot or the first warm evening can make slow change visible.",
         ],
+        image: {
+          src: "/editorial/secret-garden-first-spring-shoots.webp",
+          alt: "Snowdrops and new green shoots emerging beside a watering can near an old garden door",
+          caption: "Snowdrops and new shoots at the first turn of spring.",
+        },
         callout: "Care often begins before certainty: protect the small green thing, then keep watching.",
       },
       {
@@ -502,7 +525,7 @@ export const gardenStories: GardenStory[] = [
     opening:
       "A kitchen herb is not quite a houseplant and not quite a crop. It lives in the tender middle, beautiful enough to notice and useful enough to become part of an ordinary Tuesday.",
     publishedAt: "2026-07-20",
-    updatedAt: "2026-07-20",
+    updatedAt: "2026-07-21",
     readingTime: "5 min read",
     setting: "Home & everyday ritual",
     theme: "Useful beauty",
@@ -526,6 +549,11 @@ export const gardenStories: GardenStory[] = [
           "Cutting an herb is not simply taking from it. Thoughtful harvesting can guide the next shape of the plant. Basil cut above a pair of leaves can branch; chives return after a trim; mint keeps reaching beyond the space you thought it had agreed to occupy.",
           "The plant changes dinner, and dinner changes the plant. That small exchange is farm to table at its most believable scale.",
         ],
+        image: {
+          src: "/editorial/kitchen-basil-ready-for-dinner.webp",
+          alt: "A thriving basil plant beside freshly clipped leaves, tomatoes, and lemon on a kitchen windowsill",
+          caption: "One basil pot, close enough to become dinner.",
+        },
       },
       {
         id: "enough",
@@ -630,6 +658,11 @@ export const gardenStories: GardenStory[] = [
           "Start with a broad container that has a real drainage hole and enough depth for the tree's roots. Position the tree off center, then test a path with small stones before planting low companions. Leave visible soil and open space; the scene needs room for watering, growth, and the imagination.",
           "Choose companion plants by shared care rather than scale alone. University of Minnesota's terrarium guidance makes the same practical point: plants living together should prefer similar water and light, and their mature size matters. A plant that looks like perfect tiny groundcover today may overwhelm the tree or demand a wetter root zone later.",
         ],
+        image: {
+          src: "/editorial/miniature-christmas-garden-building-path.webp",
+          alt: "Hands arranging a pebble path through moss around a young conifer in a wide terracotta bowl",
+          caption: "A living path comes before the holiday lights.",
+        },
         items: [
           "One anchor tree gives the eye a place to begin.",
           "A curved path makes the shallow container feel deeper.",

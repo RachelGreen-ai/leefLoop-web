@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleImage } from "../../components/ArticleImage";
 import { GardenStoryCard } from "../../components/GardenStoryCard";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 import {
@@ -9,6 +10,7 @@ import {
   getGardenStory,
   getRelatedGardenStories,
 } from "../../data/garden-stories";
+import { getArticleSectionImages } from "../../data/article-media";
 import { SITE_NAME } from "../../lib/site-brand";
 import { getSiteUrl } from "../../lib/site-url";
 
@@ -55,6 +57,10 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
   }
 
   const relatedStories = getRelatedGardenStories(story.relatedSlugs);
+  const storyImages = [
+    story.image,
+    ...getArticleSectionImages(story.sections).map((image) => image.src),
+  ].map((image) => new URL(image, `${siteUrl}/`).toString());
   const pageUrl = `${siteUrl}/garden-blog/${story.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -63,7 +69,7 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
         "@type": "Article",
         headline: story.title,
         description: story.dek,
-        image: new URL(story.image, `${siteUrl}/`).toString(),
+        image: storyImages,
         datePublished: story.publishedAt,
         dateModified: story.updatedAt,
         articleSection: story.category,
@@ -135,6 +141,7 @@ export default async function GardenStoryPage({ params }: GardenStoryPageProps) 
               <section id={section.id} className="guide-section" key={section.id}>
                 <h2>{section.heading}</h2>
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                {section.image ? <ArticleImage image={section.image} /> : null}
                 {section.items ? (
                   <ul>
                     {section.items.map((item) => <li key={item}>{item}</li>)}

@@ -105,6 +105,8 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(storyHtml, /References/);
   assert.match(storyHtml, /Japanese Film Database/);
   assert.match(storyHtml, /BreadcrumbList/);
+  assert.match(storyHtml, /editorial\/little-forest-preserving-harvest\.webp/);
+  assert.match(storyHtml, /Tomatoes, shiso, and chestnuts ready to be carried into another season\./);
   assert.doesNotMatch(storyHtml, /Sources &amp; notes|Rachel’s Garden editorial team/);
 
   const documentaryResponse = await render(
@@ -118,6 +120,7 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(documentaryHtml, /Gardening With Monty Don/);
   assert.match(documentaryHtml, /Rousham House &amp; Gardens/);
   assert.match(documentaryHtml, /BreadcrumbList/);
+  assert.match(documentaryHtml, /editorial\/british-garden-working-glasshouse\.webp/);
 
   const japaneseGardensResponse = await render(
     "/garden-blog/monty-don-japanese-gardens-noticing",
@@ -130,6 +133,7 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(japaneseGardensHtml, /Murin-an/);
   assert.match(japaneseGardensHtml, /Kenrokuen Digital Archive/);
   assert.match(japaneseGardensHtml, /BreadcrumbList/);
+  assert.match(japaneseGardensHtml, /editorial\/japanese-garden-moss-path\.webp/);
 
   const miniatureChristmasResponse = await render(
     "/garden-blog/miniature-christmas-garden-living-tree",
@@ -141,6 +145,25 @@ test("server-renders the Garden Stories collection and complete screen essays", 
   assert.match(miniatureChristmasHtml, /Caring for a Living Christmas Tree/);
   assert.match(miniatureChristmasHtml, /Norfolk Island Pines/);
   assert.match(miniatureChristmasHtml, /BreadcrumbList/);
+  assert.match(
+    miniatureChristmasHtml,
+    /editorial\/miniature-christmas-garden-building-path\.webp/,
+  );
+
+  for (const [pathname, image] of [
+    [
+      "/garden-blog/secret-garden-paying-attention",
+      "editorial/secret-garden-first-spring-shoots.webp",
+    ],
+    [
+      "/garden-blog/one-herb-by-the-kitchen",
+      "editorial/kitchen-basil-ready-for-dinner.webp",
+    ],
+  ]) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200, `${pathname} should resolve`);
+    assert.match(await response.text(), new RegExp(image.replaceAll(".", "\\.")));
+  }
 });
 
 test("server-renders the PlantPulse signal engine page", async () => {
@@ -367,6 +390,16 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
     sitemapXml,
     /rachelsgarden\.example\/garden-blog\/miniature-christmas-garden-living-tree/,
   );
+  for (const image of [
+    "little-forest-preserving-harvest.webp",
+    "british-garden-working-glasshouse.webp",
+    "japanese-garden-moss-path.webp",
+    "secret-garden-first-spring-shoots.webp",
+    "kitchen-basil-ready-for-dinner.webp",
+    "miniature-christmas-garden-building-path.webp",
+  ]) {
+    assert.match(sitemapXml, new RegExp(`/editorial/${image.replaceAll(".", "\\.")}`));
+  }
   const noteLinks = new Set(
     [...notesHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );

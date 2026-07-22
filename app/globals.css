@@ -1385,6 +1385,29 @@ h3 {
   font-weight: 600;
 }
 
+.article-inline-image {
+  width: min(840px, calc(100vw - 36px));
+  margin: 36px 0 30px 50%;
+  transform: translateX(-50%);
+}
+
+.article-inline-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+.article-inline-image figcaption {
+  max-width: 720px;
+  margin: 11px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .faq-list {
   border-top: 1px solid var(--line);
 }

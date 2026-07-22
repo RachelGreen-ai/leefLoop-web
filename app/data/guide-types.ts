@@ -1,3 +1,5 @@
+import type { ArticleImageData } from "./article-media";
+
 export type GuideSource = {
   title: string;
   publisher: string;
@@ -11,6 +13,7 @@ export type GuideSection = {
   paragraphs?: string[];
   items?: string[];
   callout?: string;
+  image?: ArticleImageData;
 };
 
 export type GuideFaq = {
