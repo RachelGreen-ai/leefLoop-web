@@ -268,14 +268,69 @@ test("server-renders the notes hub and complete starter guide", async () => {
   assert.match(paperwhiteHtml, /Toxic and Non-toxic Plants: Paper White/);
 });
 
-test("publishes the complete 41-note library with valid internal note links", async () => {
+test("publishes answer-first regional plant guides with multilingual discovery and GEO schema", async () => {
+  const hubResponse = await render("/notes");
+  const hubHtml = await hubResponse.text();
+  assert.match(hubHtml, /Easy plants for Indian homes/);
+  assert.match(hubHtml, /Easy plants for Chinese homes/);
+  assert.match(hubHtml, /Easy plants for Japanese homes/);
+
+  const regionalGuides = [
+    {
+      pathname: "/notes/easy-plants-indian-homes-balconies",
+      answer: /money plant or golden pothos, snake plant, aloe vera, tulsi, curry leaf/,
+      alias: /घर में लगाने वाले आसान पौधे/,
+      image: /editorial\/indian-home-sunlight-threshold\.webp/,
+      source: /Kerala Department of Agriculture Development/,
+      pickCount: /"numberOfItems":6/,
+    },
+    {
+      pathname: "/notes/easy-plants-chinese-homes-common-names",
+      answer: /golden pothos \(绿萝\/綠蘿\), lucky bamboo \(富贵竹\/富貴竹\)/,
+      alias: /好养的室内植物/,
+      image: /editorial\/chinese-home-lucky-bamboo-care\.webp/,
+      source: /New York Botanical Garden/,
+      pickCount: /"numberOfItems":5/,
+    },
+    {
+      pathname: "/notes/easy-houseplants-japanese-homes-small-spaces",
+      answer: /pothos \(ポトス\), snake plant \(サンスベリア\), pachira \(パキラ\)/,
+      alias: /育てやすい観葉植物/,
+      image: /editorial\/japanese-home-winter-window-plants\.webp/,
+      source: /Sapporo Parks Green Fund/,
+      pickCount: /"numberOfItems":5/,
+    },
+  ];
+
+  for (const guide of regionalGuides) {
+    const response = await render(guide.pathname);
+    assert.equal(response.status, 200, `${guide.pathname} should resolve`);
+    const html = await response.text();
+    assert.match(html, guide.answer);
+    assert.match(html, guide.alias);
+    assert.match(html, guide.image);
+    assert.match(html, guide.source);
+    assert.match(html, /At a glance/);
+    assert.match(html, /"@type":"ItemList"/);
+    assert.match(html, guide.pickCount);
+    assert.match(html, /"@type":"FAQPage"/);
+    assert.match(html, /"citation":\[/);
+    assert.match(html, /Best for/);
+    assert.match(html, /Watch for/);
+  }
+});
+
+test("publishes the complete 44-note library with valid internal note links", async () => {
   const hubResponse = await render("/notes");
   const hubHtml = await hubResponse.text();
   const noteLinks = new Set(
     [...hubHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );
 
-  assert.equal(noteLinks.size, 41);
+  assert.equal(noteLinks.size, 44);
+  assert.ok(noteLinks.has("/notes/easy-plants-indian-homes-balconies"));
+  assert.ok(noteLinks.has("/notes/easy-plants-chinese-homes-common-names"));
+  assert.ok(noteLinks.has("/notes/easy-houseplants-japanese-homes-small-spaces"));
   assert.ok(noteLinks.has("/notes/trader-joes-premium-monstera-first-week"));
   assert.ok(noteLinks.has("/notes/easiest-indoor-succulents-ranked"));
   assert.ok(noteLinks.has("/notes/tomato-blossom-end-rot-eggshells"));
@@ -397,6 +452,12 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
     "secret-garden-first-spring-shoots.webp",
     "kitchen-basil-ready-for-dinner.webp",
     "miniature-christmas-garden-building-path.webp",
+    "easy-plants-indian-home-balcony.webp",
+    "indian-home-sunlight-threshold.webp",
+    "easy-plants-chinese-home.webp",
+    "chinese-home-lucky-bamboo-care.webp",
+    "easy-houseplants-japanese-home.webp",
+    "japanese-home-winter-window-plants.webp",
   ]) {
     assert.match(sitemapXml, new RegExp(`/editorial/${image.replaceAll(".", "\\.")}`));
   }

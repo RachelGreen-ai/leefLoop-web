@@ -65,6 +65,25 @@ export default async function GuidePage({ params }: GuidePageProps) {
     ...getArticleSectionImages(guide.sections).map((image) => image.src),
   ].map((image) => new URL(image, `${siteUrl}/`).toString());
   const pageUrl = `${siteUrl}/notes/${guide.slug}`;
+  const plantPickList = guide.picks
+    ? {
+        "@type": "ItemList",
+        "@id": `${pageUrl}#plant-picks`,
+        name: guide.picks.heading,
+        description: guide.picks.intro,
+        numberOfItems: guide.picks.items.length,
+        itemListElement: guide.picks.items.map((pick, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "Thing",
+            name: pick.name,
+            alternateName: pick.aliases,
+            description: `${pick.bestFor} ${pick.light} ${pick.watchFor}`,
+          },
+        })),
+      }
+    : null;
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -72,6 +91,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         "@type": "Article",
         headline: guide.title,
         description: guide.answer,
+        abstract: guide.answer,
         image: guideImages,
         datePublished: guide.publishedAt,
         dateModified: guide.updatedAt,
@@ -91,6 +111,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         },
         citation: guide.sources.map((source) => source.url),
       },
+      ...(plantPickList ? [plantPickList] : []),
       {
         "@type": "FAQPage",
         mainEntity: guide.faq.map((item) => ({
@@ -155,10 +176,45 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
         <div className="guide-layout">
           <div className="guide-body">
-            <section className="answer-box" aria-label="Short answer">
+            <section
+              className={`answer-box${guide.answer.length > 420 ? " answer-box-compact" : ""}`}
+              aria-label="Short answer"
+            >
               <p className="eyebrow">The short answer</p>
               <p>{guide.answer}</p>
             </section>
+
+            {guide.picks ? (
+              <section className="plant-picks" id="plant-picks" aria-labelledby="plant-picks-title">
+                <p className="eyebrow">At a glance</p>
+                <h2 id="plant-picks-title">{guide.picks.heading}</h2>
+                <p className="plant-picks-intro">{guide.picks.intro}</p>
+                <ul>
+                  {guide.picks.items.map((pick) => (
+                    <li key={pick.name}>
+                      <div className="plant-pick-name">
+                        <h3>{pick.name}</h3>
+                        {pick.aliases?.length ? <p>{pick.aliases.join(" · ")}</p> : null}
+                      </div>
+                      <dl>
+                        <div>
+                          <dt>Best for</dt>
+                          <dd>{pick.bestFor}</dd>
+                        </div>
+                        <div>
+                          <dt>Light</dt>
+                          <dd>{pick.light}</dd>
+                        </div>
+                        <div>
+                          <dt>Watch for</dt>
+                          <dd>{pick.watchFor}</dd>
+                        </div>
+                      </dl>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
 
             <section className="first-checks">
               <p className="eyebrow">Start here</p>

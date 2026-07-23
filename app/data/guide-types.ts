@@ -21,6 +21,20 @@ export type GuideFaq = {
   answer: string;
 };
 
+export type GuidePick = {
+  name: string;
+  aliases?: string[];
+  bestFor: string;
+  light: string;
+  watchFor: string;
+};
+
+export type GuidePickList = {
+  heading: string;
+  intro: string;
+  items: GuidePick[];
+};
+
 export type PlantGuide = {
   slug: string;
   category:
@@ -44,6 +58,7 @@ export type PlantGuide = {
   imagePosition?: string;
   imageAlt: string;
   firstChecks: string[];
+  picks?: GuidePickList;
   sections: GuideSection[];
   faq: GuideFaq[];
   sources: GuideSource[];

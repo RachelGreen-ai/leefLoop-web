@@ -1,5 +1,6 @@
 import type { GuideSummary, PlantGuide } from "./guide-types";
 import { gardenPracticeGuides } from "./guides/garden-practice";
+import { culturalHomeGuides } from "./guides/cultural-homes";
 import { retailRescueGuides } from "./guides/retail-rescue";
 import { retailFindGuides } from "./guides/retail-finds";
 import { seasonalGuides } from "./guides/seasonal";
@@ -8,6 +9,8 @@ import { succulentBasicsGuides } from "./guides/succulent-basics";
 
 export type {
   GuideFaq,
+  GuidePick,
+  GuidePickList,
   GuideSection,
   GuideSource,
   GuideSummary,
@@ -432,6 +435,7 @@ export const guides: PlantGuide[] = [
   ...succulentBasicsGuides,
   ...specialtyCareGuides,
   ...gardenPracticeGuides,
+  ...culturalHomeGuides,
 ];
 
 export function getGuide(slug: string) {
