@@ -320,14 +320,96 @@ test("publishes answer-first regional plant guides with multilingual discovery a
   }
 });
 
-test("publishes the complete 44-note library with valid internal note links", async () => {
+test("publishes a late-summer fruit harvest cluster with extractable GEO answers", async () => {
+  const hubResponse = await render("/notes");
+  const hubHtml = await hubResponse.text();
+  assert.match(hubHtml, /What fruit ripens in August\?/);
+  assert.match(hubHtml, /Figs not ripening on the tree/);
+  assert.match(hubHtml, /When to pick peaches/);
+  assert.match(hubHtml, /Apples falling before ripe/);
+  assert.match(hubHtml, /When to pick European and Asian pears/);
+  assert.match(hubHtml, /Protect ripening fruit without spraying/);
+
+  const fruitGuides = [
+    {
+      pathname: "/notes/august-fruit-harvest-guide",
+      answer: /August can bring peaches, nectarines, plums, figs, early apples/,
+      image: /editorial\/august-harvest-ripeness-check\.webp/,
+      source: /Iowa State University Extension and Outreach/,
+    },
+    {
+      pathname: "/notes/figs-not-ripening-on-tree",
+      answer: /Hard green figs generally will not become sweet after picking/,
+      image: /editorial\/fig-ripeness-neck-droop\.webp/,
+      source: /University of Maryland Extension/,
+    },
+    {
+      pathname: "/notes/when-to-pick-peaches",
+      answer: /Red blush is not a reliable maturity test/,
+      image: /editorial\/peach-background-color-check\.webp/,
+      source: /University of Maryland Extension/,
+    },
+    {
+      pathname: "/notes/apples-falling-before-ripe",
+      answer: /hole with crumbly frass or a tunnel toward the core points toward codling moth/,
+      image: /editorial\/apple-drop-diagnostic\.webp/,
+      source: /Michigan State University Extension/,
+    },
+    {
+      pathname: "/notes/when-to-pick-pears-european-asian",
+      answer: /Pick most European pears when they are mature but still firm/,
+      image: /editorial\/pear-harvest-two-types\.webp/,
+      source: /Penn State Extension/,
+    },
+    {
+      pathname: "/notes/protect-ripening-fruit-birds-squirrels-wasps",
+      answer: /physical exclusion plus timely harvest/,
+      image: /editorial\/fruit-tree-netting-frame\.webp/,
+      source: /UC Statewide Integrated Pest Management Program/,
+    },
+  ];
+
+  for (const guide of fruitGuides) {
+    const response = await render(guide.pathname);
+    assert.equal(response.status, 200, `${guide.pathname} should resolve`);
+    const html = await response.text();
+    assert.match(html, guide.answer);
+    assert.match(html, guide.image);
+    assert.match(html, guide.source);
+    assert.match(html, /"@type":"FAQPage"/);
+    assert.match(html, /"citation":\[/);
+    assert.match(html, /Three things to check first/);
+  }
+
+  const harvestResponse = await render("/notes/august-fruit-harvest-guide");
+  const harvestHtml = await harvestResponse.text();
+  assert.match(harvestHtml, /"@type":"ItemList"/);
+  assert.match(harvestHtml, /"numberOfItems":6/);
+  assert.match(harvestHtml, /Typical window/);
+  assert.match(harvestHtml, /Ripe when/);
+
+  const pearResponse = await render("/notes/when-to-pick-pears-european-asian");
+  const pearHtml = await pearResponse.text();
+  assert.match(pearHtml, /"numberOfItems":2/);
+  assert.match(pearHtml, /Pick from the tree/);
+  assert.match(pearHtml, /Finish ripening/);
+  assert.match(pearHtml, /European pears are usually picked before eating-ripe/);
+});
+
+test("publishes the complete 50-note library with valid internal note links", async () => {
   const hubResponse = await render("/notes");
   const hubHtml = await hubResponse.text();
   const noteLinks = new Set(
     [...hubHtml.matchAll(/href="(\/notes\/[^"?#]+)"/g)].map((match) => match[1]),
   );
 
-  assert.equal(noteLinks.size, 44);
+  assert.equal(noteLinks.size, 50);
+  assert.ok(noteLinks.has("/notes/august-fruit-harvest-guide"));
+  assert.ok(noteLinks.has("/notes/figs-not-ripening-on-tree"));
+  assert.ok(noteLinks.has("/notes/when-to-pick-peaches"));
+  assert.ok(noteLinks.has("/notes/apples-falling-before-ripe"));
+  assert.ok(noteLinks.has("/notes/when-to-pick-pears-european-asian"));
+  assert.ok(noteLinks.has("/notes/protect-ripening-fruit-birds-squirrels-wasps"));
   assert.ok(noteLinks.has("/notes/easy-plants-indian-homes-balconies"));
   assert.ok(noteLinks.has("/notes/easy-plants-chinese-homes-common-names"));
   assert.ok(noteLinks.has("/notes/easy-houseplants-japanese-homes-small-spaces"));
@@ -458,6 +540,18 @@ test("publishes canonical URLs, search directives, and a complete image sitemap"
     "chinese-home-lucky-bamboo-care.webp",
     "easy-houseplants-japanese-home.webp",
     "japanese-home-winter-window-plants.webp",
+    "august-backyard-fruit-harvest.webp",
+    "august-harvest-ripeness-check.webp",
+    "figs-not-ripening-tree.webp",
+    "fig-ripeness-neck-droop.webp",
+    "when-to-pick-peaches.webp",
+    "peach-background-color-check.webp",
+    "apples-falling-before-ripe.webp",
+    "apple-drop-diagnostic.webp",
+    "when-to-pick-european-asian-pears.webp",
+    "pear-harvest-two-types.webp",
+    "protect-ripening-fruit.webp",
+    "fruit-tree-netting-frame.webp",
   ]) {
     assert.match(sitemapXml, new RegExp(`/editorial/${image.replaceAll(".", "\\.")}`));
   }

@@ -198,15 +198,15 @@ export default async function GuidePage({ params }: GuidePageProps) {
                       </div>
                       <dl>
                         <div>
-                          <dt>Best for</dt>
+                          <dt>{guide.picks?.bestForLabel ?? "Best for"}</dt>
                           <dd>{pick.bestFor}</dd>
                         </div>
                         <div>
-                          <dt>Light</dt>
+                          <dt>{guide.picks?.lightLabel ?? "Light"}</dt>
                           <dd>{pick.light}</dd>
                         </div>
                         <div>
-                          <dt>Watch for</dt>
+                          <dt>{guide.picks?.watchForLabel ?? "Watch for"}</dt>
                           <dd>{pick.watchFor}</dd>
                         </div>
                       </dl>

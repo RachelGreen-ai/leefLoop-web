@@ -32,6 +32,9 @@ export type GuidePick = {
 export type GuidePickList = {
   heading: string;
   intro: string;
+  bestForLabel?: string;
+  lightLabel?: string;
+  watchForLabel?: string;
   items: GuidePick[];
 };
 
